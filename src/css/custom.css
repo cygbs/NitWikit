@@ -98,11 +98,13 @@ body {
 
 /* ======= 导航栏样式 ======= */
 .navbar {
+  background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 0 1px 0 0 var(--border-color) !important;
   transition: all 0.3s ease;
   height: var(--ifm-navbar-height);
   padding: var(--ifm-navbar-padding-vertical) var(--ifm-navbar-padding-horizontal);
   display: flex;
+  backdrop-filter: blur(10px);
   align-items: center;
 }
 
