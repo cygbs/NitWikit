@@ -14,6 +14,15 @@ const config = {
         start: "快速开始 🥵",
         // 标题颜色
         titleColor: "white",
+        // 自定义swizzle配置
+        swizzleConfig: {
+            enabled: true,
+            components: {
+                'theme/DocItem/Footer/LastUpdated': {
+                    override: 'src/plugins/theme/LastUpdate',
+                },
+            },
+        },
     },
 
     markdown: {
@@ -55,14 +64,6 @@ const config = {
                     editUrl: 'https://github.com/8aka-Team/NitWikit/tree/main',
                     showLastUpdateAuthor: true,
                     showLastUpdateTime: true,
-                    includeCurrentVersion: true,
-                    lastVersion: 'current',
-                    onlyIncludeVersions: ['current'],
-                    gitRefName: 'main',
-                    remarkPlugins: [],
-                    rehypePlugins: [],
-                    sidebarCollapsible: true,
-                    sidebarCollapsed: false,
                 },
                 blog: false,
                 theme: {
@@ -93,14 +94,6 @@ const config = {
                 editCurrentVersion: true,
                 showLastUpdateAuthor: true,
                 showLastUpdateTime: true,
-                includeCurrentVersion: true,
-                lastVersion: 'current',
-                onlyIncludeVersions: ['current'],
-                gitRefName: 'main',
-                remarkPlugins: [],
-                rehypePlugins: [],
-                sidebarCollapsible: true,
-                sidebarCollapsed: false,
             }], [
             '@docusaurus/plugin-pwa',
             {
@@ -134,14 +127,6 @@ const config = {
                 editCurrentVersion: true,
                 showLastUpdateAuthor: true,
                 showLastUpdateTime: true,
-                includeCurrentVersion: true,
-                lastVersion: 'current',
-                onlyIncludeVersions: ['current'],
-                gitRefName: 'main',
-                remarkPlugins: [],
-                rehypePlugins: [],
-                sidebarCollapsible: true,
-                sidebarCollapsed: false,
             },
         ],
     ],
