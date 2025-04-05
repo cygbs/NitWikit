@@ -1,7 +1,6 @@
 ---
-sidebar_position: 12
+sidebar_position: 3
 title: 广告
-slug: /ad
 ---
 
 # 广告
@@ -104,4 +103,5 @@ slug: /ad
 ## 联系
 
 - 站长 驿站忆行：185839426
+- 技术 千屈：3824670178
 - 技术 lilingfeng：3644147215
