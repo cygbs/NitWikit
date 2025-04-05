@@ -129,7 +129,20 @@ const config = {
                 id: 'docs-bedrock',
                 path: 'docs-bedrock',
                 routeBasePath: 'Bedrock',
-                editUrl: 'https://github.com/postyizhan/NitWikit/tree/main',
+                editUrl: 'https://github.com/8aka-Team/NitWikit/tree/main',
+                sidebarPath: require.resolve('./sidebars.js'),
+                editCurrentVersion: true,
+                showLastUpdateAuthor: true,
+                showLastUpdateTime: true,
+            },
+        ],
+        [
+            '@docusaurus/plugin-content-docs',
+            {
+                id: 'docs-about',
+                path: 'docs-about',
+                routeBasePath: 'about',
+                editUrl: 'https://github.com/8aka-Team/NitWikit/tree/main',
                 sidebarPath: require.resolve('./sidebars.js'),
                 editCurrentVersion: true,
                 showLastUpdateAuthor: true,
@@ -213,6 +226,13 @@ const config = {
                         position: 'left',
                         label: 'Bedrock',
                         docsPluginId: 'docs-bedrock'
+                    },
+                    {
+                        type: 'docSidebar',
+                        sidebarId: 'tutorialSidebar',
+                        position: 'left',
+                        label: '关于我们',
+                        docsPluginId: 'docs-about'
                     },
                     // 搜索框
                     {
@@ -301,11 +321,11 @@ const config = {
                 theme: prismThemes.vsLight,
                 darkTheme: prismThemes.vsDark,
                 additionalLanguages: [
-                    'java', 'kotlin', 'groovy', 'scala', 
+                    'java', 'kotlin', 'groovy', 'scala',
                     'bash', 'powershell',
                     'python', 'ruby', 'php', 'go', 'rust',
-                    'c', 'cpp', 'csharp', 
-                    'sql', 'json', 'yaml', 'toml', 
+                    'c', 'cpp', 'csharp',
+                    'sql', 'json', 'yaml', 'toml',
                     'css', 'scss', 'less',
                     'javascript', 'typescript', 'jsx', 'tsx',
                     'markup', 'markdown',
