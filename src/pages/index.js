@@ -31,11 +31,6 @@ function HomepageHeader() {
             to="/intro">
             {siteConfig.customFields.start || '开始阅读'}
           </Link>
-          <Link
-            className={clsx('button', styles.secondaryButton)}
-            to="https://github.com/8aka-Team/NitWikit">
-            GitHub
-          </Link>
         </div>
       </div>
     </header>
