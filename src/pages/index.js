@@ -104,7 +104,7 @@ function HomepageHeader() {
           <div className={styles.buttons}>
             <Link
               className={clsx('button', styles.primaryButton)}
-              to="/docs/intro">
+              to="/intro">
               开始探索 🚀
             </Link>
           </div>
@@ -138,7 +138,7 @@ function HomeFooterCTA() {
         <div>
           <Link
             className={clsx('button button--primary button--lg')}
-            to="/docs/intro">
+            to="/intro">
             立即开始
           </Link>
         </div>
