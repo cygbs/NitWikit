@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from 'react';
-import React, { useEffect, useState, useRef } from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -10,82 +9,6 @@ import styles from './index.module.css';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
-  const headerRef = useRef(null);
-  const blob1Ref = useRef(null);
-  const blob2Ref = useRef(null);
-  const blob3Ref = useRef(null);
-  
-  // 鼠标跟随效果
-  useEffect(() => {
-    const header = headerRef.current;
-    const blob1 = blob1Ref.current;
-    const blob2 = blob2Ref.current;
-    const blob3 = blob3Ref.current;
-    
-    if (!header || !blob1 || !blob2 || !blob3) return;
-    
-    let animationActive = false;
-    
-    const handleMouseMove = (e) => {
-      if (!animationActive) {
-        animationActive = true;
-        requestAnimationFrame(updateBlobs);
-      }
-      
-      const { clientX, clientY } = e;
-      const rect = header.getBoundingClientRect();
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      const mouseX = clientX - rect.left;
-      const mouseY = clientY - rect.top;
-      
-      // 计算鼠标和中心点的距离
-      const offsetX = (mouseX - centerX) / centerX;
-      const offsetY = (mouseY - centerY) / centerY;
-      
-      // 保存当前鼠标位置用于动画帧
-      lastOffsetX = offsetX;
-      lastOffsetY = offsetY;
-    };
-    
-    let lastOffsetX = 0;
-    let lastOffsetY = 0;
-    
-    const updateBlobs = () => {
-      // 右下角的绿色光圈 - 反向移动效果
-      const blob1Transform = getComputedStyle(blob1).transform;
-      const newBlob1Transform = `translate(${lastOffsetX * -40}px, ${lastOffsetY * -40}px)`;
-      blob1.style.transform = newBlob1Transform;
-      
-      // 左上角的蓝色光圈 - 同向移动效果
-      const blob2Transform = getComputedStyle(blob2).transform;
-      const newBlob2Transform = `translate(${lastOffsetX * 40}px, ${lastOffsetY * 40}px)`;
-      blob2.style.transform = newBlob2Transform;
-      
-      // 中心的黄色光圈 - 增强移动效果
-      const blob3Transform = getComputedStyle(blob3).transform;
-      const newBlob3Transform = `translate(calc(-50% + ${lastOffsetX * 60}px), calc(-50% + ${lastOffsetY * 60}px))`;
-      blob3.style.transform = newBlob3Transform;
-      
-      animationActive = false;
-    };
-    
-    const handleMouseLeave = () => {
-      // 鼠标离开时，恢复原位
-      blob1.style.transform = '';
-      blob2.style.transform = '';
-      blob3.style.transform = 'translate(-50%, -50%)';
-    };
-    
-    header.addEventListener('mousemove', handleMouseMove);
-    header.addEventListener('mouseleave', handleMouseLeave);
-    
-    return () => {
-      header.removeEventListener('mousemove', handleMouseMove);
-      header.removeEventListener('mouseleave', handleMouseLeave);
-    };
-  }, []);
-  
   const headerRef = useRef(null);
   const blob1Ref = useRef(null);
   const blob2Ref = useRef(null);
@@ -181,7 +104,7 @@ function HomepageHeader() {
           <div className={styles.buttons}>
             <Link
               className={clsx('button', styles.primaryButton)}
-              to="/docs/intro">
+              to="/intro">
               开始探索 🚀
             </Link>
           </div>
@@ -211,12 +134,11 @@ function HomeFooterCTA() {
         </Heading>
         <p className={styles.footerCtaSubtitle}>
           我们提供从零开始的详细教程，帮助你轻松搭建和管理自己的服务器。无论你是新手还是有经验的玩家，这里都有适合你的内容。
-          我们提供从零开始的详细教程，帮助你轻松搭建和管理自己的服务器。无论你是新手还是有经验的玩家，这里都有适合你的内容。
         </p>
         <div>
           <Link
             className={clsx('button button--primary button--lg')}
-            to="/docs/intro">
+            to="/">
             立即开始
           </Link>
         </div>

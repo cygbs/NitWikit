@@ -513,33 +513,15 @@ html[data-theme='dark'] a.card.padding--lg.cardContainer_fWXF:hover {
   background-color: rgba(45, 55, 72, 0.9);
 }
 
-/* ======= 修复文章背景通铺问题 ======= */
-/* 确保主内容区域背景色覆盖整个内容 */
+
 .main-wrapper {
   background-color: var(--ifm-background-color);
   min-height: 100vh;
   width: 100%;
   max-width: 100vw;
   overflow-x: hidden;
-  width: 100%;
-  max-width: 100vw;
-  overflow-x: hidden;
 }
 
-.homepage .navbar {
-  background-color: transparent !important;
-  position: absolute;
-  width: 100%;
-  z-index: 10;
-  box-shadow: none !important;
-}
-
-.homepage .navbar-sidebar {
-  background-color: var(--bg-card);
-}
-
-.homepage .main-wrapper {
-  padding: 0;
 .homepage .navbar {
   background-color: transparent !important;
   position: absolute;
@@ -559,13 +541,6 @@ html[data-theme='dark'] a.card.padding--lg.cardContainer_fWXF:hover {
 /* 确保文档容器背景色通铺 */
 .container {
   background-color: transparent;
-}
-
-@media screen and (min-width: 997px) {
-  .homepage .container {
-    max-width: 100%;
-    padding: 0;
-  }
 }
 
 @media screen and (min-width: 997px) {
@@ -923,4 +898,3 @@ html[data-theme='dark'] [class*="textHighlight"] {
     opacity: 0.5;
   }
 }
-
