@@ -352,10 +352,7 @@ const config = {
         '@docusaurus/theme-mermaid'
     ],
     scripts: [
-        {
-            src: '/autoload.js',
-            defer: true,
-        },
+        // 已删除看板娘相关脚本
     ],
 };
 
