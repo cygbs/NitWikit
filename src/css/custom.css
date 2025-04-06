@@ -667,13 +667,8 @@ details.details_b_Ee:hover {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
 }
 
-/* Alert 样式 */
-.alert--info {
-  --ifm-alert-background-color: var(--bg-card);
-  --ifm-alert-border-color: var(--primary);
-  --ifm-alert-color: var(--text-primary);
-  border-left: 3px solid var(--primary);
-}
+
+
 
 /* Summary 标题样式 */
 details summary {
@@ -748,10 +743,6 @@ html[data-theme='dark'] details.details_b_Ee {
   box-shadow: none;
 }
 
-html[data-theme='dark'] .alert--info {
-  --ifm-alert-background-color: var(--bg-card);
-  --ifm-alert-color: var(--text-primary);
-}
 
 /* 为details添加一个更具体的选择器来覆盖可能存在的其他样式 */
 details.details_lb9f summary::before,
@@ -897,4 +888,69 @@ html[data-theme='dark'] [class*="textHighlight"] {
     z-index: 1;
     opacity: 0.5;
   }
+}
+
+/* Alert 信息 样式 */
+.alert--info {
+  --ifm-alert-background-color: var(--bg-card);
+  --ifm-alert-border-color: var(--primary);
+  --ifm-alert-color: var(--text-primary);
+  border-left: 3px solid var(--primary);
+}
+
+html[data-theme='dark'] .alert--info {
+  --ifm-alert-background-color: var(--bg-card);
+  --ifm-alert-color: var(--text-primary);
+}
+
+/* Alert 警告 样式 */
+.alert--warning {
+  --ifm-alert-background-color: var(--bg-card);
+  --ifm-alert-border-color: #f0b429;
+  --ifm-alert-color: var(--text-primary);
+  border-left: 3px solid #f0b429;
+}
+
+html[data-theme='dark'] .alert--warning {
+  --ifm-alert-background-color: var(--bg-card);
+  --ifm-alert-color: var(--text-primary);
+}
+
+/* Alert 危险 样式 */
+.alert--danger {
+  --ifm-alert-background-color: var(--bg-card);
+  --ifm-alert-border-color: #ef4444;
+  --ifm-alert-color: var(--text-primary);
+  border-left: 3px solid #ef4444;
+}
+
+html[data-theme='dark'] .alert--danger {
+  --ifm-alert-background-color: var(--bg-card);
+  --ifm-alert-color: var(--text-primary);
+}
+
+/* Alert 成功 样式 */
+.alert--success {
+  --ifm-alert-background-color: var(--bg-card);
+  --ifm-alert-border-color: #10b981;
+  --ifm-alert-color: var(--text-primary);
+  border-left: 3px solid #10b981;
+}
+
+html[data-theme='dark'] .alert--success {
+  --ifm-alert-background-color: var(--bg-card);
+  --ifm-alert-color: var(--text-primary);
+}
+
+/* Alert 次要 样式 */
+.alert--secondary {
+  --ifm-alert-background-color: var(--bg-card);
+  --ifm-alert-border-color: #8b5cf6;
+  --ifm-alert-color: var(--text-primary);
+  border-left: 3px solid #8b5cf6;
+}
+
+html[data-theme='dark'] .alert--secondary {
+  --ifm-alert-background-color: var(--bg-card);
+  --ifm-alert-color: var(--text-primary);
 }
