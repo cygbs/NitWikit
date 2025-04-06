@@ -148,4 +148,48 @@
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.heroBlob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: 2;
+  opacity: 0.4;
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+  will-change: transform;
+  animation: bobAnimation 8s infinite alternate ease-in-out;
+  transition: transform 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+.blob1 {
+  width: 750px;
+  height: 750px;
+  right: -150px;
+  bottom: -150px;
+  background: radial-gradient(circle at center, rgba(24, 128, 87, 0.3), rgba(37, 160, 110, 0.08) 70%);
+  animation-delay: 0s;
+  animation-duration: 12s;
+}
+
+.blob2 {
+  width: 700px;
+  height: 700px;
+  left: -150px;
+  top: -150px;
+  background: radial-gradient(circle at center, rgba(49, 130, 206, 0.3), rgba(66, 153, 225, 0.08) 70%);
+  animation-delay: 2s;
+  animation-duration: 15s;
+}
+
+.blob3 {
+  width: 600px;
+  height: 600px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle at center, rgba(221, 181, 32, 0.25), rgba(236, 201, 75, 0.08) 70%);
+  animation-delay: 1s;
+  animation-duration: 10s;
 } 
