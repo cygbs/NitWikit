@@ -21,7 +21,7 @@ async function injectExternLink() {
             link.target = '_blank';
             link.rel = 'noopener noreferrer';
             link.textContent = ad.name;
-            link.className = 'ad-item'; // 使用已有的ad-item类
+            link.className = 'extern-item'; // 使用已有的extern-item类
             adContainer.appendChild(link);
         });
 
@@ -43,9 +43,9 @@ async function injectExternLink() {
                         desktopTarget.prepend(adContainer);
                     }
                     // 移除可能的移动端样式
-                    adContainer.classList.remove('mobile-ad');
+                    adContainer.classList.remove('mobile-extern');
                     // 添加桌面端样式
-                    adContainer.classList.add('desktop-ad');
+                    adContainer.classList.add('desktop-extern');
                 }
             }
             // 移动端插入位置（侧边栏底部）
@@ -54,8 +54,8 @@ async function injectExternLink() {
                 if (mobileTarget) {
                     mobileTarget.appendChild(adContainer);
                     // 添加移动端专用样式
-                    adContainer.classList.remove('desktop-ad');
-                    adContainer.classList.add('mobile-ad');
+                    adContainer.classList.remove('desktop-extern');
+                    adContainer.classList.add('mobile-extern');
                 }
             }
         };
@@ -80,11 +80,11 @@ async function injectExternLink() {
           flex-wrap: wrap;
         }
         
-        .desktop-ad {
+        .desktop-extern {
           margin-right: 1rem;
         }
         
-        .mobile-ad {
+        .mobile-extern {
           flex-direction: column;
           align-items: flex-start;
           padding: 1rem 0.5rem;
@@ -93,14 +93,14 @@ async function injectExternLink() {
           width: 100%;
         }
         
-        .mobile-ad .ad-item {
+        .mobile-extern .extern-item {
           margin: 0.25rem 0;
           font-size: 0.9rem;
         }
         
         /* 窄屏优化 */
         @media (max-width: 1100px) and (min-width: 996px) {
-          .desktop-ad {
+          .desktop-extern {
             margin-right: 0.5rem;
           }
           
@@ -108,7 +108,7 @@ async function injectExternLink() {
             gap: 0.5rem;
           }
           
-          .desktop-ad .ad-item {
+          .desktop-extern .extern-item {
             font-size: 0.85rem;
           }
         }
