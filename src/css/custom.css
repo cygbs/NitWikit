@@ -518,15 +518,37 @@ html[data-theme='dark'] a.card.padding--lg.cardContainer_fWXF:hover {
 .main-wrapper {
   background-color: var(--ifm-background-color);
   min-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
-article {
-  background-color: var(--ifm-background-color);
+.homepage .navbar {
+  background-color: transparent !important;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  box-shadow: none !important;
+}
+
+.homepage .navbar-sidebar {
+  background-color: var(--bg-card);
+}
+
+.homepage .main-wrapper {
+  padding: 0;
 }
 
 /* 确保文档容器背景色通铺 */
 .container {
   background-color: transparent;
+}
+
+@media screen and (min-width: 997px) {
+  .homepage .container {
+    max-width: 100%;
+    padding: 0;
+  }
 }
 
 /* 修复暗色模式下主内容区域 - 移除容器背景色 */
@@ -877,3 +899,4 @@ html[data-theme='dark'] [class*="textHighlight"] {
     opacity: 0.5;
   }
 }
+
