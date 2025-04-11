@@ -457,7 +457,6 @@ html[data-theme='dark'] .heroHeadline {
   background-color: #f4f6f8;
   padding: 6rem 2rem;
   text-align: center;
-  margin-top: 3rem;
   position: relative;
   overflow: hidden;
 }
@@ -1075,16 +1074,117 @@ html[data-theme='dark'] .heroBlob {
   mix-blend-mode: normal;
   filter: blur(60px);
   opacity: 0.75;
+  transition: background 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
 }
 
 html[data-theme='dark'] .blob1 {
   background: radial-gradient(circle at center, rgba(54, 192, 133, 0.5), rgba(0, 0, 0, 0) 75%);
+  animation: bobAnimation 12s infinite alternate ease-in-out;
+  animation-delay: 0s;
+  transform: none;
+  transition: background 0.3s ease, opacity 0.3s ease;
 }
 
 html[data-theme='dark'] .blob2 {
   background: radial-gradient(circle at center, rgba(66, 153, 225, 0.45), rgba(0, 0, 0, 0) 75%);
+  animation: bobAnimation 15s infinite alternate ease-in-out;
+  animation-delay: 0s;
+  transform: none;
+  transition: background 0.3s ease, opacity 0.3s ease;
 }
 
 html[data-theme='dark'] .blob3 {
   background: radial-gradient(circle at center, rgba(236, 201, 75, 0.4), rgba(0, 0, 0, 0) 75%);
+  animation: bobAnimation 10s infinite alternate ease-in-out;
+  animation-delay: 0s;
+  transform: translate(-50%, -50%);
+  transition: background 0.3s ease, opacity 0.3s ease;
+}
+
+/* 光圈静止定位 */
+.blob3 {
+  width: 600px;
+  height: 600px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle at center, rgba(221, 181, 32, 0.25), rgba(236, 201, 75, 0.08) 70%);
+  animation-delay: 0s;
+  animation-duration: 10s;
+  transition: transform 0s, background 0.3s ease, opacity 0.3s ease;
+}
+
+/* 亮色模式下适中的光圈效果 */
+html[data-theme='light'] .heroBlob {
+  filter: blur(50px);
+  opacity: 0.55;
+  mix-blend-mode: multiply;
+  z-index: 2; /* 确保不遮挡文字 */
+  animation: lightModeBlobAnimation 8s infinite alternate ease-in-out;
+}
+
+@keyframes lightModeBlobAnimation {
+  0% {
+    transform: translateY(0) scale(1);
+    filter: blur(50px) saturate(1.1);
+  }
+  100% {
+    transform: translateY(-15px) scale(1.08);
+    filter: blur(55px) saturate(1.3);
+  }
+}
+
+/* 适中增强亮色模式下的绿色光圈 */
+html[data-theme='light'] .blob1 {
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle at center, rgba(24, 128, 87, 0.25), rgba(37, 160, 110, 0.2) 60%, rgba(37, 160, 110, 0.08) 90%);
+  box-shadow: 
+    0 0 100px 50px rgba(24, 128, 87, 0.15),
+    0 0 200px 100px rgba(24, 128, 87, 0.05);
+}
+
+/* 适中增强亮色模式下的蓝色光圈 */
+html[data-theme='light'] .blob2 {
+  width: 750px;
+  height: 750px;
+  background: radial-gradient(circle at center, rgba(49, 130, 206, 0.2), rgba(66, 153, 225, 0.15) 60%, rgba(66, 153, 225, 0.06) 90%);
+  box-shadow: 
+    0 0 100px 50px rgba(49, 130, 206, 0.12),
+    0 0 200px 100px rgba(49, 130, 206, 0.05);
+}
+
+/* 适中增强亮色模式下的黄色光圈 */
+html[data-theme='light'] .blob3 {
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle at center, rgba(221, 181, 32, 0.2), rgba(236, 201, 75, 0.15) 60%, rgba(236, 201, 75, 0.05) 90%);
+  box-shadow: 
+    0 0 100px 60px rgba(221, 181, 32, 0.1),
+    0 0 200px 120px rgba(221, 181, 32, 0.05);
+}
+
+/* 给亮色模式的光圈添加内发光，适中效果 */
+html[data-theme='light'] .blob1::before,
+html[data-theme='light'] .blob2::before,
+html[data-theme='light'] .blob3::before {
+  content: '';
+  position: absolute;
+  inset: 25%;
+  border-radius: 50%;
+  background: inherit;
+  filter: blur(35px) brightness(1.2);
+  opacity: 0.65;
+  animation: lightModeGlow 5s infinite alternate ease-in-out;
+}
+
+@keyframes lightModeGlow {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
 } 
