@@ -12,7 +12,7 @@ function HomepageHeader() {
   
   return (
     <header className={styles.heroBanner}>
-      {/* 简化背景，只保留渐变光圈效果 */}
+      {/* 简化背景，只保留基本光圈效果 */}
       <div className={styles.heroBlob + ' ' + styles.blob1}></div>
       <div className={styles.heroBlob + ' ' + styles.blob2}></div>
       <div className={styles.heroBlob + ' ' + styles.blob3}></div>
@@ -42,6 +42,7 @@ function HomepageHeader() {
               src="/img/smooth-nitwikit-banner.png"
               alt="Minecraft 服务器教程" 
               className={styles.heroImage}
+              loading="lazy"
             />
           </div>
         </div>

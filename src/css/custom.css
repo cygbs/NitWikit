@@ -954,3 +954,53 @@ html[data-theme='dark'] .alert--secondary {
   --ifm-alert-background-color: var(--bg-card);
   --ifm-alert-color: var(--text-primary);
 }
+
+/* ======= 自定义滚动条样式 ======= */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(160, 174, 192, 0.3);
+  border-radius: 100px;
+  transition: all 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(160, 174, 192, 0.5);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* 暗色模式滚动条 */
+html[data-theme='dark'] ::-webkit-scrollbar-thumb {
+  background: rgba(74, 85, 104, 0.4);
+}
+
+html[data-theme='dark'] ::-webkit-scrollbar-thumb:hover {
+  background: rgba(74, 85, 104, 0.6);
+}
+
+/* 为代码块和特定容器添加不同的滚动条样式 */
+pre::-webkit-scrollbar,
+.code-block::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+pre::-webkit-scrollbar-thumb,
+.code-block::-webkit-scrollbar-thumb {
+  background: rgba(37, 160, 110, 0.3);
+}
+
+pre::-webkit-scrollbar-thumb:hover,
+.code-block::-webkit-scrollbar-thumb:hover {
+  background: rgba(37, 160, 110, 0.5);
+}

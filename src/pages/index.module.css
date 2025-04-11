@@ -13,15 +13,13 @@
   display: flex;
   align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  animation: bgShift 20s infinite alternate ease-in-out;
+  animation: bgShift 30s infinite alternate ease-in-out;
+  will-change: background;
 }
 
 @keyframes bgShift {
   0% {
     background: linear-gradient(135deg, #f8fbff 0%, #f0f7f4 100%);
-  }
-  50% {
-    background: linear-gradient(135deg, #f0f7f4 0%, #f8fff8 100%);
   }
   100% {
     background: linear-gradient(135deg, #f5fbff 0%, #eef7f2 100%);
@@ -56,6 +54,8 @@
   background: linear-gradient(135deg, rgba(37, 160, 110, 0.3), rgba(54, 192, 133, 0.1));
   border-radius: 50%;
   filter: blur(50px);
+  transform: none !important;
+  animation: none !important;
 }
 
 .shape1 {
@@ -101,7 +101,8 @@
   position: absolute;
   border-radius: 50%;
   background: linear-gradient(135deg, rgba(37, 160, 110, 0.2), rgba(255, 255, 255, 0.1));
-  animation: bubbleFloat linear infinite;
+  animation: simpleBubbleFloat linear forwards;
+  will-change: transform, opacity;
 }
 
 .bubble1 {
@@ -158,24 +159,21 @@
 .heroBlob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(60px);
+  filter: blur(50px);
   z-index: 2;
   opacity: 0.4;
   pointer-events: none;
-  mix-blend-mode: soft-light;
   will-change: transform;
-  animation: bobAnimation 8s infinite alternate ease-in-out;
-  transition: transform 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  animation: simpleBobAnimation 10s infinite alternate ease-in-out;
+  transition: background 0.3s ease, opacity 0.3s ease;
 }
 
-@keyframes bobAnimation {
+@keyframes simpleBobAnimation {
   0% {
-    transform: translateY(0) scale(1);
-    filter: blur(60px);
+    transform: translateY(0);
   }
   100% {
-    transform: translateY(-20px) scale(1.05);
-    filter: blur(70px);
+    transform: translateY(-15px);
   }
 }
 
@@ -184,8 +182,8 @@
   height: 750px;
   right: -150px;
   bottom: -150px;
+  transform-origin: center;
   background: radial-gradient(circle at center, rgba(24, 128, 87, 0.3), rgba(37, 160, 110, 0.08) 70%);
-  animation-delay: 0s;
   animation-duration: 12s;
 }
 
@@ -194,8 +192,8 @@
   height: 700px;
   left: -150px;
   top: -150px;
+  transform-origin: center;
   background: radial-gradient(circle at center, rgba(49, 130, 206, 0.3), rgba(66, 153, 225, 0.08) 70%);
-  animation-delay: 2s;
   animation-duration: 15s;
 }
 
@@ -205,8 +203,8 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  transform-origin: center;
   background: radial-gradient(circle at center, rgba(221, 181, 32, 0.25), rgba(236, 201, 75, 0.08) 70%);
-  animation-delay: 1s;
   animation-duration: 10s;
 }
 
@@ -512,16 +510,16 @@ html[data-theme='dark'] .heroHeadline {
   }
 }
 
-@keyframes bubbleFloat {
+@keyframes simpleBubbleFloat {
   0% {
-    transform: translateY(0) translateX(0);
+    transform: translateY(0);
     opacity: 0;
   }
   10% {
     opacity: 0.8;
   }
   100% {
-    transform: translateY(-100vh) translateX(calc(30px * var(--random-offset, 1)));
+    transform: translateY(-100vh);
     opacity: 0;
   }
 }
@@ -1032,8 +1030,23 @@ html[data-theme='dark'] .heroBgFlow {
   }
   
   .blob1, .blob2, .blob3 {
-    display: block;
-    opacity: 0.8;
+    opacity: 0.5;
+    transform: scale(0.85);
+  }
+  
+  .blob3 {
+    transform: translate(-50%, -50%) scale(0.85);
+  }
+  
+  .heroStars, 
+  .heroParticles, 
+  .heroBubbles {
+    display: none;
+  }
+  
+  .heroBlob {
+    filter: blur(40px);
+    animation-duration: 15s;
   }
 }
 
@@ -1071,47 +1084,63 @@ html[data-theme='dark'] .heroBgFlow {
 
 /* 暗色模式调整 */
 html[data-theme='dark'] .heroBlob {
-  mix-blend-mode: normal;
-  filter: blur(60px);
-  opacity: 0.75;
-  transition: background 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+  mix-blend-mode: screen;
+  opacity: 0.6;
+  filter: blur(70px);
 }
 
 html[data-theme='dark'] .blob1 {
-  background: radial-gradient(circle at center, rgba(54, 192, 133, 0.5), rgba(0, 0, 0, 0) 75%);
-  animation: bobAnimation 12s infinite alternate ease-in-out;
-  animation-delay: 0s;
-  transform: none;
-  transition: background 0.3s ease, opacity 0.3s ease;
+  background: radial-gradient(circle at center, rgba(54, 192, 133, 0.4), rgba(54, 192, 133, 0.1) 75%);
 }
 
 html[data-theme='dark'] .blob2 {
-  background: radial-gradient(circle at center, rgba(66, 153, 225, 0.45), rgba(0, 0, 0, 0) 75%);
-  animation: bobAnimation 15s infinite alternate ease-in-out;
-  animation-delay: 0s;
-  transform: none;
-  transition: background 0.3s ease, opacity 0.3s ease;
+  background: radial-gradient(circle at center, rgba(66, 153, 225, 0.35), rgba(66, 153, 225, 0.1) 75%);
 }
 
 html[data-theme='dark'] .blob3 {
-  background: radial-gradient(circle at center, rgba(236, 201, 75, 0.4), rgba(0, 0, 0, 0) 75%);
-  animation: bobAnimation 10s infinite alternate ease-in-out;
-  animation-delay: 0s;
-  transform: translate(-50%, -50%);
-  transition: background 0.3s ease, opacity 0.3s ease;
+  background: radial-gradient(circle at center, rgba(236, 201, 75, 0.3), rgba(236, 201, 75, 0.08) 75%);
 }
 
-/* 光圈静止定位 */
-.blob3 {
-  width: 600px;
-  height: 600px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(circle at center, rgba(221, 181, 32, 0.25), rgba(236, 201, 75, 0.08) 70%);
-  animation-delay: 0s;
-  animation-duration: 10s;
-  transition: transform 0s, background 0.3s ease, opacity 0.3s ease;
+/* 光圈内发光效果 */
+.heroBlob::before {
+  content: '';
+  position: absolute;
+  inset: 25%;
+  border-radius: 50%;
+  background: inherit;
+  filter: blur(35px);
+  opacity: 0.6;
+  animation: simpleGlowPulse 8s infinite alternate ease-in-out;
+}
+
+@keyframes simpleGlowPulse {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+/* 亮色模式下的光圈效果 */
+html[data-theme='light'] .heroBlob {
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+}
+
+html[data-theme='light'] .blob1 {
+  background: radial-gradient(circle at center, rgba(24, 128, 87, 0.3), rgba(37, 160, 110, 0.15) 70%);
+  box-shadow: 0 0 100px 50px rgba(24, 128, 87, 0.1);
+}
+
+html[data-theme='light'] .blob2 {
+  background: radial-gradient(circle at center, rgba(49, 130, 206, 0.25), rgba(66, 153, 225, 0.12) 70%);
+  box-shadow: 0 0 100px 50px rgba(49, 130, 206, 0.08);
+}
+
+html[data-theme='light'] .blob3 {
+  background: radial-gradient(circle at center, rgba(221, 181, 32, 0.2), rgba(236, 201, 75, 0.1) 70%);
+  box-shadow: 0 0 100px 60px rgba(221, 181, 32, 0.07);
 }
 
 /* 亮色模式下适中的光圈效果 */
@@ -1187,4 +1216,14 @@ html[data-theme='light'] .blob3::before {
     transform: scale(1.2);
     opacity: 0.7;
   }
+}
+
+/* 性能优化: 减少星星数量，仅保留5个 */
+.heroStar:nth-child(n+6) {
+  display: none;
+}
+
+/* 性能优化: 粒子效果优化，减少数量和复杂度 */
+.particle:nth-child(n+5) {
+  display: none;
 } 
