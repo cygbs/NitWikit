@@ -1138,7 +1138,7 @@ html[data-theme='light'] .heroBlob {
 html[data-theme='light'] .blob1 {
   width: 800px;
   height: 800px;
-  background: radial-gradient(circle at center, rgba(24, 128, 87, 0.25), rgba(37, 160, 110, 0.2) 60%, rgba(37, 160, 110, 0.08) 90%);
+  background: radial-gradient(circle at center, rgba(24, 128, 87, 0.14), rgba(37, 160, 110, 0.12) 60%, rgba(37, 160, 110, 0.08) 90%);
   box-shadow: 
     0 0 100px 50px rgba(24, 128, 87, 0.15),
     0 0 200px 100px rgba(24, 128, 87, 0.05);
@@ -1148,7 +1148,7 @@ html[data-theme='light'] .blob1 {
 html[data-theme='light'] .blob2 {
   width: 750px;
   height: 750px;
-  background: radial-gradient(circle at center, rgba(49, 130, 206, 0.2), rgba(66, 153, 225, 0.15) 60%, rgba(66, 153, 225, 0.06) 90%);
+  background: radial-gradient(circle at center, rgba(49, 130, 206, 0.14), rgba(66, 153, 225, 0.15) 60%, rgba(66, 153, 225, 0.06) 90%);
   box-shadow: 
     0 0 100px 50px rgba(49, 130, 206, 0.12),
     0 0 200px 100px rgba(49, 130, 206, 0.05);
@@ -1158,7 +1158,7 @@ html[data-theme='light'] .blob2 {
 html[data-theme='light'] .blob3 {
   width: 650px;
   height: 650px;
-  background: radial-gradient(circle at center, rgba(221, 181, 32, 0.2), rgba(236, 201, 75, 0.15) 60%, rgba(236, 201, 75, 0.05) 90%);
+  background: radial-gradient(circle at center, rgba(221, 181, 32, 0.17), rgba(236, 201, 75, 0.15) 60%, rgba(236, 201, 75, 0.05) 90%);
   box-shadow: 
     0 0 100px 60px rgba(221, 181, 32, 0.1),
     0 0 200px 120px rgba(221, 181, 32, 0.05);
