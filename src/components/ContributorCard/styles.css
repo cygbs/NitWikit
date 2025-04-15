@@ -1,0 +1,138 @@
+/* 贡献者容器样式 */
+.contributor-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: flex-start;
+  margin: 20px 0;
+}
+
+/* 贡献者卡片样式 */
+.contributor-card {
+  display: flex;
+  padding: 16px;
+  background-color: var(--ifm-card-background-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  width: calc(33.333% - 16px);
+  min-width: 260px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.contributor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* 头像容器样式 */
+.contributor-avatar-wrapper {
+  position: relative;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+/* 头像样式 */
+.contributor-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--ifm-color-primary);
+}
+
+/* 贡献者信息容器 */
+.contributor-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+/* 贡献者名称 */
+.contributor-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contributor-name a {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.contributor-name a:hover {
+  text-decoration: underline;
+}
+
+/* 贡献统计 */
+.contributor-stats {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.additions {
+  color: #2cbe4e;
+}
+
+.deletions {
+  color: #cb2431;
+}
+
+/* 加载状态 */
+.contributor-loading {
+  padding: 20px;
+  text-align: center;
+  color: var(--ifm-color-primary);
+  font-weight: bold;
+  background-color: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+/* 错误状态 */
+.contributor-error {
+  padding: 20px;
+  text-align: center;
+  color: var(--ifm-color-danger);
+  background-color: var(--ifm-color-danger-contrast-background);
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+/* 无数据状态 */
+.contributor-empty {
+  padding: 20px;
+  text-align: center;
+  color: var(--ifm-color-emphasis-600);
+  background-color: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+/* 响应式布局 */
+@media (max-width: 996px) {
+  .contributor-card {
+    width: calc(50% - 16px);
+  }
+}
+
+@media (max-width: 768px) {
+  .contributor-card {
+    width: 100%;
+  }
+}
+
+/* 黑暗模式适配 */
+[data-theme='dark'] .contributor-card {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] .contributor-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+} 
