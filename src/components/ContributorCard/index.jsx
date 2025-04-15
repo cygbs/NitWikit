@@ -190,10 +190,13 @@ export default function ContributorCard({ repo = "8aka-Team/NitWikit" }) {
           };
         });
         
-        // 按照贡献总量排序
-        const sorted = contributorsWithStats.sort((a, b) => b.total - a.total);
+        // 过滤掉没有代码贡献的用户
+        const validContributors = contributorsWithStats.filter(contributor => contributor.total > 0);
         
-        console.log(`处理后共有 ${sorted.length} 位贡献者`);
+        // 按照贡献总量排序
+        const sorted = validContributors.sort((a, b) => b.total - a.total);
+        
+        console.log(`处理后共有 ${sorted.length} 位有效贡献者`);
         setContributors(sorted);
       } catch (err) {
         console.error('加载贡献者数据出错:', err);
