@@ -50,11 +50,3 @@ import ContributorCard from '@site/src/components/ContributorCard';
    git push origin feature/your-feature-name
    ```
 6. 创建 Pull Request
-
-## 特别致谢
-
-除了代码贡献者外，我们还要特别感谢那些通过其他方式支持项目的朋友们，包括提供技术支持、反馈建议、分享推广等。
-
-:::note 加入我们
-如果你对本项目感兴趣，欢迎加入我们的 [QQ 群](https://8aka.org/qq) 一起交流讨论！
-::: 

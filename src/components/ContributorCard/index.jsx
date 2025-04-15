@@ -57,6 +57,22 @@ async function fetchContributorStats(repo, username) {
 }
 
 /**
+ * 判断用户是否为机器人账户
+ * @param {string} username 用户名
+ * @returns {boolean} 是否为机器人
+ */
+function isBot(username) {
+  const botPatterns = [
+    /bot/i,
+    /\[bot\]/i,
+    /github-actions/i,
+    /imgbot/i
+  ];
+  
+  return botPatterns.some(pattern => pattern.test(username));
+}
+
+/**
  * 单个贡献者卡片组件
  */
 export function ContributorCardItem({ contributor, repo }) {
@@ -72,6 +88,9 @@ export function ContributorCardItem({ contributor, repo }) {
     
     loadStats();
   }, [contributor, repo]);
+
+  // 计算总贡献量
+  const totalContribution = stats.additions + stats.deletions;
 
   return (
     <div className="contributor-card">
@@ -104,15 +123,19 @@ export function ContributorCardItem({ contributor, repo }) {
  */
 export default function ContributorCard({ repo = "8aka-Team/NitWikit" }) {
   const [contributors, setContributors] = useState([]);
+  const [sortedContributors, setSortedContributors] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // 获取所有贡献者数据
   useEffect(() => {
     async function loadContributors() {
       try {
         setLoading(true);
         const data = await fetchContributors(repo);
-        setContributors(data);
+        // 过滤掉机器人账户
+        const filteredData = data.filter(contributor => !isBot(contributor.login));
+        setContributors(filteredData);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -123,6 +146,36 @@ export default function ContributorCard({ repo = "8aka-Team/NitWikit" }) {
     loadContributors();
   }, [repo]);
 
+  // 获取并按贡献量排序
+  useEffect(() => {
+    if (contributors.length === 0) return;
+
+    async function sortContributorsByTotal() {
+      try {
+        // 获取每个贡献者的统计数据
+        const contributorsWithStats = await Promise.all(
+          contributors.map(async (contributor) => {
+            const stats = await fetchContributorStats(repo, contributor.login);
+            return {
+              ...contributor,
+              additions: stats.additions,
+              deletions: stats.deletions,
+              total: stats.additions + stats.deletions
+            };
+          })
+        );
+
+        // 按照贡献总量排序（降序）
+        const sorted = contributorsWithStats.sort((a, b) => b.total - a.total);
+        setSortedContributors(sorted);
+      } catch (error) {
+        console.error('排序贡献者数据出错:', error);
+      }
+    }
+
+    sortContributorsByTotal();
+  }, [contributors, repo]);
+
   if (loading) {
     return <div className="contributor-loading">正在加载贡献者数据...</div>;
   }
@@ -132,12 +185,12 @@ export default function ContributorCard({ repo = "8aka-Team/NitWikit" }) {
   }
 
   if (!contributors || contributors.length === 0) {
-    return <div className="contributor-empty">暂无贡献者数据</div>;
+    return <div className="contributor-empty">在访问github时遇到问题，请稍后再试</div>;
   }
 
   return (
     <div className="contributor-container">
-      {contributors.map((contributor) => (
+      {(sortedContributors.length > 0 ? sortedContributors : contributors).map((contributor) => (
         <ContributorCardItem
           key={contributor.id}
           contributor={contributor}
