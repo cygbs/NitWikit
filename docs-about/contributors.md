@@ -15,7 +15,7 @@ import ContributorCard from '@site/src/components/ContributorCard';
 
 本项目的所有贡献者数据都来自于 [GitHub 贡献者页面](https://github.com/8aka-Team/NitWikit/graphs/contributors)。数据包含了每位贡献者的提交次数、代码添加和删除行数等信息。
 
-下面是贡献者的详细列表，按照对项目的贡献程度排序（基于 GitHub 的贡献计算算法）：
+下面是贡献者的详细列表，贡献量仅代表贡献行数，不代表贡献质量，其排名仅供参考：
 
 <ContributorCard repo="8aka-Team/NitWikit" />
 
