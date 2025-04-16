@@ -19,9 +19,11 @@ import SponsorCard from '@site/src/components/SponsorCard';
 
 <SponsorCard 
   sponsors={[
+    { name: '碳酸锂片', amount: 200, qq: '3631901756' },
     { name: '千屈', amount: 100, qq: '3824670178' },
     { name: 'shi', amount: 100, qq: '1978606020' },
     { name: '忘记名字了', amount: 50, qq: 'default' },
+    { name: '哓迅', amount: 100, qq: '2720819243' },
     { name: '未雨屏', amount: 10, qq: '207622954' },
     { name: 'awa', amount: 10,qq: 'default' }
   ]}
