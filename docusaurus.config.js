@@ -167,7 +167,7 @@ const config = {
                 selector: '.markdown :not(em) > img',
                 background: {
                     light: 'rgb(255, 255, 255)',
-                    dark: 'rgb(50, 50, 50)',
+                    dark: 'rgb(36 36 36 / 80%)',
                 },
             },
             // 标题渲染范围
