@@ -1,18 +1,23 @@
-/* ======================================
-   1. TailwindCSS基础
-====================================== */
+/**
+ * custom.css - NitWiKit主题样式
+ * 优化版本 - 结构更清晰、减少重复代码
+ */
+
+/* ===== 1. TailwindCSS基础 ===== */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* ======================================
-   2. 全局变量定义
-====================================== */
+/* ===== 2. 颜色系统与变量 ===== */
 :root {
-  /* 主色调 */
+  /* 主色系 */
   --primary: #25a06e;
   --primary-dark: #1c714e;
   --primary-light: #36c085;
+  --primary-lighter: #4fd197;
+  --primary-lightest: #7eddae;
+  --primary-darker: #195f41;
+  --primary-darkest: #134931;
   
   /* 文本颜色 */
   --text-primary: #1a202c;
@@ -23,6 +28,7 @@
   --bg-light: #f8f9fa;
   --bg-dark: #1a202c;
   --bg-card: #f0f2f5;
+  --bg-footer-light: #f0f4f8;
   
   /* 边框颜色 */
   --border-color: #e1e4e8;
@@ -33,17 +39,24 @@
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   
-  /* Docusaurus变量 */
+  /* 过渡特效 */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-bezier: 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+  
+  /* Docusaurus主题变量映射 */
   --ifm-color-primary: var(--primary);
   --ifm-color-primary-dark: var(--primary-dark);
-  --ifm-color-primary-darker: #195f41;
-  --ifm-color-primary-darkest: #134931;
+  --ifm-color-primary-darker: var(--primary-darker);
+  --ifm-color-primary-darkest: var(--primary-darkest);
   --ifm-color-primary-light: var(--primary-light);
-  --ifm-color-primary-lighter: #4fd197;
-  --ifm-color-primary-lightest: #7eddae;
+  --ifm-color-primary-lighter: var(--primary-lighter);
+  --ifm-color-primary-lightest: var(--primary-lightest);
   
+  /* 字体设置 */
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  --ifm-code-font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   
   /* 导航栏 */
   --ifm-navbar-background-color: rgba(255, 255, 255, 0.98);
@@ -51,8 +64,6 @@
   --ifm-navbar-shadow: none;
   --ifm-navbar-padding-vertical: 0.5rem;
   --ifm-navbar-padding-horizontal: 1rem;
-  --ifm-navbar-item-padding-vertical: 0.5rem;
-  --ifm-navbar-item-padding-horizontal: 0.85rem;
   
   /* 侧边栏 */
   --ifm-menu-color: var(--text-secondary);
@@ -60,7 +71,7 @@
   --ifm-menu-color-background-active: rgba(37, 160, 110, 0.08);
   --ifm-menu-color-background-hover: rgba(37, 160, 110, 0.04);
   
-  /* 其他 */
+  /* 其他UI元素 */
   --ifm-toc-border-color: var(--border-color);
   --ifm-heading-color: var(--text-primary);
 }
@@ -82,81 +93,55 @@ html[data-theme='dark'] {
   --border-color: #364049;
   --border-color-dark: #4a5561;
   
+  /* Docusaurus深色主题变量 */
   --ifm-navbar-background-color: rgba(30, 36, 44, 0.98);
   --ifm-background-color: var(--bg-dark);
   --ifm-background-surface-color: var(--bg-card);
-  
   --ifm-menu-color: var(--text-secondary);
   --ifm-heading-color: var(--text-primary);
   --ifm-color-primary: var(--primary);
   --ifm-color-primary-dark: var(--primary-dark);
 }
 
-/* ======================================
-   3. 基础样式
-====================================== */
+/* ===== 3. 基础布局与背景 ===== */
 body {
   font-family: var(--ifm-font-family-base);
   color: var(--text-primary);
   line-height: 1.6;
   background-color: var(--bg-light);
-  transition: background-color 0.3s ease;
+  transition: background-color var(--transition-base);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* 明确定义亮色模式的全局背景 */
-html[data-theme='light'] body {
-  background-color: #f8f9fa;
+/* 统一明亮主题的背景色 */
+html[data-theme='light'] body, 
+html[data-theme='light'] .main-wrapper, 
+html[data-theme='light'] .homepage, 
+html[data-theme='light'] .docMainContainer_gTbr, 
+html[data-theme='light'] article, 
+html[data-theme='light'] .theme-doc-markdown {
+  background-color: var(--bg-light);
 }
 
-/* 确保主内容区域在亮色模式下背景色正确 */
-html[data-theme='light'] .main-wrapper,
-html[data-theme='light'] .homepage {
-  background-color: #f8f9fa;
-}
-
-/* 确保容器在亮色模式下背景透明 */
 html[data-theme='light'] .container {
   background-color: transparent;
 }
 
-/* 文档页面背景色统一 */
-.main-wrapper {
-  background-color: var(--bg-light);
-}
-
-.docMainContainer_gTbr {
-  background-color: var(--bg-light);
-}
-
-article {
-  background-color: var(--bg-light);
-}
-
-.theme-doc-markdown {
-  background-color: var(--bg-light);
-}
-
-/* 深色主题下保持一致背景 */
-html[data-theme='dark'] body {
-  background-color: var(--bg-dark);
-}
-
-html[data-theme='dark'] .main-wrapper,
-html[data-theme='dark'] .docMainContainer_gTbr,
-html[data-theme='dark'] .container,
-html[data-theme='dark'] article,
+/* 统一暗色主题的背景色 */
+html[data-theme='dark'] body, 
+html[data-theme='dark'] .main-wrapper, 
+html[data-theme='dark'] .docMainContainer_gTbr, 
+html[data-theme='dark'] .container, 
+html[data-theme='dark'] article, 
 html[data-theme='dark'] .theme-doc-markdown {
   background-color: var(--bg-dark);
 }
 
-/* ======================================
-   4. 导航栏样式
-====================================== */
+/* ===== 4. 导航栏 ===== */
 .navbar {
   box-shadow: 0 1px 0 0 var(--border-color) !important;
-  transition: all 0.3s ease;
+  transition: all var(--transition-base);
   height: var(--ifm-navbar-height);
   padding: var(--ifm-navbar-padding-vertical) var(--ifm-navbar-padding-horizontal);
   display: flex;
@@ -179,7 +164,7 @@ html[data-theme='dark'] .theme-doc-markdown {
   height: 1.75rem;
   width: 1.75rem;
   margin-right: 0.5rem;
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-base);
 }
 
 .navbar__brand:hover .navbar__logo {
@@ -193,7 +178,7 @@ html[data-theme='dark'] .theme-doc-markdown {
   padding: 0.375rem 0.75rem;
   border-radius: 0.375rem;
   color: var(--text-secondary);
-  transition: all 0.2s ease;
+  transition: all var(--transition-fast);
   font-weight: 500;
 }
 
@@ -208,14 +193,12 @@ html[data-theme='dark'] .theme-doc-markdown {
   background-color: rgba(37, 160, 110, 0.08);
 }
 
-/* ======================================
-   5. 侧边栏样式
-====================================== */
+/* ===== 5. 侧边栏 ===== */
 .theme-doc-sidebar-container {
   border: none !important;
   border-right: 1px solid var(--border-color) !important;
   background-color: var(--bg-card);
-  transition: background-color 0.3s ease;
+  transition: background-color var(--transition-base);
   margin-right: 1rem;
 }
 
@@ -228,7 +211,7 @@ html[data-theme='dark'] .theme-doc-markdown {
   border-radius: 0.375rem;
   font-size: 0.9375rem;
   padding: 0.5rem 0.75rem;
-  transition: background-color 0.15s ease, color 0.15s ease;
+  transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
   line-height: 1.4;
   font-weight: 400;
 }
@@ -267,16 +250,12 @@ html[data-theme='dark'] .theme-doc-markdown {
   padding-left: 0.5rem;
 }
 
-/* ======================================
-   6. 卡片样式
-====================================== */
+/* ===== 6. 卡片 ===== */
 .card {
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 0, 0, 0.03);
-  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 0, 0, 0.03);
+  box-shadow: var(--shadow-sm);
   border: 1px solid var(--border-color);
-  transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
-  -webkit-transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: all var(--transition-bezier);
   padding: 1.5rem !important;
   text-decoration: none !important;
   display: flex;
@@ -289,9 +268,7 @@ html[data-theme='dark'] .theme-doc-markdown {
 
 .card:hover {
   transform: translateY(-2px);
-  -webkit-transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.04);
-  -webkit-box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--shadow-md);
   border-color: rgba(37, 160, 110, 0.3);
 }
 
@@ -305,15 +282,12 @@ html[data-theme='dark'] .theme-doc-markdown {
   background: linear-gradient(to right, var(--primary), var(--primary-light));
   opacity: 0;
   transform: scaleX(0.6) translateY(3px);
-  -webkit-transform: scaleX(0.6) translateY(3px);
-  transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
-  -webkit-transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: all var(--transition-bezier);
 }
 
 .card:hover:after {
   opacity: 1;
   transform: scaleX(1) translateY(0);
-  -webkit-transform: scaleX(1) translateY(0);
 }
 
 .card h2 {
@@ -344,28 +318,23 @@ html[data-theme='dark'] .theme-doc-markdown {
   margin-bottom: 1.25rem;
 }
 
-/* 暗色模式适配 */
+/* 暗色模式卡片样式调整 */
 html[data-theme='dark'] .card {
   background-color: var(--bg-card);
   border-color: var(--border-color);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07), 0 1px 3px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07), 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 html[data-theme='dark'] .card:hover {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
-  -webkit-box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
   border-color: rgba(54, 192, 133, 0.3);
-  background-color: var(--bg-card);
 }
 
-/* ======================================
-   7. 按钮样式
-====================================== */
+/* ===== 7. 按钮 ===== */
 .button {
   border-radius: 0.375rem;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: all var(--transition-base);
   padding: 0.75rem 1.5rem;
   border: none;
   display: inline-flex;
@@ -396,14 +365,13 @@ html[data-theme='dark'] .card:hover {
   transform: translateY(-2px);
 }
 
-/* ======================================
-   8. 文章内容样式
-====================================== */
+/* ===== 8. 内容样式 ===== */
 article {
   font-size: 1rem;
   line-height: 1.7;
 }
 
+/* 标题样式 */
 article h1 {
   font-size: 2.25rem;
   margin-top: 2.5rem;
@@ -428,17 +396,19 @@ article h3 {
   font-weight: 600;
 }
 
+/* 文本元素 */
 article p {
   margin-bottom: 1.5rem;
 }
 
+/* 图片样式 */
 article img {
   border-radius: 8px;
   box-shadow: var(--shadow-sm);
   margin: 1.5rem 0;
   max-width: 100%;
   height: auto;
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-base);
 }
 
 article img:hover {
@@ -446,11 +416,12 @@ article img:hover {
   box-shadow: var(--shadow-md);
 }
 
+/* 链接样式 */
 article a {
   color: var(--primary);
   font-weight: 500;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all var(--transition-fast);
 }
 
 article a:hover {
@@ -458,9 +429,7 @@ article a:hover {
   text-decoration: underline;
 }
 
-/* ======================================
-   9. 代码块样式
-====================================== */
+/* ===== 9. 代码块 ===== */
 pre {
   border-radius: 8px;
   box-shadow: var(--shadow-sm);
@@ -480,7 +449,7 @@ pre::before {
 }
 
 code {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-family: var(--ifm-code-font-family);
   font-size: 0.9rem;
 }
 
@@ -492,9 +461,7 @@ code {
   font-weight: 500;
 }
 
-/* ======================================
-   10. 表格样式
-====================================== */
+/* ===== 10. 表格样式 ===== */
 table {
   width: 100%;
   border-collapse: separate;
@@ -527,9 +494,7 @@ tr:first-child td {
   border-top: none;
 }
 
-/* ======================================
-   11. 引用块样式
-====================================== */
+/* ===== 11. 引用块 ===== */
 blockquote {
   border-left: 4px solid var(--primary);
   background-color: rgba(37, 160, 110, 0.05);
@@ -543,9 +508,7 @@ blockquote p:last-child {
   margin-bottom: 0;
 }
 
-/* ======================================
-   12. 滚动条样式
-====================================== */
+/* ===== 12. 滚动条样式 ===== */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -572,25 +535,42 @@ html[data-theme='dark'] ::-webkit-scrollbar-thumb:hover {
   background: rgba(74, 85, 104, 0.6);
 }
 
-/* ======================================
-   13. 页脚样式
-====================================== */
+/* ===== 13. 页脚样式 ===== */
+/* 页脚基础样式 */
 .footer {
-  background-color: var(--bg-dark);
   color: var(--text-secondary);
-  padding: 2rem 0;
+  padding: 3rem 0 2rem;
+  transition: background-color var(--transition-base), border-color var(--transition-base);
+}
+
+/* 亮色模式页脚样式 */
+html[data-theme='light'] .footer {
+  background-color: var(--bg-footer-light);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.02);
+}
+
+/* 暗色模式页脚样式 */
+html[data-theme='dark'] .footer {
+  background-color: var(--bg-dark);
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* 页脚标题 */
 .footer__title {
   color: var(--text-primary);
   font-weight: 600;
   margin-bottom: 1rem;
+  font-size: 1.1rem;
 }
 
+/* 页脚链接 */
 .footer__link-item {
   color: var(--text-secondary);
-  transition: color 0.2s ease;
+  transition: color var(--transition-fast);
+  padding: 0.25rem 0;
+  display: inline-block;
+  font-weight: 500;
 }
 
 .footer__link-item:hover {
@@ -598,31 +578,45 @@ html[data-theme='dark'] ::-webkit-scrollbar-thumb:hover {
   text-decoration: none;
 }
 
+/* 页脚版权信息 */
 .footer__copyright {
   color: var(--text-light);
   font-size: 0.85rem;
-  margin-top: 2rem;
-}
-
-html[data-theme='dark'] .footer {
-  background-color: var(--bg-dark);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-html[data-theme='light'] .footer {
-  background-color: #f7f9fb;
+  margin-top: 2.5rem;
+  text-align: center;
+  padding-top: 1.5rem;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-/* ======================================
-   14. Alert样式
-====================================== */
+html[data-theme='dark'] .footer__copyright {
+  border-top-color: rgba(255, 255, 255, 0.05);
+}
+
+/* 页脚列样式 */
+.footer__col {
+  margin-bottom: 1.5rem;
+}
+
+/* 页脚底部装饰线 */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-light));
+  opacity: 0.6;
+}
+
+/* ===== 14. Alert样式 ===== */
 .alert {
   border-radius: 8px;
   border-left-width: 3px;
   background-color: var(--bg-card);
   box-shadow: var(--shadow-sm);
   margin-bottom: 1.5rem;
+  padding: 1rem 1.5rem;
 }
 
 .alert--info {
@@ -645,9 +639,14 @@ html[data-theme='light'] .footer {
   --ifm-alert-color: var(--text-primary);
 }
 
-/* ======================================
-   15. 动画效果
-====================================== */
+.alert__title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+/* ===== 15. 动画效果 ===== */
+/* 基础动画 */
 .fade-in {
   animation: fadeIn 0.5s ease-in-out;
 }
@@ -666,18 +665,173 @@ html[data-theme='light'] .footer {
   to { transform: translateY(0); opacity: 1; }
 }
 
-/* ======================================
-   16. 响应式调整
-====================================== */
+/* 新增自然动效 */
+/* 页面加载动效 */
+.main-wrapper {
+  animation: softAppear 0.8s ease-out;
+}
+
+@keyframes softAppear {
+  from { opacity: 0.4; transform: scale(0.99); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* 卡片浮动效果 */
+.card {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              box-shadow 0.3s ease, 
+              border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.01);
+}
+
+/* 链接悬停动效 */
+article a {
+  position: relative;
+}
+
+article a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: this;
+  display: block;
+  right: 0;
+  bottom: -3px;
+  height: 1px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+article a:hover::after {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
+/* 按钮点击效果 */
+.button {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform 0.4s, opacity 0.8s;
+}
+
+.button:active::after {
+  transform: scale(0, 0);
+  opacity: 0.3;
+  transition: 0s;
+}
+
+/* 导航链接动效 */
+.navbar__link {
+  position: relative;
+}
+
+.navbar__link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--primary);
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navbar__link:hover::before {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+/* 侧边栏菜单动效 */
+.menu__link {
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+.menu__link:hover {
+  transform: translateX(6px);
+}
+
+/* 图片缩放效果 */
+article img {
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+article img:hover {
+  transform: scale(1.03);
+}
+
+/* 页面滚动时元素出现动效 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* 添加到响应式部分，保持动效在移动设备上更温和 */
 @media (max-width: 996px) {
-  /* ---- 导航栏布局调整 ---- */
+  .card:hover {
+    transform: translateY(-3px);
+  }
+  
+  .menu__link:hover {
+    transform: translateX(4px);
+  }
+  
+  article img:hover {
+    transform: scale(1.02);
+  }
+}
+
+/* 减少预设动画对减少性能设备的影响 */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ===== 16. 响应式调整 ===== */
+@media (max-width: 996px) {
+  /* 导航栏调整 */
   .navbar {
     height: auto;
     min-height: var(--ifm-navbar-height);
     padding: 0.5rem 1rem;
   }
   
-  /* 确保Logo居中显示并稍微调整大小 */
   .navbar__brand {
     position: absolute;
     left: 50%;
@@ -686,37 +840,32 @@ html[data-theme='light'] .footer {
     z-index: 0;
   }
   
-  /* Logo字体大小调整 */
   .navbar__title {
     font-size: 1.2rem;
   }
   
-  /* Logo图标大小调整 */
   .navbar__logo {
     height: 1.5rem;
     width: 1.5rem;
   }
   
-  /* 确保汉堡菜单在左侧并显示在最上层 */
+  /* 侧边栏按钮和搜索定位 */
   .navbar-sidebar-toggle {
     position: relative;
     z-index: 10;
     margin-right: auto;
   }
   
-  /* 确保搜索按钮在右侧 */
   .navbar__search {
     position: relative;
     z-index: 10;
     margin-left: auto;
   }
   
-  /* 确保侧边栏菜单有更高的z-index值 */
   .navbar-sidebar {
     z-index: 15 !important;
   }
   
-  /* 调整容器定位，确保内部元素正确对齐 */
   .navbar__inner {
     position: relative;
     display: flex;
@@ -734,7 +883,7 @@ html[data-theme='light'] .footer {
     justify-content: flex-end;
   }
   
-  /* ---- 隐藏不需要的导航元素 ---- */
+  /* 导航元素优化 */
   .header-github-link,
   [class*="github-link"],
   a[aria-label*="GitHub"],
@@ -755,8 +904,7 @@ html[data-theme='light'] .footer {
     pointer-events: none !important;
   }
   
-  /* ---- 侧边栏菜单设置 ---- */
-  /* 确保侧边栏菜单中保留显示这些链接 */
+  /* 侧边栏菜单设置 */
   .navbar-sidebar .menu__list-item a[href="/"],
   .navbar-sidebar .menu__list-item a[href$="/Java/"],
   .navbar-sidebar .menu__list-item a[href$="/Bedrock/"],
@@ -769,14 +917,14 @@ html[data-theme='light'] .footer {
     pointer-events: auto !important;
   }
   
-  /* 只显示标题和侧边栏按钮 */
+  /* 保持关键元素可见 */
   .navbar-sidebar-toggle,
   .navbar__brand,
   .navbar__search {
     display: flex !important;
   }
   
-  /* ---- 文章样式调整 ---- */
+  /* 内容样式调整 */
   article {
     font-size: 0.95rem;
   }
@@ -797,8 +945,23 @@ html[data-theme='light'] .footer {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+  
+  /* 页脚响应式调整 */
+  .footer {
+    padding: 2rem 0 1.5rem;
+  }
+  
+  .footer__col {
+    margin-bottom: 2rem;
+  }
+  
+  .footer__copyright {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+  }
 }
 
+/* 小屏幕适配 */
 @media (max-width: 576px) {
   .container {
     padding-left: 1rem;
@@ -808,5 +971,22 @@ html[data-theme='light'] .footer {
   .button {
     padding: 0.65rem 1.25rem;
   }
-}
-
+  
+  /* 页脚小屏幕优化 */
+  .footer {
+    padding: 1.5rem 0 1rem;
+    text-align: center;
+  }
+  
+  .footer__title {
+    margin-top: 1rem;
+  }
+  
+  .footer__link-item {
+    padding: 0.35rem 0;
+  }
+  
+  .footer__copyright {
+    margin-top: 1rem;
+  }
+} 
