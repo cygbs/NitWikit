@@ -77,10 +77,18 @@ _详情可以参阅 [Adventure 本机支持](https://docs.advntr.dev/platform/na
 
 平台原生支持 ≠ 使用此平台开发的模组/插件支持！！！
 
-举个例子，仔细观察上述列表，你会发现bukkit并没有支持 MiniMessage ，所以你会发现大部分基于 Bukkit 开发的插件没有 MiniMessage 这一功能(如 EssentialsX)，
-_除非他们自身引入了 Adventure 库(如PlaceholderAPI)。_
+举个例子，仔细观察上述列表，你会发现 bukkit 并没有支持 MiniMessage ，所以你会发现大部分基于 Bukkit 开发的插件没有 MiniMessage 这一功能(如 EssentialsX)，
+_除非他们自身引入了 Adventure 库(如 PlaceholderAPI)。_
 
 而基于 Paper 开发的大部分插件都引入了这一功能，所以不要发现一个新奇玩意就到处瞎套。
+
+:::
+
+:::tip
+
+有些插件只是需要 RGB 颜色，引入 Adventure 库可能会让插件变的非常臃肿，所以有相当部分的插件会使用其他库或自行实现
+
+然后在插件介绍页写 “支持 MiniMessage”，其实只是使用与 MiniMessage 一样的语法，代码层面并不是 Adventure 库。
 
 :::
 
