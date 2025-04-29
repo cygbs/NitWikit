@@ -29,7 +29,7 @@ sidebar_position: 9
 
 当然,有些连接超时等报错屏蔽了也无所谓
 
-可以使用 [Console Spam Fix Reborn](https://www.spigotmc.org/resources/console-spam-fix-reborn.121703/)
+可以使用 [Console Spam Fix Reborn](https://www.spigotmc.org/resources/.121703)
 
 ## 圈内破事
 
