@@ -6,16 +6,22 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
+import { useColorMode } from '@docusaurus/theme-common';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
+  const { colorMode } = useColorMode();
+  const isDarkTheme = colorMode === 'dark';
   
   return (
     <header className={styles.heroBanner}>
-      {/* 简化背景，只保留基本光圈效果 */}
-      <div className={styles.heroBlob + ' ' + styles.blob1}></div>
-      <div className={styles.heroBlob + ' ' + styles.blob2}></div>
-      <div className={styles.heroBlob + ' ' + styles.blob3}></div>
+      {isDarkTheme && (
+        <>
+          <div className={styles.heroBlob + ' ' + styles.blob1}></div>
+          <div className={styles.heroBlob + ' ' + styles.blob2}></div>
+          <div className={styles.heroBlob + ' ' + styles.blob3}></div>
+        </>
+      )}
       
       <div className={styles.heroInner}>
         <div className={styles.heroContent}>
@@ -36,7 +42,6 @@ function HomepageHeader() {
         </div>
         
         <div className={styles.heroImageWrapper}>
-          <div className={styles.heroImageBg}></div>
           <div className={styles.heroImageContainer}>
             <img 
               src="/img/smooth-nitwikit-banner.png"
