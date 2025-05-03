@@ -36,6 +36,10 @@ import ContributorCard from '@site/src/components/ContributorCard';
    ```bash
    git clone https://github.com/你的用户名/NitWikit.git
    ```
+   如果你对历史记录没有需求,建议这么克隆
+   ```bash
+   git clone https://github.com/你的用户名/NitWikit.git --depth 1
+   ```
 3. 创建新的分支
    ```bash
    git checkout -b feature/your-feature-name
