@@ -183,7 +183,7 @@ settings:
     no-block-update-command: true  # 禁用 /blockupdate 命令
     no-tnt-place-update: true  # 放置TNT时不触发方块更新
     container-passthrough: true  # 允许容器方块传递红石信号
-    bow-infinity-fix: true  # 修复附有无限附魔的弓箭不消耗箭矢的问题
+    bow-infinity-fix: true  # 无限无箭矢射击
     hopper-counter: true  # 启用漏斗内物品计数器
   region:
     fix:
