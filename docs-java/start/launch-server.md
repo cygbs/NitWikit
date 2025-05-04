@@ -179,14 +179,18 @@ java -Xms2G -Xmx2G -jar server.jar --nogui
 
 ### Invalid initial heap size: -Xms
 
-不是哥们，内存大小设置长这样
+:::note 
+
+内存大小设置长这样
 
 ```shell
 -Xms1024M -Xmx2048M
 ```
 
-不是这样!!!!!!
+不是这样!
 
 ```shell
 -Xms 1024M -Xmx 2048M
 ```
+:::
+
