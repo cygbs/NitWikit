@@ -11,8 +11,7 @@ title: 插件端
 
 `遗憾的是，目前在 Paper 中无法获得 100% 的原版体验。`
 
-但插件端广阔的插件市场以及较好的优化也是一些人选择**轻度生电**使用插件端的原因,这篇文档会通过调整配置尽可能还原原版特性
-
+但插件端广阔的插件生态以及较好的优化也是一些人在**轻度生电**的情况下使用插件端的原因。这篇文档会通过调整服务端配置尽可能在插件端还原原版特性
 ## Paper
 
 以下是推荐的配置，以获得最接近原版的生电体验：
@@ -29,8 +28,8 @@ collisions:
 entities:
   behavior:
     only-merge-items-horizontally: true  # 仅合并高度相同的物品，以避免潜在的视觉伪影
-    phantoms-do-not-spawn-on-creative-players: false  # 禁止鬼魅在创造模式玩家周围生成
-    phantoms-only-attack-insomniacs: false  # 禁止鬼魅攻击曾经睡眠过的玩家
+    phantoms-do-not-spawn-on-creative-players: false  # 禁止幻翼在创造模式玩家周围生成
+    phantoms-only-attack-insomniacs: false  # 禁止幻翼攻击曾经睡眠过的玩家
     cooldown-failed-beehive-releases: false  # 为蜜蜂释放失败时添加冷却时间（例如蜂巢被阻挡或夜晚）
   spawning:
     count-all-mobs-for-spawning: true  # 生成点生物和其他生物是否计入全局生物上限
@@ -55,7 +54,7 @@ unsupported-settings:
 
 ```yaml
 commands:
-  suggest-player-names-when-null-tab-completions: false  # 当按制表键补全且没有其他选项时返回玩家名称列表
+  suggest-player-names-when-null-tab-completions: false  # 当按 Tab 键 补全且没有其他选项时返回玩家名称列表
   time-command-affects-all-worlds: true  # /time 命令是否作用于所有世界（否则只作用于执行者所在的世界）
 item-validation:
   display-name: 2147483647  # 物品显示名称的最大长度（字符数）
@@ -77,15 +76,21 @@ packet-limiter:
 spam-limiter:
   incoming-packet-threshold: 2147483647  # 收到的数据包超过此阈值时视为垃圾流量并忽略
 unsupported-settings:
-  allow-headless-pistons: true  # 是否允许生成无底座活塞（通常用于破坏永久方块）
+  allow-headless-pistons: true  # 是否允许生成无头活塞（通常用于破坏不可破坏方块）
   allow-permanent-block-break-exploits: true  # 是否允许使用原版漏洞破坏基岩、末地传送门框架等不可破坏方块
   allow-piston-duplication: true  # 是否允许复制 TNT、地毯和铁轨（不包括沙子）
   perform-username-validation: false  # 是否验证用户名（允许特殊字符，但可能导致命令或插件问题）
   allow-unsafe-end-portal-teleportation: true  # 是否允许利用末地传送门漏洞进行传送（例如沙子复制，不建议启用）
-  skip-tripwire-hook-placement-validation: true  # 是否跳过卷须钩放置校验以允许相关复制漏洞
+  skip-tripwire-hook-placement-validation: true  # 是否跳过绊线钩放置校验以允许相关复制漏洞
   update-equipment-on-player-actions: false  # 是否在玩家执行某些动作时更新装备；为 false 时可利用属性切换漏洞
 
 ```
+
+:::warning `book` 配置
+
+该选项可能会在你的服务器上启用禁人书,开启时请认真考虑
+
+:::
 
 ### spigot.yml 配置
 
@@ -154,6 +159,8 @@ shared-random: true # 允许RNG 预测
 
 Leaves是一个专注于生电玩家的Minecraft服务端,也是还原原版特性最完全的插件端
 
+Leaves会覆盖Paper的一些配置，所以不必再去手动更改paper的配置文件,只需要关注`leaves.yml`
+
 ```yaml
 # leaves.yml
 settings:
@@ -163,15 +170,15 @@ settings:
   minecraft-old:
     block-updater:
       instant-block-updater-reintroduced: true  # 重新启用即时方块更新机制，减少红石延迟
-      cce-update-suppression: true  # 启用块更新抑制，以减少客户端区块更新压力
+      cce-update-suppression: true  # 启用 CCE 更新抑制 ,具体请看  https://www.bilibili.com/read/cv24323749/
       redstone-wire-dont-connect-if-on-trapdoor: true  # 当红石线位于活板门上方时不进行连接
     armor-stand-cant-kill-by-mob-projectile: true  # 阻止怪物投掷物击杀盔甲架
     zero-tick-plants: true  # 允许零刻农作物（无延迟农田刷新）
     old-hopper-suck-in-behavior: true  # 恢复旧版漏斗吸物行为
     fix-fortress-mob-spawn: true  # 修复下界堡垒刷怪生成机制
     skip-height-check: true  # 跳过怪物生成高度限制检查
-    string-tripwire-hook-duplicate: true  # 修复绷带线钩子重复连接的BUG
-    budding-amethyst-can-push-by-piston: true  # 允许活塞推动螺旋晶石芽
+    string-tripwire-hook-duplicate: true  # 修复绊线钩重复连接的BUG
+    budding-amethyst-can-push-by-piston: true  # 允许活塞推动紫水晶母岩
     stackable-shulker-boxes: true  # 允许潜影盒堆叠
     no-block-update-command: true  # 禁用 /blockupdate 命令
     no-tnt-place-update: true  # 放置TNT时不触发方块更新
@@ -205,7 +212,7 @@ Luminol 是 Folia 的一个分支,相比于 Folia 有这更好的性能,同时�
 
 Folia 是 Paper 的分支,也就是说 Paper 玩不了的机器 Folia 照样玩不了
 
-唯一使用 Folia 的理由是 Folia 可以调用多个核心是实现更好的性能,因此在选择 Folia 开服前应该认真呢思考
+唯一使用 Folia 的理由是 Folia 可以调用多个核心是实现更好的性能,因此在选择 Folia 开服前应该认真的思考
 
 同时机器性能不够(没有 8h16g) 建议考虑 Leaf 而不是 Folia
 
