@@ -9,9 +9,6 @@ title: MCHPRS
 
 MCHPRS 与传统服务器非常不同。因为这个服务器是为计算红石的使用而量身定制的,所以许多原版的东西在这里不存在
 
-MCHPRS 使得在 Minecraft 的 CPU 上运行程序成为可能，例如在 Minecraft 中运行有限形式的 Minecraft。为了实现这些速度，创建了
-Redpiler，即“红石编译器”。
-
 :::tip
 
 MCHPRS 破坏了很多基于生物/传送装置的红石机器,因此 MCHPRS 最好的用途是纯粹的超大规模红石电路,比如红石计算机

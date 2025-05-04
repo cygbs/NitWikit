@@ -27,7 +27,7 @@ collisions:
   max-entity-collisions: 2147483647  # 达到此数量后服务器将停止处理实体碰撞
 entities:
   behavior:
-    only-merge-items-horizontally: true  # 仅合并高度相同的物品，以避免潜在的视觉伪影
+    only-merge-items-horizontally: true  # 仅合并高度相同的物品
     phantoms-do-not-spawn-on-creative-players: false  # 禁止幻翼在创造模式玩家周围生成
     phantoms-only-attack-insomniacs: false  # 禁止幻翼攻击曾经睡眠过的玩家
     cooldown-failed-beehive-releases: false  # 为蜜蜂释放失败时添加冷却时间（例如蜂巢被阻挡或夜晚）
