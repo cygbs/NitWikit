@@ -227,7 +227,7 @@ pause
 ```shell
 java -Xms2G -Xmx2G -jar server.jar --nogui
 ```
-中 `java` 和 `-jar` 中的内容填写到该文件中。
+中 `java` 和 `-jar` 之间的内容填写到该文件中。
 
 如果你想使用 `nogui`，就像注释里面说的，在 `@libraries/net/minecraftforge/forge/1.18.2-40.1.60/win_args.txt` 和 `%*` 之间写入 `nogui`
 
