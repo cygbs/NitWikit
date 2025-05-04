@@ -5,7 +5,7 @@ title: MCHPRS
 
 # MCHPRS
 
-一个为红石而构建的 Minecraft 服务器。每个 512x512 的地块运行在单独的线程上,基于 Rust ,拥有非常高的性能
+一个为红石而构建的 Minecraft 服务器。每个 512x512 的区域运行在单独的线程上,基于 Rust ,拥有非常高的性能
 
 MCHPRS 与传统服务器非常不同。因为这个服务器是为计算红石的使用而量身定制的,所以许多原版的东西在这里不存在
 
@@ -28,7 +28,7 @@ cd MCHPRS
 cargo build --release
 ```
 
-完成后，可执行文件将位于 `./target/release/mchprs` 或 `./target/release/mchprs.exe` ，具体取决于操作系统。
+完成后，编译的可执行文件为 `./target/release/mchprs` 或 `./target/release/mchprs.exe` ，具体取决于操作系统。
 
 如果你希望基于你的 CPU 进一步优化(但兼容性会下降),你可以使用这个指令构建:
 
@@ -54,7 +54,7 @@ RUSTFLAGS="-C target-cpu=native" cargo build --release
 
 ## Velocity
 
-MCHPRS 本身不支持玩家身份验证，但支持 Velocity 支持
+MCHPRS 本身不支持玩家身份验证，但支持 Velocity 转发
 
 要使用 Velocity IP 转发，您必须设置并配置 Velocity 代理。确保您的 Velocity 配置中 `player-info-forwarding-mode` 设置为
 `modern`.然后，将其追加到 `Config.toml`:
