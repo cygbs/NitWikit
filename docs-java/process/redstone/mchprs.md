@@ -33,6 +33,8 @@ cargo build --release
 RUSTFLAGS="-C target-cpu=native" cargo build --release
 ```
 
+如果你不想构建,你也可以直接在 [GitHub Action](https://github.com/MCHPR/MCHPRS/actions/workflows/build.yml) 下载构建好的
+
 ## 配置
 
 配置文件在 `Config.toml`:
