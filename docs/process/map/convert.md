@@ -55,8 +55,6 @@ java -Xms2G -Xmx2G -jar server.jar --nogui --forceUpgrade
 
 Chunker.app 是一个多功能的转换工具，支持基岩版和 Java 之间的转换，在转换大版本的时候也推荐使用
 
-他还有一个网页版本：https://web.chunker.app
-
 目前不支持实体和玩家背包
 
 ## Amulet
