@@ -405,7 +405,6 @@ article p {
 article img {
   border-radius: 8px;
   box-shadow: var(--shadow-sm);
-  margin: 1.5rem 0;
   max-width: 100%;
   height: auto;
   transition: transform var(--transition-base);

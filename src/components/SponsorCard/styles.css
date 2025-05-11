@@ -50,10 +50,11 @@
   height: 80px;
   border-radius: 50%;
   overflow: hidden;
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem auto; /* 居中并保持底部间距 */
   border: 3px solid var(--ifm-color-primary-lightest);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  position: relative;
 }
 
 .sponsor-card:hover .sponsor-avatar-wrapper {
@@ -66,6 +67,7 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
+  display: block;
 }
 
 .sponsor-card:hover .sponsor-avatar {
@@ -171,6 +173,7 @@ html[data-theme='dark'] .sponsor-avatar-wrapper {
   .sponsor-avatar-wrapper {
     width: 60px;
     height: 60px;
+    margin: 0 auto 0.75rem auto; /* 调整移动端的margin */
   }
   
   .sponsor-name {
