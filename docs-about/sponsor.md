@@ -24,7 +24,7 @@ import SponsorCard from '@site/src/components/SponsorCard';
     { name: 'shi', amount: 100, qq: '1978606020' },
     { name: '忘记名字了', amount: 50, qq: 'default' },
     { name: '哓迅', amount: 30, qq: '2720819243' },
-    { name: '未雨屏', amount: 10, qq: '207622954' },
+    { name: '未雨屏', amount: 110, qq: '207622954' },
     { name: 'awa', amount: 10,qq: 'default' }
   ]}
 />

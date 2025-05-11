@@ -38,12 +38,6 @@
 - [mcutc 论坛](https://bbs.mcutc.cn/threads/560/)
 - [HiMCBBS](https://www.himcbbs.com/threads/nitwikit-geyser.420/)
 
-如果你发现无法访问文档，请查看[监控](https://status.8aka.org/)，确认是不是你的问题
-
-如果你希望部署你自己的文档副本，可以
-
-[![Deployed on Zeabur](https://zeabur.com/deployed-on-zeabur-dark.svg)](https://zeabur.com?referralCode=lilingfengvvv&utm_source=lilingfengvvv)
-
 # 🔨 构建文档
 
 > [!NOTE]
@@ -96,3 +90,13 @@
     - 盈利
 - 你可以将本作品在不经授权的情况下用于：
     - 带有出处的引用
+ 
+如果你希望部署你自己的文档副本，可以
+
+[![Deployed on Zeabur](https://zeabur.com/deployed-on-zeabur-dark.svg)](https://zeabur.com?referralCode=lilingfengvvv&utm_source=lilingfengvvv)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F8aka-Team%2FNitWikit)
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/integration/start/deploy?repository=https://github.com/8aka-Team/NitWikit)
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https%3A%2F%2Fgithub.com%2F8aka-Team%2FNitWikit)

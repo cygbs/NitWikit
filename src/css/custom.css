@@ -883,9 +883,8 @@ article img:hover {
   }
   
   /* 导航元素优化 */
-  .header-github-link,
-  [class*="github-link"],
-  a[aria-label*="GitHub"],
+  [class*="github-link"]:not(.header-github-link),
+  a[aria-label*="GitHub"]:not(.header-github-link),
   .navbar__item[href="/"]:not(.navbar__brand), 
   .navbar__item[href$="/Java/"], 
   .navbar__item[href$="/Bedrock/"], 
@@ -893,7 +892,7 @@ article img:hover {
   .navbar__item[href*="Java"],
   .navbar__item[href*="Bedrock"],
   .navbar__item[href*="about"],
-  .navbar__item:not(.navbar__logo):not(.navbar__title):not(.navbar__brand):not(.navbar-sidebar-toggle):not(.navbar__search),
+  .navbar__item:not(.navbar__logo):not(.navbar__title):not(.navbar__brand):not(.navbar-sidebar-toggle):not(.navbar__search):not(.header-github-link),
   .navbar__items--left .navbar__item:not(.navbar__brand):not(.navbar-sidebar-toggle) {
     display: none !important;
     width: 0 !important;
@@ -901,6 +900,19 @@ article img:hover {
     margin: 0 !important;
     opacity: 0 !important;
     pointer-events: none !important;
+  }
+  
+  /* 确保GitHub图标在移动设备上可见 */
+  .header-github-link {
+    display: flex !important;
+    width: auto !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 10;
+    border-radius: 50%;
+    background-color: rgba(125, 125, 125, 0.1);
+    margin: 0 0.5rem !important;
   }
   
   /* 侧边栏菜单设置 */
@@ -988,4 +1000,46 @@ article img:hover {
   .footer__copyright {
     margin-top: 1rem;
   }
+}
+
+/* 确保GitHub图标不会继承卡片样式 */
+.header-github-link:after,
+.github-icon-button:after,
+.header-github-link::after,
+.github-icon-button::after {
+  display: none !important;
+  content: none !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  border: none !important;
+  background: none !important;
+  transform: none !important;
+}
+
+.header-github-link:hover:after,
+.github-icon-button:hover:after,
+.header-github-link:hover::after,
+.github-icon-button:hover::after {
+  display: none !important;
+  content: none !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  border: none !important;
+  background: none !important;
+  transform: none !important;
+}
+
+/* 修改卡片样式避免影响GitHub图标 */
+a.card:after:not(.header-github-link):not(.github-icon-button),
+a.card::after:not(.header-github-link):not(.github-icon-button) {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(to right, var(--primary), var(--primary-light));
+  opacity: 0;
+  transform: scaleX(0.6) translateY(3px);
+  transition: all var(--transition-bezier);
 } 
