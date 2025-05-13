@@ -9,4 +9,4 @@ sidebar_position: 3
 
 建议使用(还提供了ia支持)：https://github.com/xMikux/Slimefun-Resourcepack/blob/main/.github/README.zh-cn.md
 
-geyser 可以看 [此处](Java/process/mobile-player/Geyser/Upgrade/Slimefun.md)
+geyser 可以看 [此处](/docs-java/process/mobile-player/Geyser/Upgrade/Slimefun.md)
