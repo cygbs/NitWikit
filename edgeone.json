@@ -1,0 +1,48 @@
+{
+  "rules": [
+    {
+      "rule_type": "cache",
+      "matches": [
+        {
+          "target": "file_extension",
+          "operator": "equal",
+          "value": ["jpg", "jpeg", "png", "gif", "svg", "webp", "ico", "bmp", "tiff"]
+        },
+        {
+          "target": "path",
+          "operator": "prefix",
+          "value": "/images/"
+        }
+      ],
+      "actions": {
+        "cache_ttl": "14d"
+      }
+    },
+    {
+      "rule_type": "cache",
+      "matches": [
+        {
+          "target": "file_name",
+          "operator": "equal",
+          "value": "sitemap.xml"
+        }
+      ],
+      "actions": {
+        "cache_ttl": "0s" 
+      }
+    },
+    {
+      "rule_type": "cache",
+      "matches": [
+        {
+          "target": "file_extension",
+          "operator": "equal",
+          "value": ["html", "htm"]
+        }
+      ],
+      "actions": {
+        "cache_ttl": "2d"
+      }
+    }
+  ]
+}

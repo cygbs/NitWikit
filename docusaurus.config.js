@@ -1,5 +1,8 @@
 import {themes as prismThemes} from "prism-react-renderer";
 
+const IS_CHINA_SITE = process.env.CHINA === 'true';
+const ICP_LICENSE = process.env.ICP_LICENSE;
+
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -8,6 +11,8 @@ const config = {
     },
 
     customFields: {
+        // 广告 API 地址
+        adApiUrl: IS_CHINA_SITE ? 'https://ad-api.8aka.cn' : 'https://ad-api.8aka.org/ad-api', // 假设非中国区原始 API 也是这个域名下的路径
         // 标题前缀
         titlePrefix: "主页",
         // 开始按钮文字
@@ -23,6 +28,10 @@ const config = {
                 },
             },
         },
+        // ICP 备案号
+        ICP_LICENSE: ICP_LICENSE,
+        // 是否为中国站点
+        IS_CHINA_SITE: IS_CHINA_SITE,
     },
 
     markdown: {
@@ -33,7 +42,7 @@ const config = {
     tagline: '一群笨蛋编写的 Minecraft 开服教程',
     favicon: 'img/favicon.ico',
 
-    url: 'https://nitwikit.8aka.org',
+    url: IS_CHINA_SITE ? 'https://nitwikit.8aka.cn' : 'https://nitwikit.8aka.org',
 
     baseUrl: '/',
 
@@ -158,6 +167,7 @@ const config = {
     themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
+            // Giscus 评论功能在 CHINA 环境变量设置时禁用
             giscus: {
                 repo: '8aka-Team/NitWikit',
                 repoId: 'R_kgDOLkVR-A',
