@@ -362,9 +362,6 @@ const config = {
     themes: [
         '@docusaurus/theme-mermaid'
     ],
-    scripts: [
-        // 已删除看板娘相关脚本
-    ],
 };
 
 export default config;

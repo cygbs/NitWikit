@@ -114,6 +114,10 @@ Downloading mojang_x.x.x.jar
 
 请尝试使用科学上网。
 
+import GlobalContent from '@site/src/components/GlobalContent'
+
+<GlobalContent>
+
 ### 我不会在命令行界面 (CMD / 终端 / Powershell) 使用科学上网
 
 :::tip
@@ -147,6 +151,8 @@ export HTTPS_PROXY=http://127.0.0.1:7890
 注：输入之后仅对这个命令行窗口有效，`开启新的 / 关闭它` 之后要重新输入。
 
 > 大佬们，浏览器能用不是 cmd 能用，不然你猜我为什么写这个。
+
+</GlobalContent>
 
 ### 中文乱码
 
