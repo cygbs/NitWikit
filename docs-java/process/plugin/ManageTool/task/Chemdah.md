@@ -19,6 +19,8 @@ sidebar_position: 1
 
 :::
 
+网页版编辑器：https://chemdah.ptms.ink/zh
+
 该插件的免费版本仅比付费版少了数据库功能，如果你想下载免费版，加群 [339194566](https://qm.qq.com/q/YizoAx5pKg)
 
 官方文档并不完善，使用此插件你可能需要付费购买第三方文档（WTF？？）
