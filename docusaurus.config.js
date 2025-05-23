@@ -11,8 +11,6 @@ const config = {
     },
 
     customFields: {
-        // 广告 API 地址
-        adApiUrl: IS_CHINA_SITE ? 'https://ad-api.8aka.cn' : 'https://ad-api.8aka.org/ad-api', // 假设非中国区原始 API 也是这个域名下的路径
         // 标题前缀
         titlePrefix: "主页",
         // 开始按钮文字

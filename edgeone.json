@@ -1,48 +1,41 @@
 {
-  "rules": [
+  "name": "NitWikit",
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "outputDirectory": "./build",
+  "nodeVersion": "22.11.0",
+  "headers": [
     {
-      "rule_type": "cache",
-      "matches": [
+      "source": "/*",
+      "headers": [
         {
-          "target": "file_extension",
-          "operator": "equal",
-          "value": ["jpg", "jpeg", "png", "gif", "svg", "webp", "ico", "bmp", "tiff"]
+          "key": "X-Frame-Options",
+          "value": "DENY"
         },
         {
-          "target": "path",
-          "operator": "prefix",
-          "value": "/images/"
+          "key": "Cache-Control",
+          "value": "max-age=7200"
         }
-      ],
-      "actions": {
-        "cache_ttl": "14d"
-      }
+      ]
     },
     {
-      "rule_type": "cache",
-      "matches": [
+      "source": "/assets/*",
+      "headers": [
         {
-          "target": "file_name",
-          "operator": "equal",
-          "value": "sitemap.xml"
+          "key": "Cache-Control",
+          "value": "max-age=31536000"
         }
-      ],
-      "actions": {
-        "cache_ttl": "0s" 
-      }
+      ]
+    }
+  ],
+  "caches": [
+    {
+      "source": "/sitemap.xml",
+      "cacheTtl": 0
     },
     {
-      "rule_type": "cache",
-      "matches": [
-        {
-          "target": "file_extension",
-          "operator": "equal",
-          "value": ["html", "htm"]
-        }
-      ],
-      "actions": {
-        "cache_ttl": "2d"
-      }
+      "source": "/images/*.jpg",
+      "cacheTtl": 3600
     }
   ]
 }
