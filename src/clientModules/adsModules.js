@@ -1,11 +1,10 @@
 // src/clientModules/adModule.js
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 
-async function injectExternLink(siteConfig) {
+async function injectExternLink() {
     try {
         // 1. 获取广告数据
-        const adApiUrl = siteConfig.customFields.adApiUrl || 'https://ad-api.8aka.org/ads'; // Fallback to default if not set
-        const response = await fetch(adApiUrl);
+        const response = await fetch('https://ad-api.8aka.org/ads');
         const links = await response.json();
 
         // 2. 验证数据格式
@@ -121,12 +120,14 @@ async function injectExternLink(siteConfig) {
     }
 }
 
-export default function (context) {
-  const { siteConfig } = context;
-  if (ExecutionEnvironment.canUseDOM) {
-    // 延迟执行，等待 DOM 加载完成
-    setTimeout(() => injectExternLink(siteConfig), 1000);
-  }
+// 只在客户端执行
+if (ExecutionEnvironment.canUseDOM) {
+    // 确保DOM完全加载后再注入广告
+    if (document.readyState === 'complete') {
+        injectExternLink();
+    } else {
+        window.addEventListener('load', injectExternLink);
+    }
 }
 
 export function onRouteDidUpdate() {
