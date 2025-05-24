@@ -43,6 +43,7 @@ Transfer 方法**并不像 BungeeCord 与 Velocity**，其服务端不会禁止�
 <details>
 <summary>点击查看该插件更多内容</summary>
 <p>
+  
 #### 插件版本要求及配置方法
 
 需要 Spigot/Paper 1.21.4
