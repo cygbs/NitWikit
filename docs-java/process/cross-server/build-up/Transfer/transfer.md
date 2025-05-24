@@ -9,7 +9,7 @@ sidebar_position: 2
 
 ## 关于 Transfer
 
-Transfer是一个新的，**不同于 BungeeCord 与 Velocity 的**跨服方法，在《我的世界》1.20.5版本被添加。提供了简单有效的简易跨服方式。[点此]()查看搭建方法。
+Transfer是一个新的，**不同于 BungeeCord 与 Velocity 的**跨服方法，在《我的世界》1.20.5版本被添加。提供了简单有效的简易跨服方式。[点此](./build-up.md)查看搭建方法。
 
 指令格式如下（其中普通括号表示非必须填写）：
 
@@ -21,3 +21,9 @@ Transfer是一个新的，**不同于 BungeeCord 与 Velocity 的**跨服方法�
 - 多个服务器不在同一网络环境下，用 BungeeCord 或者 Velocity 可能会出现~~高 Ping 战士~~现象的服务器。
 - 不在意适配该功能的插件的数量，或对此早有对策的服务器。
 - ~~安全性要求不高的服务器。~~
+
+## Velocity 的 Transfer 支持
+
+Velocity 支持从别的服务器通过 Transfer 跳转至 Velocity，需要打开velocity.toml的`accepts-transfer = false`。
+
+你也可以从 Velocity 之下的1.20.5或更高版本的下游服务器跳转到其他服务器。
