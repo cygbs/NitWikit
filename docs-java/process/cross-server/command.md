@@ -46,4 +46,10 @@ import TabItem from '@theme/TabItem';
 | `/send`                   | `velocity.command.send`        | 将其他玩家（或跨服端上的所有玩家）发送到指定子服。                               |
 
   </TabItem>
+  <TabItem value="transfer" label="Transfer" default>
+    
+| 命令 | 权限 | 描述 |
+| --- | --- | --- |
+| `/transfer` | 原版3级管理员 | 原版自带的跨服指令 |
+  </TabItem>
 </Tabs>
