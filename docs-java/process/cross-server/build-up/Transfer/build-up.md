@@ -36,7 +36,7 @@ Transfer 方法**并不像 BungeeCord 与 Velocity**，其服务端不会禁止�
 
 ### OnlyTransfer插件
 
-[OnlyTransfer]()是个由国人写的安全类插件，旨在**解决原版 Transfer 的几大痛点**。
+[OnlyTransfer](https://bilibili.com/opus/1062419036109799429) 是个由国人写的安全类插件，旨在**解决原版 Transfer 的几大痛点**。
 
 ~~（我更喜欢叫它Security Enhanced Transfer）~~
 
@@ -44,4 +44,4 @@ Transfer 方法**并不像 BungeeCord 与 Velocity**，其服务端不会禁止�
 
 可能是 Spigot/Paper 没有提供 Transfer 有关的 API，使得这个插件使用 NMS 实现导致目前只有1.21.4版本。
 
-从[这里]下载插件，
+从[这里](https://enanetdisk.pages.dev/?file=%2Fdisk%2FMinecraftPlugins%2FOnlyTransfer.jar)下载插件，
