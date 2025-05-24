@@ -54,4 +54,4 @@ Waterfall 仍然会合并来自 BungeeCord 的更改。
 
 从我的世界1.20.5版本开始，`/transfer` 成为了一个MC服务器内建的指令。可以用于简单的跨服用处，目前已有人通过开发插件为此功能进行了完善。
 
-你可以通过 [MC Wiki](https://zh.minecraft.wiki/w/%E5%91%BD%E4%BB%A4/transfer?variant=zh-cn) 或 [此处](./Transfer/transfer.md) 获取更多信息
+你可以通过 [MC Wiki](https://zh.minecraft.wiki/w/%E5%91%BD%E4%BB%A4/transfer?variant=zh-cn) 或 [此处](./build-up/Transfer/transfer.md) 获取更多信息。
