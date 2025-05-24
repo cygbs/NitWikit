@@ -40,8 +40,45 @@ Transfer 方法**并不像 BungeeCord 与 Velocity**，其服务端不会禁止�
 
 ~~（我更喜欢叫它Security Enhanced Transfer）~~
 
-#### 插件版本要求及搭建
+<details>
+<summary>点击查看该插件更多内容</summary>
+<p>
+#### 插件版本要求及配置方法
+
+需要 Spigot/Paper 1.21.4
 
 可能是 Spigot/Paper 没有提供 Transfer 有关的 API，使得这个插件使用 NMS 实现导致目前只有1.21.4版本。
 
-从[这里](https://enanetdisk.pages.dev/?file=%2Fdisk%2FMinecraftPlugins%2FOnlyTransfer.jar)下载插件，
+从[这里](https://enanetdisk.pages.dev/?file=%2Fdisk%2FMinecraftPlugins%2FOnlyTransfer.jar)下载插件，扔进所有子服的插件文件夹。
+
+下面这是该插件的配置文件：
+
+```text
+# 是否允许通过服务器列表直接进入服务器
+# 如果为true，则该服务器被允许直接通过客户端进入而非transfer（个人补充）
+# 如果不是主城或者登录服，不建议打开该选项，否则安全性降低（个人补充）
+allow-server-list: false
+
+# 跨服传送的令牌，两台服务器必须配置相同的令牌
+# 类似于 Velocity 的`forward.secret`（个人补充）
+# 但貌似只有被传送的对象服务器才会检查这个（个人补充）
+transfer-token: "114514191981"
+
+# 允许的服务器IP和端口
+# 不在该列表里的服务器不被允许跳转（个人补充）
+# 如果是公共服务器，请确保所有子服均暴露在公网下（个人补充）
+allowed-servers:
+  - "127.0.0.1:25565"
+```
+
+#### 该插件与 Velocity 的 Transfer 支持兼容问题
+
+经过测试，并不完全兼容：
+
+单端在添加了 Velocity 为允许的服务器后，虽然 Velocity 没有密钥，但可以进入 Velocity 并来到 Velocity 下的子服。
+
+但是，Velocity 下的子服安装了这个插件后，没法使用指令跳转到其他同样有这个插件的单端。而在两端均不使用这个插件的时候正常。
+
+这意味着一些边缘应用场景下这个插件会失效，该问题已有人反馈给作者。
+</p>
+</details>
