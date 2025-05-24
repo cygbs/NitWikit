@@ -50,6 +50,6 @@ import TabItem from '@theme/TabItem';
     
 | 命令 | 权限 | 描述 |
 | --- | --- | --- |
-| `/transfer` | 原版3级管理员 | 原版自带的跨服指令 |
+| `/transfer` | `minecraft.command.transfer` | 原版自带的跨服指令 |
   </TabItem>
 </Tabs>
