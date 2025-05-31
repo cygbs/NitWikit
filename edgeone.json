@@ -34,7 +34,11 @@
       "cacheTtl": 0
     },
     {
-      "source": "/images/*.jpg",
+      "source": "/*.jpg",
+      "cacheTtl": 3600
+    },
+    {
+      "source": "/*.png",
       "cacheTtl": 3600
     }
   ]
