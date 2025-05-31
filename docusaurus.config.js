@@ -6,13 +6,6 @@ const ICP_LICENSE = process.env.ICP_LICENSE;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    future: {
-        v4: {
-            removeLegacyPostBuildHeadAttribute = true,
-        },
-        experimental_faster: true,
-    },
-
     customFields: {
         // 标题前缀
         titlePrefix: "主页",
