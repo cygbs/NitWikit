@@ -369,11 +369,11 @@ transport.proxyProtocolVersion = "v2"
 ```yaml
 # config/paper-global.yaml
 proxies:
-  proxy-protocol: false
+  proxy-protocol: true   # 从 false 改为 true
 ```
 
 这样配置会使你的服务器仅接受来自 Frp 的连接。
 
-如果你有特殊需求，需要同时支持直连和 Proxy Protocol 的话，需要安装 [HAProxyDetector](https://github.com/andylizi/haproxy-detector) 插件来解决。
+如果你有特殊需求，需要同时支持直连和 Proxy Protocol 的话，请安装 [HAProxyDetector](https://github.com/andylizi/haproxy-detector) 插件来解决。
 
 对于较高的版本，请使用 [HaHaWTH 的 fork 版本](https://github.com/HaHaWTH/HAProxy-Detector)。
