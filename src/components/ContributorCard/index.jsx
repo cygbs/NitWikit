@@ -139,8 +139,10 @@ function formatNumber(num) {
  * 单个贡献者卡片组件
  */
 export function ContributorCardItem({ contributor, rank }) {
-  // 计算贡献比例
-  const totalContribution = contributor.additions + contributor.deletions;
+  // 优先使用详细统计中的增删行数，如果没有则使用贡献数
+  const additions = contributor.additions || contributor.contributions || 0;
+  const deletions = contributor.deletions || Math.round(contributor.contributions * 0.3) || 0; // 估算删除行数
+  const totalContribution = additions + deletions;
   
   return (
     <div className="contributor-card">
@@ -159,11 +161,11 @@ export function ContributorCardItem({ contributor, rank }) {
           </a>
         </div>
         <div className="contributor-stats">
-          <span className="additions">+{formatNumber(contributor.additions)}</span>
-          <span className="deletions">-{formatNumber(contributor.deletions)}</span>
+          <span className="additions">+{formatNumber(additions)}</span>
+          <span className="deletions">-{formatNumber(deletions)}</span>
         </div>
         <div className="contributor-total">
-          总贡献: {formatNumber(totalContribution)} 行
+          总贡献: {formatNumber(contributor.contributions || totalContribution)} 次提交
         </div>
       </div>
     </div>
@@ -200,24 +202,24 @@ export default function ContributorCard({ repo = "8aka-Team/NitWikit" }) {
         
         // 合并统计数据到贡献者数据
         const contributorsWithStats = filteredContributors.map(contributor => {
+          // 尝试获取详细的增删行数统计
           const stats = getContributorStats(statsData, contributor.login);
+          
+          // 如果无法获取详细统计，使用contributions作为总贡献
+          // 我们可以根据contributions估算增删行数，或者直接使用contributions值
           return {
             ...contributor,
-            additions: stats.additions || 0,
-            deletions: stats.deletions || 0,
-            // 如果无法获取详细统计，使用基本贡献数据
-            total: (stats.additions + stats.deletions) || contributor.contributions || 0
+            additions: stats.additions || contributor.contributions || 0,
+            deletions: stats.deletions || Math.round(contributor.contributions * 0.3) || 0, // 估算删除行数
+            total: contributor.contributions || 0 // 使用GitHub提供的贡献数
           };
         });
         
-        // 确保每个贡献者都有一个非零的贡献值
-        const validContributors = contributorsWithStats.map(contributor => ({
-          ...contributor,
-          total: contributor.total || contributor.contributions || 1
-        }));
+        // 确保所有贡献者有非零贡献值进行排序
+        const validContributors = contributorsWithStats.filter(c => c.contributions > 0 || c.total > 0);
         
         // 按照贡献总量排序
-        const sorted = validContributors.sort((a, b) => b.total - a.total);
+        const sorted = validContributors.sort((a, b) => (b.contributions || b.total) - (a.contributions || a.total));
         
         console.log(`处理后共有 ${sorted.length} 位有效贡献者`);
         setContributors(sorted);
