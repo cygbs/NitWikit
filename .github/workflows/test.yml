@@ -45,7 +45,7 @@ jobs:
             ${{ runner.os }}-node-modules-
 
       - name: "Install"
-        run: "pnpm install"
+        run: "pnpm install --frozen-lockfile"
 
       # 压缩图片
       - name: "图片压缩"
@@ -63,6 +63,15 @@ jobs:
         with:
           fix: true
           globs: 'docs*/**/*.md'
+
+      # 添加构建缓存
+      - name: Cache build
+        uses: actions/cache@v4
+        with:
+          path: .vitepress/dist  # 根据您的实际构建输出目录调整
+          key: ${{ runner.os }}-build-${{ hashFiles('**/*.md', 'docs/**/*', '.vitepress/**/*') }}
+          restore-keys: |
+            ${{ runner.os }}-build-
 
       - name: "Build"
         run: "pnpm run build"
