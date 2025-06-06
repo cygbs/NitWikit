@@ -69,7 +69,13 @@ async function fetchAllContributorStats(repo) {
  * @returns {Object} 贡献者统计数据
  */
 function getContributorStats(allStats, username) {
-  const userStats = allStats.find(stat => stat.author.login === username);
+  // 确保 allStats 是数组
+  if (!Array.isArray(allStats)) {
+    console.error('获取的统计数据格式错误:', allStats);
+    return { additions: 0, deletions: 0 };
+  }
+  
+  const userStats = allStats.find(stat => stat && stat.author && stat.author.login === username);
   if (!userStats) {
     return { additions: 0, deletions: 0 };
   }
@@ -232,4 +238,4 @@ export default function ContributorCard({ repo = "8aka-Team/NitWikit" }) {
       ))}
     </div>
   );
-} 
+}
