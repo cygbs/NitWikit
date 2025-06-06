@@ -55,7 +55,15 @@ async function fetchAllContributorStats(repo) {
       throw new Error('获取贡献者统计数据失败');
     }
     
-    return await response.json();
+    const data = await response.json();
+    
+    // 确保返回的是数组
+    if (!Array.isArray(data)) {
+      console.error('GitHub API返回的统计数据不是数组格式:', data);
+      return [];
+    }
+    
+    return data;
   } catch (error) {
     console.error('获取贡献者统计数据出错:', error);
     return [];
@@ -176,28 +184,37 @@ export default function ContributorCard({ repo = "8aka-Team/NitWikit" }) {
       try {
         setLoading(true);
         
-        // 并行获取两种数据
-        const [contributorsData, statsData] = await Promise.all([
-          fetchContributors(repo),
-          fetchAllContributorStats(repo)
-        ]);
+        // 首先获取基本贡献者数据
+        const contributorsData = await fetchContributors(repo);
         
         // 过滤掉机器人账户
         const filteredContributors = contributorsData.filter(contributor => !isBot(contributor.login));
+        
+        // 尝试获取详细统计数据
+        let statsData = [];
+        try {
+          statsData = await fetchAllContributorStats(repo);
+        } catch (statsError) {
+          console.warn('获取详细统计数据失败，将使用基本贡献数据:', statsError);
+        }
         
         // 合并统计数据到贡献者数据
         const contributorsWithStats = filteredContributors.map(contributor => {
           const stats = getContributorStats(statsData, contributor.login);
           return {
             ...contributor,
-            additions: stats.additions,
-            deletions: stats.deletions,
-            total: stats.additions + stats.deletions
+            additions: stats.additions || 0,
+            deletions: stats.deletions || 0,
+            // 如果无法获取详细统计，使用基本贡献数据
+            total: (stats.additions + stats.deletions) || contributor.contributions || 0
           };
         });
         
-        // 过滤掉没有代码贡献的用户
-        const validContributors = contributorsWithStats.filter(contributor => contributor.total > 0);
+        // 确保每个贡献者都有一个非零的贡献值
+        const validContributors = contributorsWithStats.map(contributor => ({
+          ...contributor,
+          total: contributor.total || contributor.contributions || 1
+        }));
         
         // 按照贡献总量排序
         const sorted = validContributors.sort((a, b) => b.total - a.total);
