@@ -170,7 +170,7 @@ export function ContributorCardItem({ contributor, rank }) {
               <span className="deletions">-{formatNumber(deletions)}</span>
             </>
           ) : (
-            <span className="no-stats">未能加载行数统计</span>
+            <span className="no-stats">行数统计暂未显示</span>
           )}
         </div>
         <div className="contributor-total">
@@ -218,8 +218,8 @@ export default function ContributorCard({ repo = "8aka-Team/NitWikit" }) {
           // 我们可以根据contributions估算增删行数，或者直接使用contributions值
           return {
             ...contributor,
-            additions: stats.additions || contributor.contributions || 0,
-            deletions: stats.deletions || Math.round(contributor.contributions * 0.3) || 0, // 估算删除行数
+            additions: stats.additions || 0,
+            deletions: stats.deletions || 0, // 估算删除行数
             total: contributor.contributions || 0 // 使用GitHub提供的贡献数
           };
         });
