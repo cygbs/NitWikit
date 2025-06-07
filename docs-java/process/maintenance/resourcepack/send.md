@@ -38,6 +38,10 @@ https://itemsadder.devs.beer/v/chinese/plugin-usage/resourcepack-hosting
 
 看配置文件
 
+### CraftEngine
+
+https://mo-mi.gitbook.io/xiaomomi-plugins/craftengine/plugin-wiki/craftengine/resource-pack/host
+
 ## 托管网站
 
 以下均为ia文档中所说的 第三方平台托管(external-host)

@@ -15,7 +15,7 @@ sidebar_position: 3
 
 :::
 
-推荐使用 [PackSquash](https://packsquash.aylas.org/) 进行压缩和混淆
+推荐使用 [PackSquash](https://packsquash.aylas.org/) 进行压缩和混淆,注意:**本部分内容仅限于 ZIP 层面的压缩&混淆**
 
 ## 下载
 
