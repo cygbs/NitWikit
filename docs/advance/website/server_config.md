@@ -282,4 +282,24 @@ Cloudflare 的免费 SSL 服务可以为你的网站提供免费的 SSL 证书�
 
 创建证书后,按照服务器配置配置证书,开启`经过身份验证的源服务器拉取` 即可
 
+### 服务器配置
+
+通过代理连接会导致两个问题：
+
+* NamelessMC 会看到你的代理地址而不是你的用户地址。这会破坏 IP 封锁和速率限制。这可以通过从代理向后端 Web 服务器发送 Forwarded 、 X-Forwarded-For 或 X-Real-IP （不推荐）标头来解决。
+
+在你的 Nginx 配置文件中添加如下几行:
+
+```nginx
+proxy_set_header X-Forwarded-For    $proxy_add_x_forwarded_for;
+proxy_set_header X-Forwarded-Proto  $scheme;
+proxy_set_header X-Forwarded-Port   $server_port;
+```
+
+在 Nginx 配置文件 http 段配置：
+
+```nginx
+set_real_ip_from 0.0.0.0/0;
+real_ip_header X-Forwarded-For;
+```
 
