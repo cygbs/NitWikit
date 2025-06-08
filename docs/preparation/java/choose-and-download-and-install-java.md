@@ -61,13 +61,13 @@ MOD 服务端
 
 <!--markdownlint-disable line-length-->
 
-| Java 版本 | 下载链接                                                                                                                                                                        |
-|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Java 8  | [Dragonwell](https://dragonwell.oss-cn-shanghai.aliyuncs.com/8.19.20/Alibaba_Dragonwell_Extended_8.19.20_x64_windows.zip)                                                   |
-| Java 11 | [Dragonwell](https://dragonwell.oss-cn-shanghai.aliyuncs.com/11.0.23.20.9/Alibaba_Dragonwell_Extended_11.0.23.20.9_x64_windows.zip)                                         |
-| Java 17 | [Zulu](https://d.injdk.cn/d/download/zulu/17/zulu17.52.17-ca-jdk17.0.12-win_x64.zip)                                                                                        |
-| Java 21 | [GraalVM](https://d.injdk.cn/d/download/graalvm/21/graalvm-jdk-21_windows-x64_bin.zip)  [Zulu](https://d.injdk.cn/d/download/zulu/21/zulu21.36.17-ca-jdk21.0.4-win_x64.zip) |
-| Java 24 | [GraalVM](https://d.injdk.cn/d/download/graalvm/24/graalvm-jdk-24_windows-x64_bin.zip) [Zulu](https://d.injdk.cn/d/download/zulu/24/zulu24.28.83-ca-jdk24.0.0-win_x64.zip)  |
+| Java 版本 | 下载链接                                                                                               |
+|---------|----------------------------------------------------------------------------------------------------|
+| Java 8  | [Dragonwell](https://dragonwell-jdk.io/)                                                           |
+| Java 11 | [Dragonwell](https://dragonwell-jdk.io/)                                                           |
+| Java 17 | [Zulu](https://d10.injdk.cn/openjdk/zulu/17/)                                                      |
+| Java 21 | [GraalVM](https://d10.injdk.cn/openjdk/graalvm/21/)  [Zulu](https://d10.injdk.cn/openjdk/zulu/21/) |
+| Java 24 | [GraalVM](https://d10.injdk.cn/openjdk/graalvm/24/) [Zulu](https://d10.injdk.cn/openjdk/zulu/24/)  |
 
 <!--markdownlint-enable line-length-->
 
@@ -85,7 +85,7 @@ MOD 服务端
 
 ### 下载镜像
 
-[InJDK](https://d.injdk.cn/download) 各种 JDK 的下载镜像
+[InJDK](https://d10.injdk.cn/openjdk/) 各种 JDK 的下载镜像
 
 ### Oracle 版
 
