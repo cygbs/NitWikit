@@ -21,7 +21,7 @@ MCSManager是一款免费，易用，现代化的游戏服务器管理面板，�
 
 #### Windows
 
-首先，点击[此链接](https://awwa.cc/mcsm/win) 一键下载到本地后解压
+首先，点击[此链接](https://cdn.imlazy.ink:233/files/mcsmanager_windows_release.zip) 一键下载到本地后解压
 
 解压之后，你就可以看到 `start.bat`，打开就可以启动(就是这么简单)
 
