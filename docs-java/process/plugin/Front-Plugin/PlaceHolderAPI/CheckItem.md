@@ -40,7 +40,7 @@ sidebar_position: 4
 /papi parse me %checkitem_remove_diamond%
 ```
 
-在 [启用 give 和 remove](#启用give和remove) 后，跑一下图中的变量会收取玩家所有的钻石
+在 [启用 give 和 remove](#启用 give 和 remove) 后，跑一下图中的变量会收取玩家所有的钻石
 
 变量中 **remove** 的位置在作者项目的 README 中，并没有名字，其实这个地方决定了这个变量的效果
 

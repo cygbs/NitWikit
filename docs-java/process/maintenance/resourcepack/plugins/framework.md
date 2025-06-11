@@ -30,7 +30,7 @@ import TabItem from '@theme/TabItem';
 这是一个付费闭源插件，GitHub 上并没有上传插件本体。
 
 ```text
-【IA 入门指南。新手必看.简洁版】
+【IA 入门指南。新手必看·简洁版】
 -
 第一步：IA 是基于原版的材质包框架所开发的插件，所以遵守 Mojang 制定的材质包规范，如果你会材质包开发甚至不需要用到 IA。如果你在使用 IA 时连 CMD，命名空间，着色器，JSON 这些最基本的内容都不知道请恶补以下内容：
 https://zhangshenxing.github.io/VanillaModTutorial
