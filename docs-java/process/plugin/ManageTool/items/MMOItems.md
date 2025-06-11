@@ -28,7 +28,7 @@ sidebar_position: 1
 
 ![](_images/mmoitems_2.webp)
 
-作者在 Review 中回复，MMOItems 更新到 7.0 后将支持编辑界面的本地化.
+作者在 Review 中回复，MMOItems 更新到 7.0 后将支持编辑界面的本地化。
 
 # Bstats
 
