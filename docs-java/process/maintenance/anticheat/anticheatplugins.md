@@ -7,11 +7,11 @@ sidebar_position: 1
 
 :::tip[写在最前]
 
-混合端**不要**用下面所列的反作弊插件，建议使用 [次元反作弊](https://www.mcmod.cn/class/6578.html)，[SkAc反作弊](https://www.mcmod.cn/class/18057.html) 或 [猫反作弊](https://www.wxmwl.com/?p=95)
+混合端**不要**用下面所列的反作弊插件，建议使用 [次元反作弊](https://www.mcmod.cn/class/6578.html)，[SkAc 反作弊](https://www.mcmod.cn/class/18057.html) 或 [猫反作弊](https://www.wxmwl.com/?p=95)
 
 次元反作弊的交流群：327175980
 
-SkAc反作弊的交流群：672827899
+SkAc 反作弊的交流群：672827899
 
 :::
 
@@ -44,7 +44,7 @@ Matrix 是由国人 RE 编写的一款反作弊插件，当年诞生是用于取
 而如今经过不断改良也拥有了不错的检测性能和质量，足以对抗部分脑溢血参数。
 
 ！试用版只拥有少部分检测且只支持一台机器
-！7天使用权到期后可继续订阅试用版使用
+！7 天使用权到期后可继续订阅试用版使用
 
 付费版 - 99 RMB
 
@@ -53,7 +53,7 @@ Matrix 是由国人 RE 编写的一款反作弊插件，当年诞生是用于取
 
 企业版 - 499 RMB
 
-- 拥有所有检测(虽然多的检测误判挺多的)
+- 拥有所有检测 (虽然多的检测误判挺多的)
 - 可同时给 40 台机器使用
 - 可对你的服务器进行深度定制
 
@@ -61,7 +61,7 @@ Matrix 是由国人 RE 编写的一款反作弊插件，当年诞生是用于取
 
 如果你是大型小游戏/大型群组服，可以购买企业版，这能让 Matrix 对你的服务器进行更深度的定制
 
-> 官网: matrix.rip
+> 官网：matrix.rip
 
 </TabItem>
 <TabItem value="ncp" label="NoCheatPlus-Update">
@@ -78,16 +78,16 @@ Matrix 是由国人 RE 编写的一款反作弊插件，当年诞生是用于取
 
 > GitHub: https://github.com/Updated-NoCheatPlus/NoCheatPlus
 > 
-> 下载镜像: https://dl.8aka.org/plugins/NoCheatPlus.jar
+> 下载镜像：https://dl.8aka.org/plugins/NoCheatPlus.jar
 
 </TabItem>
 <TabItem value="grim" label="GrimAC">
 
 一个不错的实验性反作弊，支持避免检查来自 Geyser 的玩家，移动检测虽然强大但有很多误判。
 
-！目前仍然有很多不稳定因素，但 Timer 和 Reach ， BadPackets 检查都是较为稳定的。
+！目前仍然有很多不稳定因素，但 Timer 和 Reach，BadPackets 检查都是较为稳定的。
 
-！除了实验性检查， 其余的检查是不可被关闭的。
+！除了实验性检查，其余的检查是不可被关闭的。
 
 ！可能不适合部分生电服务器或声明允许使用辅助模组的插件。
 
@@ -111,7 +111,7 @@ Matrix 是由国人 RE 编写的一款反作弊插件，当年诞生是用于取
 
 对于 Geyser 的基岩版支持也是如此，并且从一开始的同时检查基岩版玩家和 Java 版玩家被拆分成了 Spartan: Java 和 Spartan: Bedrock 两个不同的版本。
 
-被 md_5 警告后在 SpigotMC上 捆绑销售。就算你需要退款，先请在 SpigotMC 上撤回你的负面言论后才可进行 Spartan 的退款服务，
+被 md_5 警告后在 SpigotMC 上 捆绑销售。就算你需要退款，先请在 SpigotMC 上撤回你的负面言论后才可进行 Spartan 的退款服务，
 
 由于购买后 6 个月需要重新支付才能继续使用且包含额外的需要付费的功能导致被 md_5 警告的传奇反作弊，这就是 Spartan-AntiCheat。
 
@@ -122,7 +122,7 @@ Matrix 是由国人 RE 编写的一款反作弊插件，当年诞生是用于取
 
 ### 扩展反作弊插件
 
-一些扩展的反作弊插件,通常不提供直接的防作弊功能,而是扩展
+一些扩展的反作弊插件，通常不提供直接的防作弊功能，而是扩展
 
 <Tabs queryString="ext">
 <TabItem value="aca" label="AntiCheatAddition">
@@ -137,14 +137,14 @@ Matrix 是由国人 RE 编写的一款反作弊插件，当年诞生是用于取
 - 分析不可能发送的数据包
 - (以及更多)
 
-> 购买地址: https://www.spigotmc.org/resources/anticheataddition.33590/
+> 购买地址：https://www.spigotmc.org/resources/anticheataddition.33590/
 
 </TabItem>
 <TabItem value="aco" label="AntiCheatObfuscator">
 
 此插件会 "混淆 你的服务器上的反作弊，可以避免作弊者发现你的反作弊组合而针对性绕过
 
-> 下载地址: https://www.minebbs.com/resources/anticheatobfuscator-1-8-1-20.9251/
+> 下载地址：https://www.minebbs.com/resources/anticheatobfuscator-1-8-1-20.9251/
 > 
 > Modrinth: https://modrinth.com/plugin/anticheatobfuscator
 
@@ -153,14 +153,14 @@ Matrix 是由国人 RE 编写的一款反作弊插件，当年诞生是用于取
 
 一个可以用来查端的插件，可以检测客户端是什么类型的客户端，可以检测到部分模组。
 
-> 下载地址: https://www.spigotmc.org/resources/clientdetectorplus-now-in-alpha-testing.90375/
+> 下载地址：https://www.spigotmc.org/resources/clientdetectorplus-now-in-alpha-testing.90375/
 >
-> 开发版本(推荐): http://patreon.com/CraptiCraftDevelopment
+> 开发版本 (推荐): http://patreon.com/CraptiCraftDevelopment
 
 </TabItem>
 <TabItem value="iseeyou" label="ISeeYou">
 
-ISeeYou 是一个免费的录制插件,可以录制玩家的一举一动
+ISeeYou 是一个免费的录制插件，可以录制玩家的一举一动
 
 :::warning
 
@@ -168,7 +168,7 @@ ISeeYou 是一个免费的录制插件,可以录制玩家的一举一动
 
 :::
 
-> 下载地址: https://github.com/MC-XiaoHei/ISeeYou/releases
+> 下载地址：https://github.com/MC-XiaoHei/ISeeYou/releases
 
 </TabItem>
 </Tabs>
@@ -177,7 +177,7 @@ ISeeYou 是一个免费的录制插件,可以录制玩家的一举一动
 
 ## 只有这几个？
 
-你难道想让我把 Intave Karhu Polar那些什么全部都列出来吗，
+你难道想让我把 Intave Karhu Polar 那些什么全部都列出来吗，
 
 要求不高这几个主流就差不多够用了，毕竟是面向小白的开服教程，
 
@@ -193,17 +193,17 @@ ISeeYou 是一个免费的录制插件,可以录制玩家的一举一动
 
 一款面向萌新的主流反作弊配置，对配置有任何问题骚扰 Talents 先生项目的 Issues 即可解决！
 
-GitHub：https://github.com/8aka-Team/Talents-AntiCheat-Config
+GitHub: https://github.com/8aka-Team/Talents-AntiCheat-Config
 
 ### ViaBackwards
 
-如果你在你的服务器使用了跨版本插件(ViaVersion)，你需要开启这个选项以增加反作弊对其他版本的兼容性。
+如果你在你的服务器使用了跨版本插件 (ViaVersion)，你需要开启这个选项以增加反作弊对其他版本的兼容性。
 
 打开 `ViaBackwards/config.yml` ，找到 `handle-pings-as-inv-acknowledgements` 配置项，把它改成 `true` 就可以增加对反作弊的兼容性
 
 ## 笨蛋脚本
 
-自动为你配置反作弊，[下载!](https://script.8aka.org/config-anticheat)
+自动为你配置反作弊，[下载！](https://script.8aka.org/config-anticheat)
 
 ## 组合反作弊
 

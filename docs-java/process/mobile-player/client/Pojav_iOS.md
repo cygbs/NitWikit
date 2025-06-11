@@ -9,7 +9,7 @@ sidebar_position: 2
 
 ~~(当然如果下面几个方法都不成功那恭喜你只能去越狱了)~~
 
-## 方法一: 使用牛蛙助手
+## 方法一：使用牛蛙助手
 
 ### 安装 PojavLauncher
 
@@ -22,7 +22,7 @@ sidebar_position: 2
 在手机上的牛蛙助手中导入 ipa 文件
 ![](../_images/1.PNG)
 
-点击签名进行自签(刚开始用自签会被封号，不会很严重修改密码就好了，自签只有一周的使用时间，过了时间要重新签名)
+点击签名进行自签 (刚开始用自签会被封号，不会很严重修改密码就好了，自签只有一周的使用时间，过了时间要重新签名)
 ![](../_images/2.PNG)
 
 点击进行安装
@@ -42,7 +42,7 @@ sidebar_position: 2
 若牛蛙提示下图，就按它说的打开牛蛙的 VPN
 ![](../_images/4.PNG)
 
-## 方法二: 使用 TrollStore
+## 方法二：使用 TrollStore
 
 :::warning
 
@@ -60,8 +60,8 @@ sidebar_position: 2
 
 如果你是：
 
-- iOS14-beta2～iOS14.8.1 的系统(A8～A11 处理器)
-- iOS15.5 系统(A9～A11 处理器)
+- iOS14-beta2～iOS14.8.1 的系统 (A8～A11 处理器)
+- iOS15.5 系统 (A9～A11 处理器)
 - iOS15.6 beta4～iOS15.6.1(A9～A11 处理器)
 - iOS15.7～iOS15.8.2(A9～A17，M1～M2 处理器)
 - iOS16 beta1～beta3(A9～A11 处理器)
@@ -73,9 +73,9 @@ sidebar_position: 2
 
 如果你是：
 
-- iOS14-beta2～iOS14.8.1的系统(A12 以上，M1～M2处理器)
+- iOS14-beta2～iOS14.8.1 的系统 (A12 以上，M1～M2 处理器)
 - iOS15～iOS15.5 beta4(A8 以上，M1～M2 处理器)
-- iOS15.5 系统(A12 以上，M1～M2 处理器)
+- iOS15.5 系统 (A12 以上，M1～M2 处理器)
 - iOS15.6 beta4～iOS15.6.1(A12 以上，M1～M2 处理器)
 - iOS16 beta1～beta3(A12 以上，M1～M2 处理器)
 
@@ -97,11 +97,11 @@ sidebar_position: 2
 - iOS15.6 beta4～iOS15.6.1(A8 处理器)
 
 那么 [点此查看](https://ios.cfw.guide/installing-trollstore-trollinstallermdc/) TrollInstallerMDC 的安装方法。
-**(较复杂，怕麻烦的，没电脑的，没有苹果官方 Type C 转Lighting 或者 C2C 的线的，但是又只能用这个方法安装 TrollStore 的劝退)**
+**(较复杂，怕麻烦的，没电脑的，没有苹果官方 Type C 转 Lighting 或者 C2C 的线的，但是又只能用这个方法安装 TrollStore 的劝退)**
 
 如果你是：
 
-- iOS15.7.2～iOS15.8.2(A8处理器)
+- iOS15.7.2～iOS15.8.2(A8 处理器)
 
 那么 [点此查看](https://ios.cfw.guide/installing-trollstore-trollmisaka) TrollMisaka 的安装方法。
 **(也挺复杂，怕麻烦的，没电脑的，没有苹果官方 Type C 转 Lighting 或者 C2C 的线的，但是又只能用这个方法安装 TrollStore 的劝退)**

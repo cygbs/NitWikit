@@ -30,13 +30,13 @@ options:
 
 将 location 设置为 cn
 
-(建议)将 lang 设置为 zh_CN
+(建议) 将 lang 设置为 zh_CN
 
 下方配置供你参考
 
 ```yaml title="plugins/GuizhanLibPlugin/config.yml"
 # Whether to enable auto update module (see updater.yml for details)
-# 是否开启自动更新模块(详见 updater.yml)
+# 是否开启自动更新模块 (详见 updater.yml)
 auto-update: true
 
 # Universal Updater Settings

@@ -15,7 +15,7 @@ sidebar_position: 4
 
 ## GeyserBlockJavaPlayers
 
-让你的Java服务器仅基岩版玩家才能加入
+让你的 Java 服务器仅基岩版玩家才能加入
 
 [下载](https://ci.kejonamc.dev/job/GeyserBlockJavaPlayers/job/master/)
 
@@ -27,6 +27,6 @@ GeyserVoice 是一个 Java 服务端插件，旨在通过集成 VoiceCraft Proxi
 
 ## GeyserPreventServerSwitch
 
-可以阻止基岩版玩家通过代理进入服务器,可用于反机器人
+可以阻止基岩版玩家通过代理进入服务器，可用于反机器人
 
 [下载](https://github.com/kejonaMC/GeyserPreventServerSwitch)

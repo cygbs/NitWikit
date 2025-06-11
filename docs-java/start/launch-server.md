@@ -9,7 +9,7 @@ sidebar_position: 4
 
 :::tip 
 
-新版本的 Forge 和 Neoforge 使用安装器安装后会自动生成启动脚本。 参阅 [新版 Forge 和 NeoForge 启动方法](#新版-forge-和-neoforge-启动)
+新版本的 Forge 和 Neoforge 使用安装器安装后会自动生成启动脚本。参阅 [新版 Forge 和 NeoForge 启动方法](#新版-forge-和-neoforge-启动)
 
 :::
 
@@ -18,7 +18,7 @@ sidebar_position: 4
 下载此[脚本](https://script.8aka.org/generate-script)，回答几个问题就可以为你自动生成启动脚本!!
 
 <details>
-<summary>直接在终端里敲命令来启动?</summary>
+<summary>直接在终端里敲命令来启动？</summary>
 
 如果你第一次开服，或者你看不懂这个折叠里的内容，那就跳过，直接去看底下的编写启动脚本
 
@@ -30,7 +30,7 @@ sidebar_position: 4
 
 (估计有人不知道文件资源管理器是什么，所以放张图)
 
-有路径一样，你的 cmd 也是有路径的(红框中为此 cmd 所在的路径)
+有路径一样，你的 cmd 也是有路径的 (红框中为此 cmd 所在的路径)
 
 [cmd 是什么](https://cn.bing.com/search?q=cmd%E6%98%AF%E4%BB%80%E4%B9%88)
 
@@ -89,12 +89,12 @@ eula 就像是用户协议一样的东西，你想知道讲了啥，点 [这里]
 改好之后重新开启服务器，当出现以下字样说明服务器已经成功开启。
 
 ```text
-Done (6.554s)! For help， type "help"
+Done (6.554s)! For help, type "help"
 ```
 
 :::tip
 
-你可以点击目录中的配置服务器进入下一节内容了!
+你可以点击目录中的配置服务器进入下一节内容了！
 
 :::
 
@@ -132,7 +132,7 @@ import GlobalContent from '@site/src/components/GlobalContent'
 
 请确定你的科学上网是可用的，不多赘述。
 
-在命令行界面(一般情况下，一个黑 / 蓝框框)中执行这两条
+在命令行界面 (一般情况下，一个黑 / 蓝框框) 中执行这两条
 
 ```shell
 set http_proxy=http://127.0.0.1:7890
@@ -156,7 +156,7 @@ export HTTPS_PROXY=http://127.0.0.1:7890
 
 ### 中文乱码
 
-如果你用的是Windows，你需要在启动脚本**最前面**加上`chcp 65001`
+如果你用的是 Windows，你需要在启动脚本**最前面**加上`chcp 65001`
 
 如上面的方法无效，检查你的系统区域设置是否为中国和中文语言包是否下载。
 
@@ -177,11 +177,11 @@ java -Xms2G -Xmx2G -jar server.jar --nogui
 
 有些时候写好启动脚本启动后，报错`Error: Unable to access jarfile xxx.jar`，但是相同目录下明明有`xxx.jar`
 
-像这样:
+像这样：
 
 ![](_images/4.png)
 
-启动后报错，此时我们可以查看文件后缀名([不懂如何打开请点这里](https://cn.bing.com/search?q=%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E5%90%8E%E7%BC%80%E5%90%8D))
+启动后报错，此时我们可以查看文件后缀名 ([不懂如何打开请点这里](https://cn.bing.com/search?q=%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E5%90%8E%E7%BC%80%E5%90%8D))
 
 然后你就会看到这样的惊奇一幕
 
@@ -199,7 +199,7 @@ java -Xms2G -Xmx2G -jar server.jar --nogui
 -Xms1024M -Xmx2048M
 ```
 
-不是这样!
+不是这样！
 
 ```shell
 -Xms 1024M -Xmx 2048M
@@ -208,7 +208,7 @@ java -Xms2G -Xmx2G -jar server.jar --nogui
 
 ### 新版 Forge 和 NeoForge 启动
 
-使用安装器安装后，你无法在根目录找到 `xxx.jar`，同时会生成一个bat脚本。里面大概是这样的
+使用安装器安装后，你无法在根目录找到 `xxx.jar`，同时会生成一个 bat 脚本。里面大概是这样的
 
 ```shell
 @echo off
@@ -223,9 +223,9 @@ pause
 这是因为新版的 Forge 和 NeoForge 将服务器 jar 包放在 libraries 文件夹里面，并通过自带的启动脚本进行启动。
 前面 `REM` 开头的是注释，大概就是说
 
-> Forge需要一组配置好的JVM和程序参数。
-> 向user_JVM_args.txt添加自定义JVM参数
-> 在%*或之前的下一行将自定义程序参数（如nogui）添加到此文件中
+> Forge 需要一组配置好的 JVM 和程序参数。
+> 向 user_JVM_args.txt 添加自定义 JVM 参数
+> 在%*或之前的下一行将自定义程序参数（如 nogui）添加到此文件中
 > 直接将它们传递给此脚本
 
 此时你会发现有一个 `user_JVM_args.txt` 在你的根目录下，打开他，将原来的

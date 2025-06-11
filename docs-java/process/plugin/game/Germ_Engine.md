@@ -15,7 +15,7 @@ sidebar_position: 5
 
 ## ![介绍](_images/Germ_Engine/6.png)
 
-萌芽引擎是基于 Minecraft 1.12.2 版本，以插件(服务端) + MOD(客户端) 的方式，
+萌芽引擎是基于 Minecraft 1.12.2 版本，以插件 (服务端) + MOD(客户端) 的方式，
 站在巨人的肩膀上实现了全面且丰富的在服务端制作各种客户端功能的方法。
 使用萌芽引擎可以很大的程度拓展游戏内容、提升玩家游玩体验。
 他包含了多种功能其主要的有时装渲染、界面拓展、模型、动作、道具拓展……
@@ -38,6 +38,6 @@ sidebar_position: 5
 
 萌芽控制台：http://admin.germmc.com
 
-萌芽引擎JavaDoc：http://javadoc.germmc.com    1.12.2-Bukkit：http://bukkitapi.germmc.com
+萌芽引擎 JavaDoc：http://javadoc.germmc.com    1.12.2-Bukkit：http://bukkitapi.germmc.com
 
-旧版WIKI①(已过时)：http://wiki.germmc.com       旧版WIKI②(已过时)：http://engine.germmc.com
+旧版 WIKI①(已过时)：http://wiki.germmc.com       旧版 WIKI②(已过时)：http://engine.germmc.com

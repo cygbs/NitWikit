@@ -48,7 +48,7 @@ WorldGuard 可以保护你的区域或世界，使他们免受破坏，或者调
 
 ## 扩展
 
-额外flags: https://www.spigotmc.org/resources/worldguard-extra-flags.4823/
+额外 flags: https://www.spigotmc.org/resources/worldguard-extra-flags.4823/
 
 ## 前置
 

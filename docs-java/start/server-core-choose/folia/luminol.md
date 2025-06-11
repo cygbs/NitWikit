@@ -11,7 +11,7 @@ Luminol 是一个非常棒的 Folia 分支！
 
 ## 安装
 
-我们不推荐直接使用 Folia，因为这需要自己去构建，[Luminol](https://luminolmc.com) 是一个非常棒的选择，如果你需要1.20.1/2，你可以使用 [Molia](https://github.com/Era4FunMC/Molia)
+我们不推荐直接使用 Folia，因为这需要自己去构建，[Luminol](https://luminolmc.com) 是一个非常棒的选择，如果你需要 1.20.1/2，你可以使用 [Molia](https://github.com/Era4FunMC/Molia)
 
 请选择 Luminol，我们后面会讲 LightLuminol，下载到本地后，替换原来的核心就可以了
 
@@ -19,7 +19,7 @@ Luminol 是一个非常棒的 Folia 分支！
 
 ![](../_images/LightingLuminol.png)
 
-LightingLuminol 是 Luminol 的分支，旨在修复对 BukkitAPI 的破坏，最大程度保证 Bukkit 插件的兼容性。但是，虽然 LightLuminol 对于 Bukkit 插件兼容性较好，但是会有许多问题，包括不定时的NullPointerError，Thread 不安全，内存泄露，数据丢失（一天崩个几十次，挺正常的）
+LightingLuminol 是 Luminol 的分支，旨在修复对 BukkitAPI 的破坏，最大程度保证 Bukkit 插件的兼容性。但是，虽然 LightLuminol 对于 Bukkit 插件兼容性较好，但是会有许多问题，包括不定时的 NullPointerError，Thread 不安全，内存泄露，数据丢失（一天崩个几十次，挺正常的）
 
 所以在开始使用 LightingLuminol，请想想 Leaf 是不是更好？
 
@@ -29,7 +29,7 @@ LightingLuminol 是 Luminol 的分支，旨在修复对 BukkitAPI 的破坏，�
 
 ## 下载
 
-如果官网进不去或者下载慢可以使用这里的镜像!
+如果官网进不去或者下载慢可以使用这里的镜像！
 
 * [Luminol](https://sync.mcsl.com.cn/core/Luminol)
 * [LightingLuminol](https://sync.mcsl.com.cn/core/LightingLuminol)
@@ -57,6 +57,6 @@ Luminol 另一个好处就是可以开启生电配置
 
 * fixes.allow_void_trading 虚空交易
 * fixes.allow_unsafe_teleportation 刷沙
-* fixes.use_vanilla_random_source RNG操作
+* fixes.use_vanilla_random_source RNG 操作
 
 其它特性请阅读 Paper 文档

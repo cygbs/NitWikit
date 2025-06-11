@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# Via进阶
+# Via 进阶
 
 学会更多关于 via 的知识
 
@@ -21,7 +21,7 @@ sidebar_position: 5
 :::
 
 在 1.20 中，sb mojang 在锻造台上添加了一个新的 UI(也就是添加了锻造模板)，如果你的 1.16-1.19 服务器运行 ViaBackwards，那么 1.20+ 玩家将无法打开锻造台。
-同样的事情在 1.20+ 服务器和 1.16-1.19 客户端上也是如此。 该插件还使 1.7-1.15 客户端能够打开锻造台。( 你可以恢复到旧的 1.16-1.19 锻造台，不需要下界升级锻造模板)
+同样的事情在 1.20+ 服务器和 1.16-1.19 客户端上也是如此。该插件还使 1.7-1.15 客户端能够打开锻造台。( 你可以恢复到旧的 1.16-1.19 锻造台，不需要下界升级锻造模板)
 
 ## ViaChatFixer
 
@@ -47,13 +47,13 @@ sidebar_position: 5
 
 :::
 
-这个插件可以为极老版本翻译投掷的药水(由于本项目已经停更，所以不能翻译全部药水)
+这个插件可以为极老版本翻译投掷的药水 (由于本项目已经停更，所以不能翻译全部药水)
 
 需要自行构建
 
 ## ViaBackwards-Plus
 
-这个**材质包**(这不是插件)的功能就是在低版本显示高版本物品的材质(支持1.16.5+)
+这个**材质包**(这不是插件) 的功能就是在低版本显示高版本物品的材质 (支持 1.16.5+)
 
 :::note
 
@@ -63,7 +63,7 @@ sidebar_position: 5
 
 :::
 
-使用教程:
+使用教程：
 
 1.在服务端安装资源包 ([下载地址](https://github.com/ViaVersionAddons/ViaBackwards-Plus))，你可以选择与你的已有资源包合并
 2.在客户端安装模组 Chime([下载地址](https://modrinth.com/mod/chime))，然后连接到服务器！
@@ -94,13 +94,13 @@ sidebar_position: 5
 
 :::
 
-这个插件可以自动帮你更新Via，从而帮你摆脱了玩家骚扰
+这个插件可以自动帮你更新 Via，从而帮你摆脱了玩家骚扰
 
-功能:
+功能：
 
 * 与 Minecraft 1.8 及更高版本兼容 Spigot/Velocity/Bungeecord，包括最新版本。
 * 自动从 Jenkins 下载 ViaVersion、ViaBackwards、ViaRewind 和 ViaRewind-Legacy-Support 的成功版本及其开发版本。
-* config.yml允许你指定要更新的 Via 以及是否使用每个插件的开发版本。
+* config.yml 允许你指定要更新的 Via 以及是否使用每个插件的开发版本。
 * /updatevias 命令强制更新检查器对所有 Via(需要 autoviaupdater.admin 权限)
 
 [下载地址](https://www.spigotmc.org/resources/autoviaupdater.109331/)

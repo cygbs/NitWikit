@@ -7,7 +7,7 @@ sidebar_position: 2
 
 ## 什么是变量？
 
-这里指的变量是形似 `%player_name%`， 即 `%xxx%` 的占位符
+这里指的变量是形似 `%player_name%`，即 `%xxx%` 的占位符
 
 它们用来显示一些信息
 
@@ -70,9 +70,9 @@ boolean:
   'false': 'no'
 ```
 
-将yes和no改为true false
+将 yes 和 no 改为 true false
 
-不改也没事，就是改成true false会更方便判断
+不改也没事，就是改成 true false 会更方便判断
 
 ## 在哪寻找我要的变量？
 
@@ -102,6 +102,6 @@ boolean:
 
 手动下载吧 https://api.extendedclip.com/all
 
-把下载的jar文件塞到 `plugins\PlaceholderAPI\expansions` 文件夹
+把下载的 jar 文件塞到 `plugins\PlaceholderAPI\expansions` 文件夹
 
 然后执行命令 `/papi reload`

@@ -33,7 +33,7 @@ sidebar_position: 3
 
 因此，建议注册并登陆账号。
 
-GitHub界面是全英文，可以尝试安装油猴汉化插件：https://github.com/maboloshi/github-chinese
+GitHub 界面是全英文，可以尝试安装油猴汉化插件：https://github.com/maboloshi/github-chinese
 
 <details>
   <summary>注册问题</summary>
@@ -45,13 +45,13 @@ GitHub界面是全英文，可以尝试安装油猴汉化插件：https://github
 <details>
   <summary>连不上怎么办</summary>
 
-这是由于 GitHub 是开放的外国网站，网站上时不时会有一些不能在此讨论的内容，所以运营商会刻意地屏蔽这个网站，在很多时候都不能正常访问。具体的表现如下：[只要Github域名指向任意IP，该IP的443端口就会超时3分钟](https://blog.csdn.net/weixin_43659597/article/details/118882176)。
+这是由于 GitHub 是开放的外国网站，网站上时不时会有一些不能在此讨论的内容，所以运营商会刻意地屏蔽这个网站，在很多时候都不能正常访问。具体的表现如下：[只要 Github 域名指向任意 IP，该 IP 的 443 端口就会超时 3 分钟](https://blog.csdn.net/weixin_43659597/article/details/118882176)。
 
 有以下几种解决办法：
 
 1. 魔法
-2. [改hosts](https://www.cnblogs.com/eudaimonia/p/16001981.html#1034247326)
-3. [Watt Toolkit](https://steampp.net/)：下载安装完成后，在左侧侧边栏切换到**网络加速**，点击**平台加速(免费)**，往下翻勾上GitHub，然后点击**一键加速**，随后就可以正常访问GitHub了
+2. [改 hosts](https://www.cnblogs.com/eudaimonia/p/16001981.html#1034247326)
+3. [Watt Toolkit](https://steampp.net/)：下载安装完成后，在左侧侧边栏切换到**网络加速**，点击**平台加速 (免费)**，往下翻勾上 GitHub，然后点击**一键加速**，随后就可以正常访问 GitHub 了
 <!--[点击此处](https://cn.bing.com/search?q=%E8%BF%9E%E4%B8%8D%E4%B8%8AGitHub%E6%80%8E%E4%B9%88%E5%8A%9E)-->
 
 </details>
@@ -116,7 +116,7 @@ SpigotMC 是目前 Minecraft 开服圈最大的插件网站，最大的问题是
 
 使用魔法就可以看到验证了，而不是傻呵呵的跟人说。
 
-*SpigotMC不开放注册* *老外的网站真反人类*
+*SpigotMC 不开放注册* *老外的网站真反人类*
 
 </details>
 
@@ -328,9 +328,9 @@ PaperMC 的现代化的插件平台，目前正在 Beta 阶段，插件相对较
 
 例如：
 
-Paper核心的使用情况：https://bstats.org/plugin/server-implementation/Paper/580
+Paper 核心的使用情况：https://bstats.org/plugin/server-implementation/Paper/580
 
-PlaceHolderAPI插件使用情况：https://bstats.org/plugin/bukkit/PlaceholderAPI/438
+PlaceHolderAPI 插件使用情况：https://bstats.org/plugin/bukkit/PlaceholderAPI/438
 
 DecentHolograms 插件统计：
 
@@ -362,11 +362,11 @@ DecentHolograms 插件统计：
 
 ![](_images/motd.png)
 
-MOTD 就是 Minecraft 客户端在尝试连接服务器之前，服务器对客户端发送的一条短消息，这通常包含1-3行文字和一张图片。
+MOTD 就是 Minecraft 客户端在尝试连接服务器之前，服务器对客户端发送的一条短消息，这通常包含 1-3 行文字和一张图片。
 
 MOTD 是玩家进入服务器之前最先看到的东西，决定了玩家对一个服务器的第一印象，所以，请任选一个 MOTD 生成器生成个性化 MOTD：
 
-> [MOTD.gg](https://motd.gg)(非常非常推荐)(~~还可以偷别的服务器的motd~~)
+> [MOTD.gg](https://motd.gg)(非常非常推荐)(~~还可以偷别的服务器的 motd~~)
 >
 > [MOTD creator](https://mctools.org/motd-creator)
 >
