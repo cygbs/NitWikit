@@ -119,9 +119,6 @@ async function main() {
       
       return {
         ...contributor,
-        additions: stats.additions || 0,
-        deletions: stats.deletions || 0,
-        total: contributor.contributions || 0
       };
     });
     
