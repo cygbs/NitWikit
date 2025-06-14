@@ -96,6 +96,12 @@ const config = {
             "@gracefullight/docusaurus-plugin-microsoft-clarity",
             {projectId: "oyfswsvfpc"},
         ],
+        IS_CHINA_SITE ? [
+            '@docusaurus/plugin-google-tag-manager',
+            {
+                containerId: 'GTM-MB4XZBWJ',
+            },
+        ] : '@docusaurus/plugin-debug',
         [
             '@docusaurus/plugin-content-docs',
             {
