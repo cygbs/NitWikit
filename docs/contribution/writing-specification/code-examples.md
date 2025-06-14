@@ -5,7 +5,7 @@ title: 代码高亮示例
 
 # 代码高亮示例
 
-NitWikit支持多种编程语言的代码高亮，让您的文档更加专业和美观。
+NitWikit 支持多种编程语言的代码高亮，让您的文档更加专业和美观。
 
 ## 基本使用
 
@@ -18,7 +18,7 @@ console.log(hello);
 ```
 ````
 
-效果如下:
+效果如下：
 
 ```javascript
 const hello = 'world';
@@ -46,7 +46,7 @@ function multiply(a, b) {
 ```
 ````
 
-效果如下:
+效果如下：
 
 ```javascript
 // 普通代码行
@@ -65,7 +65,7 @@ function multiply(a, b) {
 
 ## 错误行标记
 
-有时候您可能想展示错误代码，可以使用错误行标记:
+有时候您可能想展示错误代码，可以使用错误行标记：
 
 ````md
 ```javascript
@@ -74,18 +74,18 @@ let array = [1, 2, 3];
 array.forEach(item => console.log(item));
 
 // error-next-line
-console.log(item); // 这行是错误的，因为item在这个作用域不可用
+console.log(item); // 这行是错误的，因为 item 在这个作用域不可用
 
 // error-start
 // 多行错误示例
 function brokenFunction() {
-  return x + y; // x和y都未定义
+  return x + y; // x 和 y 都未定义
 }
 // error-end
 ```
 ````
 
-效果如下:
+效果如下：
 
 ```javascript
 // 正确的代码
@@ -93,19 +93,19 @@ let array = [1, 2, 3];
 array.forEach(item => console.log(item));
 
 // error-next-line
-console.log(item); // 这行是错误的，因为item在这个作用域不可用
+console.log(item); // 这行是错误的，因为 item 在这个作用域不可用
 
 // error-start
 // 多行错误示例
 function brokenFunction() {
-  return x + y; // x和y都未定义
+  return x + y; // x 和 y 都未定义
 }
 // error-end
 ```
 
 ## 支持的语言
 
-NitWikit支持多种编程语言的语法高亮，包括但不限于：
+NitWikit 支持多种编程语言的语法高亮，包括但不限于：
 
 - JavaScript/TypeScript/JSX/TSX
 - HTML/XML/Markdown
@@ -114,9 +114,9 @@ NitWikit支持多种编程语言的语法高亮，包括但不限于：
 - Java/Kotlin/Scala
 - C/C++/C#/Dart
 - SQL/JSON/YAML/TOML
-- Shell脚本/Bash
+- Shell 脚本/Bash
 - Docker/Nginx/Apache
-- 更多语言请查看[Prism.js支持的语言列表](https://prismjs.com/#supported-languages)
+- 更多语言请查看[Prism.js 支持的语言列表](https://prismjs.com/#supported-languages)
 
 ## 使用示例
 
@@ -124,7 +124,7 @@ NitWikit支持多种编程语言的语法高亮，包括但不限于：
 
 ```python
 def fibonacci(n):
-    """返回斐波那契数列的第n个数"""
+    """返回斐波那契数列的第 n 个数"""
     # highlight-start
     if n <= 0:
         return 0

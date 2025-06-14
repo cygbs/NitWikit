@@ -9,7 +9,7 @@ sidebar_position: 5
 
 ## Spark
 
-Spark是一个Minecraft的性能分析器，支持广泛(如 Bukkit，BungeeCord，Velocity，Forge，Fabric 等)。
+Spark 是一个 Minecraft 的性能分析器，支持广泛 (如 Bukkit，BungeeCord，Velocity，Forge，Fabric 等)。
 
 :::info
 
@@ -51,7 +51,7 @@ Spark是一个Minecraft的性能分析器，支持广泛(如 Bukkit，BungeeCord
 
 /spark profiler info 检查当前分析的状态。
 
-这是主要的指令，为了更多的功能，更精准的分析等可以在后面加上参数.具体请查看 [profiler 指令使用方法](https://snowcutieowo.github.io/spark/#/spark.command-usage)
+这是主要的指令，为了更多的功能，更精准的分析等可以在后面加上参数。具体请查看 [profiler 指令使用方法](https://snowcutieowo.github.io/spark/#/spark.command-usage)
 
 :::tip
 
@@ -65,17 +65,17 @@ Spark 中内存占用并非平均内存占用，而是**瞬间内存占用**，�
 
 #### /spark tps
 
-Spark 默认会替代服务器的 TPS 输出(但可能被 CMI 等插件覆盖，请关闭CMI的/tps指令或者输入完整 `/spark tps` 获取)。
+Spark 默认会替代服务器的 TPS 输出 (但可能被 CMI 等插件覆盖，请关闭 CMI 的/tps 指令或者输入完整 `/spark tps` 获取)。
 
 ## Timings
 
-Timings是一个 Spigot 自带的性能分析器，由于其监听每一个事件，性能开销比较大，
+Timings 是一个 Spigot 自带的性能分析器，由于其监听每一个事件，性能开销比较大，
 
-在很多服务器核心(如 Purpur 等)本身也是被移除的，**不推荐**。
+在很多服务器核心 (如 Purpur 等) 本身也是被移除的，**不推荐**。
 
 :::warning
 
-在可预见的未来Timings将会被移除，作为新手可以直接跳过。如果你使用Paper服务器，请禁用Timings！虽然它是一个很好的诊断工具，
+在可预见的未来 Timings 将会被移除，作为新手可以直接跳过。如果你使用 Paper 服务器，请禁用 Timings！虽然它是一个很好的诊断工具，
 
 但由于其不断不断启动和停止虚拟“秒表”，会对性能产生非常大的影响。因此无论服务器规模大小只需禁用计时即可实现 *10-30%* 的性能提升。
 
@@ -93,12 +93,12 @@ Timings是一个 Spigot 自带的性能分析器，由于其监听每一个事�
 
 ### arthas
 
-Arthas 是一款阿里巴巴开发的在线性能分析软件，可实时查看应用 JVM /内存/ GC /线程 的状态信息，甚至包括查看方法调用的出入参、异常，监测方法执行耗时等，一般用于排查某些插件的CPU占用情况和插件线程占用分析。
+Arthas 是一款阿里巴巴开发的在线性能分析软件，可实时查看应用 JVM /内存/ GC /线程 的状态信息，甚至包括查看方法调用的出入参、异常，监测方法执行耗时等，一般用于排查某些插件的 CPU 占用情况和插件线程占用分析。
 
 [官方文档链接](https://arthas.aliyun.com/doc/)
 
 ### jprofiler
 
-jprofiler 是一款付费的易用的性能分析软件，甚至可以对 MySQL ，内存泄漏进行分析，可视化展示。
+jprofiler 是一款付费的易用的性能分析软件，甚至可以对 MySQL，内存泄漏进行分析，可视化展示。
 
 [官方链接](https://www.ej-technologies.com/products/jprofiler/overview.html)

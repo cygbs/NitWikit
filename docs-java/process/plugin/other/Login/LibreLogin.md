@@ -21,4 +21,4 @@ sidebar_position: 5
 
 在安装在 Paper 上时，需要一个单独的世界用于容纳登录的玩家。
 
-支持 Paper， BungeeCord 和 Velocity，不支持 Folia。
+支持 Paper，BungeeCord 和 Velocity，不支持 Folia。

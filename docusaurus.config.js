@@ -6,8 +6,13 @@ const ICP_LICENSE = process.env.ICP_LICENSE;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+
     future: {
-        experimental_faster: true,
+        v4: true,
+        experimental_faster: {
+            rspackBundler: true, // required flag
+            rspackPersistentCache: true, // new flag
+        },
     },
 
     customFields: {

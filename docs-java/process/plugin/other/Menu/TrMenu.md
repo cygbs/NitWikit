@@ -37,7 +37,7 @@ Notice：维护这个分支完全是个人兴趣。
 
 ### TrMenu v3 的优势
 
-- 极佳的速度和性能：不仅针对条件判断进行了优化，而且重构了虚拟背包的API
+- 极佳的速度和性能：不仅针对条件判断进行了优化，而且重构了虚拟背包的 API
 - 大量的模块已经确认拥有更好的性能，同时提供了一个特别的方式来检测 TrMenu 的性能表现
 - 一如既往的强大功能：几乎所有功能都经过优化和保留，并添加了新功能。
 - 功能与脚本：统一并标准化了内联函数的使用，重构了 TrMenu 动作，并全面支持新的 kether 脚本语言。
@@ -71,7 +71,7 @@ Notice：维护这个分支完全是个人兴趣。
 
 交流群：325014486
 
-[如何支持1.8](https://hhhhhy.gitbook.io/trmenu-v3/appendix/v3-guide#datasource.yml-dui-yu-1.8-fu-wu-duan)
+[如何支持 1.8](https://hhhhhy.gitbook.io/trmenu-v3/appendix/v3-guide#datasource.yml-dui-yu-1.8-fu-wu-duan)
 
 ## 文档
 
@@ -122,13 +122,13 @@ kether 语法提示
 
 :::warning
 
-请使用 最新的 **TrMenu社区版** 不保证**旧**版本可用性
+请使用 最新的 **TrMenu 社区版** 不保证**旧**版本可用性
 
 :::
 
 ### 妙妙写法
 
-#### 子图标写true
+#### 子图标写 true
 
 `condition` 最后的结果为 true 就会显示这个子图标
 
@@ -148,7 +148,7 @@ kether 语法提示
 
 #### 子图标写动作
 
-因为 `condition` 会执行里面的kether语句
+因为 `condition` 会执行里面的 kether 语句
 
 所以你可以这样子在菜单打开或重新计算子图标的时候跑一遍这些语句
 
@@ -202,11 +202,11 @@ Right-Click-Player: 'open: Profile'
 
 https://github.com/Dreeam-qwq/TrMenu/blob/stable/v3/plugin/src/main/resources/menus/Profile.yml
 
-### 蹲下+替换副手打开菜单
+### 蹲下 + 替换副手打开菜单
 
 或者说 shift+F 打开菜单？
 
-#### 蹲下+替换副手执行动作
+#### 蹲下 + 替换副手执行动作
 
 https://hhhhhy.gitbook.io/trmenu-v3/usage/shortcuts
 
@@ -223,7 +223,7 @@ https://hhhhhy.gitbook.io/trmenu-v3/usage/shortcuts
 
 据作者所说重启服务器会丢数据
 
-不过这些配置主要是用来学习的，不会有人直接cv过去用吧 -->
+不过这些配置主要是用来学习的，不会有人直接 cv 过去用吧 -->
 
 ### 商店
 
@@ -231,7 +231,7 @@ https://hhhhhy.gitbook.io/trmenu-v3/usage/shortcuts
 
 你需要安装 [CheckItem](../../Front-Plugin/PlaceHolderAPI/CheckItem.md)
 
-并 [开启give和remove](../../Front-Plugin/PlaceHolderAPI/CheckItem.md#启用give和remove) 和 [更改-boolean](../../Front-Plugin/PlaceHolderAPI/Q&A.md#更改-boolean)
+并 [开启 give 和 remove](../../Front-Plugin/PlaceHolderAPI/CheckItem.md#启用give和remove) 和 [更改-boolean](../../Front-Plugin/PlaceHolderAPI/Q&A.md#更改-boolean)
 
 :::
 
@@ -260,9 +260,9 @@ https://hhhhhy.gitbook.io/trmenu-v3/usage/shortcuts
       name: '两个钻石换三个绿宝石'
       material: stone
     actions:
-      - if papi %checkitem_mat:diamond，amt:2% then {
-          papi %checkitem_remove_mat:diamond，amt:2%
-          papi %checkitem_give_mat:emerald，amt:3%
+      - if papi %checkitem_mat:diamond, amt:2% then {
+          papi %checkitem_remove_mat:diamond, amt:2%
+          papi %checkitem_give_mat:emerald, amt:3%
         } else tell inline "物品不够，你有{{papi %checkitem_amount_mat:diamond,amt:2%}}个，还差{{math 2 - papi %checkitem_amount_mat:diamond,amt:2%}}个"
 ```
 
@@ -271,7 +271,7 @@ https://hhhhhy.gitbook.io/trmenu-v3/usage/shortcuts
 ```yaml
   '写法1':
     display:
-      name: '10块钱买2个钻石'
+      name: '10 块钱买 2 个钻石'
       material: stone
     actions:
       - condition: 'money 10'
@@ -282,7 +282,7 @@ https://hhhhhy.gitbook.io/trmenu-v3/usage/shortcuts
           - tell inline "钱不够，你有{{papi %vault_eco_balance%}}块，还差{{math 10 - papi %vault_eco_balance%}}块"
   '写法2':
     display:
-      name: '10块钱买2个钻石'
+      name: '10 块钱买 2 个钻石'
       material: stone
     actions:
       - if money 10 then {
@@ -306,10 +306,10 @@ https://hhhhhy.gitbook.io/trmenu-v3/usage/shortcuts
 ```yaml
   'C':
     display:
-      name: '10块钱买2个钻石(限购20个)'
+      name: '10 块钱买 2 个钻石 (限购 20 个)'
       material: stone
     icons:
-      - condition: meta set KEY to 限购数据1
+      - condition: meta set KEY to 限购数据 1
       - condition: data set papi %trmenu_meta_KEY% to 20
     actions:
       - condition: meta set 单价 to 10

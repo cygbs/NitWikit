@@ -27,7 +27,7 @@ Mod 端的选择一般优先考虑玩法（即主要的玩法 Mod），再考虑
 
 ![](_images/Sinytra_Connector.png)
 
-Sinytra Connector(中文名:信雅互联) 可以在 Forge 上运行 Fabric 模组
+Sinytra Connector(中文名：信雅互联) 可以在 Forge 上运行 Fabric 模组
 
 :::warning
 
@@ -70,7 +70,7 @@ Legacy Fabric 的模组生态相较于 Forge 并不完善，不建议使用。
 
 :::
 
-其他整活版本:
+其他整活版本：
 
 | 名称                   | 兼容版本         | 下载地址                                |
 |----------------------|--------------|-----------------------------------------------|

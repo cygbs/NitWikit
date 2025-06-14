@@ -22,7 +22,7 @@ slug: /optimize/jvm/dragonwell
 
 ## ZGC
 
-Dragonwell 11 的 ZGC 不同于 OpenJDK11 的 ZGC，Dragonwell 通过移植 OpenJDK 15+的 ZGC补丁，使得Dragonwell的ZGC可以投入生产环境
+Dragonwell 11 的 ZGC 不同于 OpenJDK11 的 ZGC，Dragonwell 通过移植 OpenJDK 15+ 的 ZGC 补丁，使得 Dragonwell 的 ZGC 可以投入生产环境
 
 添加参数 `-XX:+UseZGC -XX:AllocatePrefetchStyle=1`以启用
 
@@ -40,19 +40,19 @@ Dragonwell 11 的 ZGC 不同于 OpenJDK11 的 ZGC，Dragonwell 通过移植 Open
 
 ## 对象头压缩
 
-可以节约10%左右的Java对象内存占用，并可能提升程序性能。**目前仅支持G1GC和ParallelGC**
+可以节约 10% 左右的 Java 对象内存占用，并可能提升程序性能。**目前仅支持 G1GC 和 ParallelGC**
 
 添加参数`-XX:+UseCompactObjectHeaders`
 
 ## Wisp
 
-Wisp在JVM上提供了一种用户态的线程实现。开启Wisp2后，Java线程不再简单地映射到内核级线程，而是对应到一个协程，JVM在少量内核线上调度大量协程执行，以减少内核的调度开销
+Wisp 在 JVM 上提供了一种用户态的线程实现。开启 Wisp2 后，Java 线程不再简单地映射到内核级线程，而是对应到一个协程，JVM 在少量内核线上调度大量协程执行，以减少内核的调度开销
 
-只需添加JVM参数即可开启Wisp2，无需更改程序！！
+只需添加 JVM 参数即可开启 Wisp2，无需更改程序！！
 
 :::tip
 
-仅支持Linux x64
+仅支持 Linux x64
 
 :::
 

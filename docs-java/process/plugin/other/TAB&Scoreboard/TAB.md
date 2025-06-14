@@ -28,7 +28,7 @@ TAB 是一个用于在不同位置显示信息的多功能插件，旨在在功�
 
 ## 照片
 
-### TAB（HEADER FOOTER）
+### TAB (HEADER FOOTER)
 
 ![](_images/TAB/TAB-1.png)
 
@@ -72,7 +72,7 @@ TAB 是一个用于在不同位置显示信息的多功能插件，旨在在功�
 
 [点我查看文档](https://docs.superiormc.cn/v/tab-wiki/core-features/ming-cheng-biao-qian-xia-fang)
 
-### BOSS条（BOSSBAR）
+### BOSS 条（BOSSBAR）
 
 ![](_images/TAB/TAB-7.png)
 
@@ -124,7 +124,7 @@ TAB 是一个用于在不同位置显示信息的多功能插件，旨在在功�
 4. 在不损失任何功能的情况下提高插件的性能。
 
 * 你可以加入这个大好人的 [community discord](https://discord.gg/YPqXt63YQj) 来得到其他好心人的支持
-注：discord在国内不能访问，需要挂梯
+注：discord 在国内不能访问，需要挂梯
 
 ## API
 

@@ -57,7 +57,7 @@ sidebar_position: 2
 
 ## 执行命令
 
-Citizens插件本身有执行命令的 https://wiki.citizensnpcs.co/NPC_Commands
+Citizens 插件本身有执行命令的 https://wiki.citizensnpcs.co/NPC_Commands
 
 所以不要再使用 https://www.spigotmc.org/resources/citizenscmd.30224/ 了
 
