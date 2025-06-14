@@ -10,7 +10,7 @@ sidebar_position: 1
 ## 开始！
 
 1. 把你的两个服务端放在不同的目录，同意 eula 后启动你的两个服务端。
-2. 输入`stop`关停两个服务端
+2. 输入 `stop` 关停两个服务端
 3. 用文本编辑器打开你两个服务端的server.properties文件，找到`accepts-transfers=false`，将 false 改 true。
 4. 保存文件并重新启动两个服务端。
 5. 如果你要把服务器公开给玩家，**所有子服必须暴露在在公网环境下**。
