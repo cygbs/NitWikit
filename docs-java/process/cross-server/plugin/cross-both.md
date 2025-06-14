@@ -7,7 +7,7 @@ sidebar_position: 2
 
 这一分类中的插件有单端版和跨服端版，你可以删除单端版使用跨服端版，在此页会对比此举的优缺点。
 
-在 “好处” 与 “坏处” 对比中，如果一方被 “*” 标记，表示我们认为此方要远大于另一方。
+在“好处”与“坏处”对比中，如果一方被“*”标记，表示我们认为此方要远大于另一方。
 
 ## MiniMOTD
 
@@ -204,7 +204,7 @@ TODO
 
 支持制作文字动画，支持 RGB 颜色
 
-想让他显示 PlaceholderAPI 的变量?请在所有子服务器上安装 [Tab-Bridge](https://www.spigotmc.org/resources/.83966/)
+想让他显示 PlaceholderAPI 的变量？请在所有子服务器上安装 [Tab-Bridge](https://www.spigotmc.org/resources/.83966/)
 
 此外，如果你使用了 Layout 功能，如果你不安装此插件，会导致一些显示 Bug
 

@@ -10,7 +10,7 @@ slug: /optimize/jvm/common
 
 注意在 WINDOWS 上使用大页，必须要以管理员启动
 
-当然，在动手前，让我们先试一试是不是系统已经支持了这项功能 ，在控制台执行此命令
+当然，在动手前，让我们先试一试是不是系统已经支持了这项功能，在控制台执行此命令
 
 ```shell
 java -Xlog:gc+init -XX:+UseLargePages -Xmx1g -version
@@ -32,7 +32,7 @@ java -Xlog:gc+init -XX:+UseTransparentHugePages -Xmx1g -version
 
 但是如果你依然不支持或者想要追求极致性能，可以查看 [内核优化](../kernel.md)
 
-如果支持 LargePages ，加上此参数
+如果支持 LargePages，加上此参数
 
 ```shell
 -XX:+UseLargePages  -XX:LargePageSizeInBytes=2m
@@ -52,7 +52,7 @@ java -Xlog:gc+init -XX:+UseTransparentHugePages -Xmx1g -version
 
 ## SIMD
 
-如果你使用的是 Pufferfish 的分支(Purpur，Leaf，Leaves，Gale)，你可以添加此参数
+如果你使用的是 Pufferfish 的分支 (Purpur，Leaf，Leaves，Gale)，你可以添加此参数
 
 ```shell
 --add-modules=jdk.incubator.vector
@@ -86,7 +86,7 @@ java -Xlog:gc+init -XX:+UseTransparentHugePages -Xmx1g -version
 
 ## 更快的安全随机数生成器
 
-(仅适合 Linux 和 MacOS 系统, 在 Windows 上无效)
+(仅适合 Linux 和 MacOS 系统，在 Windows 上无效)
 (原版 Minecraft 仅在个人信息公钥签名中使用到 SecureRandom)
 
 ```shell
@@ -101,7 +101,7 @@ java -Xlog:gc+init -XX:+UseTransparentHugePages -Xmx1g -version
  -Xlog:async
 ```
 
-异步输出 Java 统一日志系统(Unified Logging)打印的 JVM 调试信息
+异步输出 Java 统一日志系统 (Unified Logging) 打印的 JVM 调试信息
 
 仅在使用 -Xlog:gc 等 flag 开启 JVM 调试信息打印的时候发挥作用
 
@@ -123,4 +123,4 @@ java -Xlog:gc+init -XX:+UseTransparentHugePages -Xmx1g -version
 -Dpaper.disableWorldSymlinkValidation=true 
 ```
 
-在加载世界时禁用文件夹遍历和符号链接验证.显著提高大型世界的加载速度
+在加载世界时禁用文件夹遍历和符号链接验证。显著提高大型世界的加载速度

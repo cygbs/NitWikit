@@ -56,7 +56,7 @@ https://github.com/gonalez/znpcs/wiki/Commands#server
 ```
 
 - [id] 是 NPC 的 id.
-- [server] 是子服名字.
+- [server] 是子服名字。
 
 ### 菜单
 

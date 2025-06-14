@@ -24,15 +24,15 @@ https://www.bt.cn/new/btcode.html
 
 之后，找到 PHPStudy 的安装目录，找到 Mysql 的安装文件夹
 
-注：通常命名为：MySQL 或者mysqlXX（XX为版本号）
+注：通常命名为：MySQL 或者 mysqlXX（XX 为版本号）
 
 然后直接删除这个文件夹
 
-接下来，我们需要清理配置（清理方式可选择手动注释或者删除）文件（位于安装目录的 conf 文件夹下，数据库的配置文件名称为 mysql.conf ）
+接下来，我们需要清理配置（清理方式可选择手动注释或者删除）文件（位于安装目录的 conf 文件夹下，数据库的配置文件名称为 mysql.conf）
 
 最后，我们重新启动 PHPStudy 
 
-### Linux平台：
+### Linux 平台：
 
 首先，点击左侧面板的数据库，进入数据库列表管理页面
 

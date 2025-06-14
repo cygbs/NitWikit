@@ -39,11 +39,11 @@ x86 Java 8 用户可以添加以下附加参数：
 
 ## JWarmup
 
-JWarmup的基本原理: 根据前一次程序运行的情况，记录下热点方法、类编译顺序等信息，在应用下一次启动的时候积极加载相关的类，并积极编译相关的方法，进而应用启动后可以直接运行编译好的Java代码(C2编译)。
+JWarmup 的基本原理：根据前一次程序运行的情况，记录下热点方法、类编译顺序等信息，在应用下一次启动的时候积极加载相关的类，并积极编译相关的方法，进而应用启动后可以直接运行编译好的 Java 代码 (C2 编译)。
 
 ### 使用步骤
 
-#### 记录阶段(一般是beta环境)，在5分钟后生成profiling data
+#### 记录阶段 (一般是 beta 环境)，在 5 分钟后生成 profiling data
 
 <!--markdownlint-disable line-length-->
 
@@ -51,25 +51,25 @@ JWarmup的基本原理: 根据前一次程序运行的情况，记录下热点�
 
 <!--markdownlint-enable line-length-->
 
-#### 使用阶段(一般是生产环境)
+#### 使用阶段 (一般是生产环境)
 
 添加参数`-XX:+CompilationWarmUp -XX:-TieredCompilation -XX:CompilationWarmUpLogfile=jwarmup.log -XX:CompilationWarmUpDeoptTime=0`
 
 ## 对象头压缩
 
-可以节约10%左右的Java对象内存占用，并可能提升程序性能。
+可以节约 10% 左右的 Java 对象内存占用，并可能提升程序性能。
 
 添加参数`-XX:+UseCompactObjectHeaders`
 
 ## Wisp
 
-Wisp在JVM上提供了一种用户态的线程实现。开启Wisp2后，Java线程不再简单地映射到内核级线程，而是对应到一个协程，JVM在少量内核线上调度大量协程执行，以减少内核的调度开销
+Wisp 在 JVM 上提供了一种用户态的线程实现。开启 Wisp2 后，Java 线程不再简单地映射到内核级线程，而是对应到一个协程，JVM 在少量内核线上调度大量协程执行，以减少内核的调度开销
 
-只需添加JVM参数即可开启Wisp2，无需更改程序！！
+只需添加 JVM 参数即可开启 Wisp2，无需更改程序！！
 
 :::tip
 
-仅支持Linux x64
+仅支持 Linux x64
 
 :::
 

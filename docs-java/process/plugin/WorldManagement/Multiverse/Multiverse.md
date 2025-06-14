@@ -43,7 +43,7 @@ sidebar_label: 多世界 - Multiverse
 - [Multiverse-NetherPortals](https://github.com/Multiverse/Multiverse-NetherPortals) -> 允许玩家创建能够带他们去指定世界的地狱传送门！
 - [Multiverse-Portals](https://github.com/Multiverse/Multiverse-Portals) -> 创建传送到指定地点的传送门。
 - [Multiverse-Inventories](https://github.com/Multiverse/Multiverse-Inventories) -> 将玩家背包按世界隔离。
-- [Multiverse-SignPortals](https://github.com/Multiverse/Multiverse-SignPortals) -> 告示牌传送!
+- [Multiverse-SignPortals](https://github.com/Multiverse/Multiverse-SignPortals) -> 告示牌传送！
 
 ## 链接
 
@@ -73,8 +73,8 @@ sidebar_label: 多世界 - Multiverse
 
 ## Folia
 
-[Multiverse-Core_Zeta](https://github.com/RenYuan-MC/Multiverse-Core_Zeta) 是 Multiverse-Core 的一个 fork,支持 Folia
-,你可以[在这](https://dl.8aka.org/plugins/multiverse-core-4.3.14-zeta_folia-experimental.jar) 下载预编译版本,或自行编译
+[Multiverse-Core_Zeta](https://github.com/RenYuan-MC/Multiverse-Core_Zeta) 是 Multiverse-Core 的一个 fork，支持 Folia
+,你可以[在这](https://dl.8aka.org/plugins/multiverse-core-4.3.14-zeta_folia-experimental.jar) 下载预编译版本，或自行编译
 
 ## 崩服漏洞
 
@@ -84,7 +84,7 @@ Multiverse-Core [4.3.1](https://www.spigotmc.org/resources/multiverse-core.390/u
 
 如果你因为某些原因不能更新到最新版，可以使用修复补丁
 
-补丁(只需安装其中一个)：
+补丁 (只需安装其中一个)：
 
 - [Multiverse-Patches](https://www.spigotmc.org/resources/.96390)
 - [Multiverse-Core Fix](https://www.spigotmc.org/resources/.70218)

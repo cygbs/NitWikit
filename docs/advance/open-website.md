@@ -13,64 +13,64 @@ sidebar_position: 8
 
 主域名，回源域名
 
-### 1\. 注册一个github账号
+### 1\. 注册一个 github 账号
 
-进入github.com，点击sign up
+进入 github.com，点击 sign up
 
 ![114514.png](_images/open-web-photo/114514.png)
 
-进入后按照提示完成注册(看不懂自己用翻译)
+进入后按照提示完成注册 (看不懂自己用翻译)
 
-进入主页后点击左上的new(绿色的)
+进入主页后点击左上的 new(绿色的)
 
 ![屏幕截图 2024-09-16 082239.png](_images/open-web-photo/dian-new.png)
 
 会跳转到一个界面
 
-Repository name填 你的用户名.github.io
+Repository name 填你的用户名.github.io
 
-如果不会git的话就勾选Add a README
+如果不会 git 的话就勾选 Add a README
 
-然后点Create repository
+然后点 Create repository
 
 会直接到创建的项目主页
 
-点Add file 会出来两个选项点Upload files
+点 Add file 会出来两个选项点 Upload files
 
 
 
-会来到上传界面，上传你的网站源码(首页的名字要改成index)
+会来到上传界面，上传你的网站源码 (首页的名字要改成 index)
 
-上传完后点Commit changes
+上传完后点 Commit changes
 
 ![微信图片_20240916083119.png](_images/open-web-photo/add-web.png)
 
-然后你访问 你的用户名.github.io就可以访问了
+然后你访问 你的用户名.github.io 就可以访问了
 
 如果你做到这一步至此你的网站已经是搭建完成了。但是由于某些特别的原因，大陆访问 Github Pages 服务比较困难。为了保证不懂技术的普通玩家们顺利访你的服务器官网，可以选择以下方式
 
-### 2\.cloudflare saas回源
+### 2\.cloudflare saas 回源
 
 :::warning
 
-注意!如果想要域名访问要先在github项目的settings-pages-Custom domain 添加域名
+注意！如果想要域名访问要先在 github 项目的 settings-pages-Custom domain 添加域名
 
 :::
-先将你的回源域名绑定到cloudflare
+先将你的回源域名绑定到 cloudflare
 
-然后创建一个DNS记录
+然后创建一个 DNS 记录
 
-类型填CNAME 名称填origin 内容填你刚刚搭建完的网站
+类型填 CNAME 名称填 origin 内容填你刚刚搭建完的网站
 
 你的用户名.github.io 选择开启小黄云 点保存
 
 ![微信图片_20240916091413.png](_images/open-web-photo/origin.png)
 
-然后来到ssl/tls-自定义主机名
+然后来到 ssl/tls-自定义主机名
 
-然后选择开通，如果它提示你要绑卡的话，如果你没有卡，你可以上闲鱼买一个15块的代绑
+然后选择开通，如果它提示你要绑卡的话，如果你没有卡，你可以上闲鱼买一个 15 块的代绑
 
-开通完成后，先在回退源那输入你刚刚创建的DNS记录origin.你的回源域名
+开通完成后，先在回退源那输入你刚刚创建的 DNS 记录 origin.你的回源域名
 ![微信图片_20240916091834.png](_images/open-web-photo/tianjiahuiy.png)
 
 等待到那里显示生效后 点击添加自定义主机名
@@ -81,19 +81,19 @@ Repository name填 你的用户名.github.io
 填完后点击添加
 ![微信图片_20240916092238.png](_images/open-web-photo/zidingy.png)
 
-然后按照提示完成txt授权
+然后按照提示完成 txt 授权
 
-然后回到DNS记录
+然后回到 DNS 记录
 
-添加一个类型为 CNAME 名称为cdn 内容为
+添加一个类型为 CNAME 名称为 cdn 内容为
 cf-cname.xingpingcn.top 不需要开启小黄云
 ![微信图片_20240916092435.png](_images/open-web-photo/close-yellow-cloud.png)
 
-然后来到你的主域名 添加DNS记录
+然后来到你的主域名 添加 DNS 记录
 
-添加一个类型为CNAME 名称为输入你刚刚在自定义主机名时输入的前缀 内容为cdn.你的回源域名
+添加一个类型为 CNAME 名称为输入你刚刚在自定义主机名时输入的前缀 内容为 cdn.你的回源域名
 
-并等待DNS记录生效，生效后就可以正常使用你的域名访问了
+并等待 DNS 记录生效，生效后就可以正常使用你的域名访问了
 
 ### 3.开启 Cloudflare 缓存
 
@@ -105,9 +105,9 @@ cf-cname.xingpingcn.top 不需要开启小黄云
 
 来到创建规则页面后点击最上面的缓存所有内容
 ![huanc-2](_images/open-web-photo/huanc-2.png)
-然后添加边缘 TTL设置按照图片选择
+然后添加边缘 TTL 设置按照图片选择
 ![huanc-3](_images/open-web-photo/huanc-3.png)
-然后添加浏览器 TTL设置按照图片选择
+然后添加浏览器 TTL 设置按照图片选择
 ![huanc-4](_images/open-web-photo/huanc-4.png)
 完成后点下面的部署，缓存就设置完成了
 
@@ -164,11 +164,11 @@ cf-cname.xingpingcn.top 不需要开启小黄云
 
 ### 在 Linux 系统上搭建网站服务
 
-以ubuntu为例
+以 ubuntu 为例
 
-在控制台输入apt install nginx
+在控制台输入 apt install nginx
 
-然后找到var-www-html将网站源码上传上去
+然后找到 var-www-html 将网站源码上传上去
 
 随后在 nginx 安装目录中执行 `./nginx` 即可运行服务。
 
@@ -178,39 +178,39 @@ cf-cname.xingpingcn.top 不需要开启小黄云
 
 在浏览器中输入 https://nginx.org/en/
 
-然后点击右边的download
+然后点击右边的 download
 
 进入后点击你电脑适合的版本
 
-选择下载要下载带有windows这个词的
+选择下载要下载带有 windows 这个词的
 
 下载完之后解压文件
 
-解压后进入文件夹，找到名字为html的文件夹
+解压后进入文件夹，找到名字为 html 的文件夹
 
 将你的源码上传上去。记住先把原来里面的文件给删掉再放
 
-然后双击启动nginx.exe
+然后双击启动 nginx.exe
 
 为了保证网站时刻开启，建议为 nginx 设置开机自启。
 
 <!--
-然后如果你的服务器有公网IP的话，现在的浏览器输入你的公网IP就可以看到你的网站了
+然后如果你的服务器有公网 IP 的话，现在的浏览器输入你的公网 IP 就可以看到你的网站了
 
-如果你按照前面的教程申请了公网IP，并且关闭了防火墙，但是还是访问不了的话，那就是运营商封了80和443
+如果你按照前面的教程申请了公网 IP，并且关闭了防火墙，但是还是访问不了的话，那就是运营商封了 80 和 443
 
-如果可以正常访问，那就可以来到你的域名添加一个a类型的记录，把服务器的公网IP填进去然后就可以使用域名访问了-->
+如果可以正常访问，那就可以来到你的域名添加一个 a 类型的记录，把服务器的公网 IP 填进去然后就可以使用域名访问了-->
 
 ### 使用虚拟主机搭建网站服务
 
 如果你没有用来建站的服务器，或者前面的不用服务器的方法对你来说实在是太难，可以尝试一下
 
-接触过租服务器的一般都会知道有一些idc的网站里面有一些叫做虚拟主机的东西
+接触过租服务器的一般都会知道有一些 idc 的网站里面有一些叫做虚拟主机的东西
 那么那是什么？那是用来开网站的，在我看来，如果你是一个新手服主的话，我的建议就是使用虚拟主机搭建网站
 
 :::warning
 
-如果你的域名没有备案的话，请不要购买国内的虚拟主机(因为工信部为了打击不良网站，所以只要在国内的虚拟主机或服务器要进行建站的话，域名需要备案)
+如果你的域名没有备案的话，请不要购买国内的虚拟主机 (因为工信部为了打击不良网站，所以只要在国内的虚拟主机或服务器要进行建站的话，域名需要备案)
 
 :::
 
@@ -247,27 +247,27 @@ cf-cname.xingpingcn.top 不需要开启小黄云
 
 如果你觉得这个源码不适合你，或者是你不想用别人的源码，你可以尝试去自学。这里就不附上自学的教程了
 
-## 使用NamelessMC搭建网站服务
+## 使用 NamelessMC 搭建网站服务
 
 ### 使用宝塔面板搭建
 
 :::warning
 
-如果你的域名没有备案的话，请不要购买国内的服务器(因为工信部为了打击不良网站，所以只要在国内的虚拟主机或服务器要进行建站的话，域名需要备案)
+如果你的域名没有备案的话，请不要购买国内的服务器 (因为工信部为了打击不良网站，所以只要在国内的虚拟主机或服务器要进行建站的话，域名需要备案)
 
 :::
 
 #### 要准备的
 
-namelessmc的配置要求原文要求的是
+namelessmc 的配置要求原文要求的是
 
-PHP 7.4、8.0或8.1（推荐），具有以下扩展：
+PHP 7.4、8.0 或 8.1（推荐），具有以下扩展：
 
 * php curl
 * php-exif
-* php-gd支持png和jpeg
+* php-gd 支持 png 和 jpeg
 * php mbstring
-* php-mysql或php-mysqlnd
+* php-mysql 或 php-mysqlnd
 * php pdo
 * php xml
 还有 MySQL 5.7.22 或更高 或 MariaDB 10.2 或更高
@@ -280,10 +280,10 @@ PHP 7.4、8.0或8.1（推荐），具有以下扩展：
 
 :::warning
 
-接下来的教程都默认你安装了所有依赖和有公网ip
+接下来的教程都默认你安装了所有依赖和有公网 ip
 
 :::
-先在网站-php项目点添加站点
+先在网站-php 项目点添加站点
 ![](_images/open-web-photo/baotadianj.png)
 然后按以下选择
 ![](_images/open-web-photo/mysql.png)
@@ -306,32 +306,32 @@ PHP 7.4、8.0或8.1（推荐），具有以下扩展：
 
 然后将文件夹的东西复制到根目录
 
-然后访问你的公网ip来到安装界面
+然后访问你的公网 ip 来到安装界面
 ![](_images/open-web-photo/install.png)
 
-然后点击Continue 下一步
+然后点击 Continue 下一步
 
 然后按照提示完成安装
 :::warning
 
-有时候安装完之后可能会识别不出来重启一下php就可以解决了，有一点提醒:数据库名字一定要为namelessmc否则会无法下一步
+有时候安装完之后可能会识别不出来重启一下 php 就可以解决了，有一点提醒：数据库名字一定要为 namelessmc 否则会无法下一步
 
 :::
-完成后会跳转到仪表盘，然后记得去把API开一下，到时候可以直接和你的MC服务器连接
+完成后会跳转到仪表盘，然后记得去把 API 开一下，到时候可以直接和你的 MC 服务器连接
 ![](_images/open-web-photo/api.png)
 
-然后它会出现连接地址和API密钥，到时候输入你插件的配置文件里面就可以实现联通了，这里就不做演示了
+然后它会出现连接地址和 API 密钥，到时候输入你插件的配置文件里面就可以实现联通了，这里就不做演示了
 
 然后主页面就长这样子
 ![](_images/open-web-photo/index.png)
 
-如果你看到这个界面那么如果你是第1次使用宝塔面板搭建网站，那么恭喜你，你成功了
+如果你看到这个界面那么如果你是第 1 次使用宝塔面板搭建网站，那么恭喜你，你成功了
 
 ## 使用 vercel 搭建网站服务
 
-此方法在我看来是最简单的方法，他的加载速度加上优选IP之后可以比cloudflare saas后还快(没有设置缓存的情况下)，而且比cloudflare saas要简单许多
+此方法在我看来是最简单的方法，他的加载速度加上优选 IP 之后可以比 cloudflare saas 后还快 (没有设置缓存的情况下)，而且比 cloudflare saas 要简单许多
 
-如果你无法正常访问 vercel 请下载 [Watt Toolkit](https://steampp.net) 并在最下面的其他服务内勾选的加速vercel.app
+如果你无法正常访问 vercel 请下载 [Watt Toolkit](https://steampp.net) 并在最下面的其他服务内勾选的加速 vercel.app
 
 ### 要准备的东西
 
@@ -342,18 +342,18 @@ PHP 7.4、8.0或8.1（推荐），具有以下扩展：
 
 首先进入[vercel](https://vercel.com)
 
-然后可以点击图片上的这两个，那个黑色的是注册那个圈起来的白色的是登录，如果你已经有了github账号可以直接登录
+然后可以点击图片上的这两个，那个黑色的是注册那个圈起来的白色的是登录，如果你已经有了 github 账号可以直接登录
 ![](_images/open-web-photo/vercel-login.png)
 
-登录完之后去 Github 新建一个仓库，上传你的网站源码(这里前面讲过如何新建仓库并上传源码，这里就不讲了)
+登录完之后去 Github 新建一个仓库，上传你的网站源码 (这里前面讲过如何新建仓库并上传源码，这里就不讲了)
 
 上传完之后在 vercel 里的主页，点击 add new
 ![](_images/open-web-photo/add-new.png)
 
-然后选择第2个
+然后选择第 2 个
 ![](_images/open-web-photo/choose-second.png)
 
-进入之后找到你刚刚创建并上传了源码的仓库，然后点击那个仓库旁的 import ，然后再点 deploy
+进入之后找到你刚刚创建并上传了源码的仓库，然后点击那个仓库旁的 import，然后再点 deploy
 
 然后耐心等待构建完成
 
@@ -365,18 +365,18 @@ PHP 7.4、8.0或8.1（推荐），具有以下扩展：
 然后再最上面的那个框那里输入你要绑定的域名，然后点击 add
 ![](_images/open-web-photo/add.png)
 
-这时他会提示你要添加一个 cname 记录，千万不要使用这个地址，要使用其他人制作的优选IP 优选IP是vercel.182682.xyz
+这时他会提示你要添加一个 cname 记录，千万不要使用这个地址，要使用其他人制作的优选 IP 优选 IP 是 vercel.182682.xyz
 ![](_images/open-web-photo/cname.png)
 
 添加完之后等待它自动检查检查完成并签发完证书之后然后访问你绑定的域名就可以访问到你的网站了
 
 ### 一些弊端
 
-不知为何 vercel 在构建本站文档的时候，出现了一点奇怪的错误，我尝试了其他的构建网站可是都没有问题(已解决)
+不知为何 vercel 在构建本站文档的时候，出现了一点奇怪的错误，我尝试了其他的构建网站可是都没有问题 (已解决)
 
 ### 开启 vercel 缓存
 
-开启vercel缓存很简单，只需要先创建一个名为vercel.json的文件，然后将以下代码复制进入文件内再上传到网站的根目录下，然后等待vercel自动更新部署成功就可以使用了
+开启 vercel 缓存很简单，只需要先创建一个名为 vercel.json 的文件，然后将以下代码复制进入文件内再上传到网站的根目录下，然后等待 vercel 自动更新部署成功就可以使用了
 
 ```bash
 
@@ -409,13 +409,13 @@ PHP 7.4、8.0或8.1（推荐），具有以下扩展：
 
 ## 对比
 
-开设这个对比是为了让没有服务器的建站新手更好的选择到底是使用cloudflare saas回源还是使用vercel
+开设这个对比是为了让没有服务器的建站新手更好的选择到底是使用 cloudflare saas 回源还是使用 vercel
 
 :::warning
 
 此测试仅做参考，不代表这两个平台完全真实的测试结果
 :::
-### itdog 在线ping测试
+### itdog 在线 ping 测试
 Cloudflare
 ![cloudflare-ping](_images/open-web-photo/cloudflare-ping.png)
 vercel

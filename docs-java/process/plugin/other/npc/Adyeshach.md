@@ -17,7 +17,7 @@ sidebar_position: 4
 </a>
 
 ```text
-Adyeshach 是一款基于 TabooLib 进行开发的纯发包 NPC 插件，旨在大幅提升性能并提供更高级的功能和 API 。
+Adyeshach 是一款基于 TabooLib 进行开发的纯发包 NPC 插件，旨在大幅提升性能并提供更高级的功能和 API。
 ```
 
 ## 照片

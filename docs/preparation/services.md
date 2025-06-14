@@ -8,13 +8,13 @@ import GlobalContent from '@site/src/components/GlobalContent'
 
 # 笨蛋服务
 
-这些服务由赛博菩萨 cloudflare 和 lilingfeng 搭建，完全免费提供!
+这些服务由赛博菩萨 cloudflare 和 lilingfeng 搭建，完全免费提供！
 
 目前包括
 
 <GlobalContent>
 
-- [笨蛋镜像](https://mirror.yizhan.wiki) - 加速网站的访问(为没有 VPN 的人准备)
+- [笨蛋镜像](https://mirror.yizhan.wiki) - 加速网站的访问 (为没有 VPN 的人准备)
 - [笨蛋图床](https://image.8aka.org) - 简洁，免费的图床
 
 </GlobalContent>
@@ -32,7 +32,7 @@ import GlobalContent from '@site/src/components/GlobalContent'
 
 我们提供免费的 `pvp.kim` 二级域名，目前不限量注册，支持 CNAME，A，AAAA，SRV
 
-> 获得: https://domain.8aka.org
+> 获得：https://domain.8aka.org
 
 ## 下载镜像
 

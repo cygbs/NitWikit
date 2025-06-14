@@ -40,7 +40,7 @@ sidebar_position: 4
 /papi parse me %checkitem_remove_diamond%
 ```
 
-在 [启用give和remove](#启用give和remove) 后，跑一下图中的变量会收取玩家所有的钻石
+在 [启用 give 和 remove](#启用 give 和 remove) 后，跑一下图中的变量会收取玩家所有的钻石
 
 变量中 **remove** 的位置在作者项目的 README 中，并没有名字，其实这个地方决定了这个变量的效果
 
@@ -50,7 +50,7 @@ sidebar_position: 4
 
 这里返回了 yes
 
-[如何返回 true/false ？](/docs-java/process/plugin/Front-Plugin/PlaceHolderAPI/Q&A.md#更改-boolean)
+[如何返回 true/false？](/docs-java/process/plugin/Front-Plugin/PlaceHolderAPI/Q&A.md#更改-boolean)
 
 例如：
 
@@ -59,19 +59,19 @@ sidebar_position: 4
 - amount 查看数量    %checkitem_amount_mat:diamond%  // 查看玩家背包中的钻石数量
 - getinfo 物品信息   下面会讲到
 
-你应该注意到了 `mat:diamond` ，因为我写了diamond所以这些变量的功能是针对钻石的
+你应该注意到了 `mat:diamond` ，因为我写了 diamond 所以这些变量的功能是针对钻石的
 
- > mat是 material 的缩写
+ > mat 是 material 的缩写
 
-像 `mat` 被称为 **修饰符(modifier)**
+像 `mat` 被称为 **修饰符 (modifier)**
 
 用来更详细的指明你需要的操作
 
 例如：`%checkitem_remove_mat:diamond,amt:10%`
 
-作用是收取10个钻石
+作用是收取 10 个钻石
 
-> amt是 amount 的缩写
+> amt 是 amount 的缩写
 
 :::note
 
@@ -94,9 +94,9 @@ sidebar_position: 4
 - nameequals
 - mat               // 物品材质
 - amt               // 物品数量
-- data              // 物品的data
-- custommodeldata   // 物品的CMD值
-- lorecontains      // lore中包含
+- data              // 物品的 data
+- custommodeldata   // 物品的 CMD 值
+- lorecontains      // lore 中包含
 - loreequals
 - matcontains
 - enchantments      // 附魔
@@ -115,10 +115,10 @@ sidebar_position: 4
 用来获取玩家指定背包位置的物品信息
 
 ```text
-%checkitem_getinfo:<槽位>_<修饰符1>,<修饰符2>,<...>%
+%checkitem_getinfo:<槽位>_<修饰符 1>,<修饰符 2>,<...>%
 ```
 
-特别的，\<槽位\> 可以使用 `mainhand`（手持物品） 和 `offhand`（副手物品）
+特别的，\<槽位\> 可以使用 `mainhand`（手持物品）和 `offhand`（副手物品）
 
 以及，**修饰符** 的 `:` 号也是需要写的，不过 `:` 之后写不写都一样
 
@@ -132,12 +132,12 @@ sidebar_position: 4
 
 ![](./_images/CheckItem/getinfo_2.png)
 
-### 例子：收取ia物品
+### 例子：收取 ia 物品
 
-收取指定ia物品的指定数量
+收取指定 ia 物品的指定数量
 
 ```text
-%checkitem_remove_nbtstrings:itemsadder..id..data=ia物品ID,amt:数量%
+%checkitem_remove_nbtstrings:itemsadder..id..data=ia 物品 ID,amt:数量%
 ```
 
 使用了两个修饰符
@@ -145,9 +145,9 @@ sidebar_position: 4
 - nbtstrings
 - amt
 
-其他物品库多数也会像ia一样给物品打上自己的nbt标签,照着改改就好
+其他物品库多数也会像 ia 一样给物品打上自己的 nbt 标签，照着改改就好
 
-## 启用give和remove
+## 启用 give 和 remove
 
 ```yaml title="plugins\PlaceholderAPI\config.yml"
 expansions:

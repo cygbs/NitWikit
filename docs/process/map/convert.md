@@ -5,7 +5,7 @@ sidebar_position: 2
 
 # 地图转换
 
-在某些时候我们需要更改服务端版本(比如 1.20 -> 1.21)，然后就会
+在某些时候我们需要更改服务端版本 (比如 1.20 -> 1.21)，然后就会
 
 <!--markdownlint-disable line-length-->
 
