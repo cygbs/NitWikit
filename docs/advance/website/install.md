@@ -1,6 +1,6 @@
 ---
 title: 安装
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 import Tabs from '@theme/Tabs';
@@ -24,6 +24,8 @@ wget -O - "https://github.com/NamelessMC/Nameless/releases/latest/download/namel
 
 ```
 
+如果你是 Windows,直接下载解压到网站目录即可(Apache 通常是 `htdocs`)
+
 </TabItem>
 <TabItem value="git" label="Git">
 
@@ -41,6 +43,42 @@ git clone --branch v2 https://github.com/NamelessMC/Nameless.git /var/www/html/n
 # 通过Composer安装
 composer create-project namelessmc/nameless /var/www/html/namelessmc
 ```
+
+</TabItem>
+<TabItem value="docker" label="Docker">
+
+1. **安装Docker Compose** (Debian/Ubuntu):
+   ```bash
+   sudo apt install docker-compose-plugin
+   ```
+
+2. **下载配置文件**
+   ```bash
+   # 下载docker-compose.yaml文件
+   wget https://github.com/NamelessMC/Nameless-Docker/blob/master/docker-compose.yaml
+   ```
+
+3. **准备数据目录**
+   ```bash
+   # 创建网站数据目录并设置权限
+   mkdir web
+   chown -R 33:33 web
+   ```
+
+4. **启动容器**
+   ```bash
+   docker compose up -d
+   ```
+
+5. **完成安装**
+   - 访问 http://localhost:80
+   - 数据库地址填写: `db`
+   - 数据库用户名、密码、数据库名都填写: `nameless`
+
+#### 推荐Docker标签
+- `v2.2`: 最新稳定版 (PHP 8.3)
+- `v2.1`: 上一稳定版 (PHP 8.2)  
+- `dev`: 开发版 (仅用于开发)
 
 </TabItem>
 </Tabs>
@@ -107,6 +145,8 @@ sudo chmod -R 777 /var/www/html/namelessmc/uploads
    - 打开浏览器访问：`http://your-domain.com/install`
    - 或：`http://your-domain.com/namelessmc/install`
 
+![img.png](_images/img-2.png)
+
 2. **数据库配置**
    ```
    数据库类型：MySQL
@@ -117,6 +157,8 @@ sudo chmod -R 777 /var/www/html/namelessmc/uploads
    密码：your_secure_password
    表前缀：nl2_ (可自定义)
    ```
+   
+![img.png](_images/img-3.png)
 
 3. **站点配置**
    ```
@@ -132,3 +174,12 @@ sudo chmod -R 777 /var/www/html/namelessmc/uploads
    密码：强密码
    确认密码：重复输入
    ```
+![img.png](_images/img-.png)
+
+然后就安装好了
+
+![](_images/img_1.png)
+
+![](_images/img_2.png)
+
+接下来自己摸索即可
