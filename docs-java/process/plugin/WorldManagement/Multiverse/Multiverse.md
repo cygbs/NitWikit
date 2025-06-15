@@ -69,7 +69,9 @@ sidebar_label: 多世界 - Multiverse
 
 :::
 
-值得一提的是，在 [GitHub](https://github.com/Multiverse/Multiverse-Core/releases) 上的版本比在 SpigotMC 上能下载到的版本要新。
+~~值得一提的是，在 [GitHub](https://github.com/Multiverse/Multiverse-Core/releases) 上的版本比在 SpigotMC 上能下载到的版本要新。~~
+
+开发组貌似想起来自己曾在 SpigotMC 发过此资源了
 
 ## Folia
 
