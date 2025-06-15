@@ -50,6 +50,12 @@ Mohist 与 Arclight 并没有谁好谁坏，通常来说，两个服务端最好
 
 :::
 
+:::tip 兼容性修复
+
+如果你使用的是 1.12.2 的混合端，推荐同时安装 [HybridFix](https://www.mcmod.cn/class/17621.html) 增强兼容性
+
+:::
+
 ## Fabric
 
 ```mermaid
