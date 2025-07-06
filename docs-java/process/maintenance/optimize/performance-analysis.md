@@ -35,6 +35,12 @@ Spark 是一个 Minecraft 的性能分析器，支持广泛 (如 Bukkit，Bungee
 
 对于 Purpur Fork 服务器或 Paper 1.21 #100 之后的构建，默认自带 Spark，无需单独下载。
 
+:::warning
+
+在 BungeeCord、Velocity 和 Forge/Fabric 中，请分别使用 `/sparkb` 、 `/sparkv` 和 `/sparkc` 来代替 `/spark`
+
+:::
+
 #### /spark profiler
 
 如果分析器已经启动，你可以输入下面这些命令：
