@@ -23,4 +23,10 @@ sidebar_position: 3
 
 `GitHub` https://github.com/Puharesource/TitleManager
 
+`文档` https://tmdocs.tarkan.dev
+
 :::
+
+## Bstats
+
+[![](https://bstats.org/signatures/bukkit/TitleManager.svg)](https://bstats.org/plugin/bukkit/TitleManager/7318)
