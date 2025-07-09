@@ -121,7 +121,7 @@ accepts-transfers = true
 ```
 
 **混合架构示例：**
-```
+```text
 独立服务器 --Transfer--> Velocity ---> 子服务器群组
 ```
 

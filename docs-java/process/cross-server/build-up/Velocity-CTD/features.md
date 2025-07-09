@@ -36,7 +36,7 @@ max-connections = 8
 
 ## 队列系统
 
-### 功能介绍
+### 队列功能介绍
 
 Velocity-CTD 内置了高效的队列系统，可以在服务器满员时自动将玩家加入队列，支持优先级、超时等高级功能。
 
@@ -93,7 +93,7 @@ velocity.queue.timeout.600: true  # 离线后保留队列位置 600 秒
 - 权限：`velocity.command.alertraw`
 
 示例：
-```
+```bash
 /alert 服务器将在 10 分钟后重启
 /alertraw <red>紧急维护通知</red>
 ```
@@ -137,11 +137,11 @@ velocity.queue.timeout.600: true  # 离线后保留队列位置 600 秒
 
 ## 多转发系统
 
-### 功能介绍
+### 多转发功能介绍
 
 Velocity-CTD 支持为不同的子服务器使用不同的转发模式，这在混合环境中非常有用。
 
-### 配置方法
+### 多转发配置方法
 
 ```toml
 [multi-forwarding]
@@ -153,7 +153,7 @@ server-specific-forwarding = {
 }
 ```
 
-### 使用场景
+### 多转发使用场景
 
 - **版本混合网络**：同时支持新旧版本的 Minecraft 服务器
 - **安全性要求不同**：某些服务器需要更高的安全性
