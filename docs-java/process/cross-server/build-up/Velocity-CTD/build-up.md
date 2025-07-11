@@ -67,12 +67,12 @@ ping-passthrough = "all"
 ## 登录服
 login = "0.0.0.0:25501"
 ## 生存服
-survival = "0.0.0.0.:25502"
+survival = "0.0.0.0:25502"
 ## 资源服
 resource = "0.0.0.0:25503"
 # 尝试连接子服的先后顺序
 try = [
-    "login"，"survival"
+    "login", "survival"
 ]
 # 建议删除此项所有值
 [forced-hosts]
