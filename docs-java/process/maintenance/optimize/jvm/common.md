@@ -62,11 +62,49 @@ java -Xlog:gc+init -XX:+UseTransparentHugePages -Xmx1g -version
 
 默认的 SpigotLibraryLoader 下载源或插件使用 PaperLibraryLoader 添加的 Maven 中心仓库下载源在国内访问很慢，
 
+### Leaf 
+
 如果你使用的是 Leaf，你可以添加参数使用国内下载源：
 
 ```shell
 -DLeaf.library-download-repo=https://maven.aliyun.com/repository/public
 ```
+
+### Paper 及其分支
+
+在 Paper 1.20.6 之后，可以使用以下系统属性配置 Maven 中心仓库镜像：
+
+```shell
+-Dorg.bukkit.plugin.java.LibraryLoader.centralURL=https://maven.aliyun.com/repository/central
+```
+
+或者设置环境变量：
+
+```shell
+# Linux/MacOS
+export PAPER_DEFAULT_CENTRAL_REPOSITORY=https://maven.aliyun.com/repository/central
+
+# Windows (PowerShell)
+$env:PAPER_DEFAULT_CENTRAL_REPOSITORY="https://maven.aliyun.com/repository/central"
+
+# Windows (CMD)
+set PAPER_DEFAULT_CENTRAL_REPOSITORY=https://maven.aliyun.com/repository/central
+```
+
+#### 推荐的国内镜像源
+
+- **阿里云 Maven 中心仓库**: `https://maven.aliyun.com/repository/central`
+- **阿里云公共仓库**: `https://maven.aliyun.com/repository/public`
+- **华为云 Maven 中心仓库**: `https://repo.huaweicloud.com/repository/maven/`
+- **腾讯云 Maven 中心仓库**: `https://mirrors.cloud.tencent.com/nexus/repository/maven-public/`
+
+:::tip 性能提示
+
+使用国内镜像源可以显著提升插件依赖库的下载速度，特别是在服务器首次启动或安装新插件时。
+
+:::
+
+
 
 ## 中文编码
 
