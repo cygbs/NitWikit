@@ -139,19 +139,74 @@ discord 下载预构建
 
 ## Broadcaster Xbox Live 广播
 
-让服务器在 Xbox Live 上显示，朋友可以直接从好友列表加入服务器。
+让服务器在 Xbox Live 上显示为可加入的会话，朋友可以直接从 Xbox 好友列表加入服务器。
 
-[下载地址](https://github.com/MCXboxBroadcast/Broadcaster/releases)
+![img.png](_image/img_1.png)
 
-### 扩展版本安装
+### 工作原理
 
-1. 下载 `MCXboxBroadcastExtension.jar`
-2. 放入 Geyser `extensions` 文件夹
-3. 重启服务器，按照提示进行 Microsoft 账户认证
+Broadcaster 通过模拟 Xbox Live 客户端，将你的 Geyser/基岩版服务器广播到 Xbox Live 网络。当玩家关注了认证账户后，服务器会在他们的好友标签页中显示为可加入的游戏会话。
 
-### 认证步骤
+### 安装方法
 
-启动后会显示认证码，打开 `https://www.microsoft.com/link` 输入代码，登录 Microsoft 账户，在 Xbox 上关注该账户即可。
+#### 方法一：扩展版本（推荐）
+
+适用于已有 Geyser 服务器的情况。
+
+1. **下载扩展**
+   - 从 [GitHub Releases](https://github.com/MCXboxBroadcast/Broadcaster/releases) 下载 `MCXboxBroadcastExtension.jar`
+
+2. **安装扩展**
+   ```
+   服务器根目录/
+   ├── plugins/
+   │   └── Geyser-Spigot/
+   │       └── extensions/
+   │           └── MCXboxBroadcastExtension.jar
+   ```
+
+3. **重启服务器**
+   - 重启服务器以加载扩展
+
+4. **查看认证信息**
+   - 服务器启动后，控制台会显示认证码：
+   ```
+   To sign in, use a web browser to open the page https://www.microsoft.com/link and enter the code XXXXXXXX to authenticate.
+   ```
+
+#### 方法二：独立版本
+
+适用于需要独立运行或连接远程服务器的情况。
+
+1. **下载独立版**
+   - 下载 `MCXboxBroadcastStandalone.jar`
+
+2. **启动程序**
+   ```bash
+   java -jar MCXboxBroadcastStandalone.jar
+   ```
+
+3. **配置目标服务器**
+   - 编辑生成的 `config.yml` 文件：
+   ```yaml
+   remote:
+     address: "your-server-ip"
+     port: 19132
+   ```
+
+4. **重启工具**
+   - 保存配置后重启程序
+
+### 高级配置
+
+#### 自定义服务器图片
+
+自定义图片功能允许你为服务器设置专属的展示图片，该图片会在 Xbox Live 好友列表和个人资料页面中显示。
+
+![](_image/img.png)
+
+将制作好的图片重命名为 `screenshot.jpg`,放到配置文件目录即可
+
 
 ## GeyserFloatingPoints 浮点精度修复
 
