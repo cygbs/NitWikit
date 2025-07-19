@@ -78,7 +78,7 @@ GeyserOptionalPack 是一个可选资源包
 可以解决这个问题，[GitHub](https://github.com/GeyserExtensionists/GeyserMoreRows),需要自行构建，不会可以加入 zim 的
 discord 下载预构建
 
-下载后还需安装[基岩资源包](https://raw.githubusercontent.com/GeyserExtensionists/GeyserMoreRows/refs/heads/main/MorerowsPack.mcpack)
+下载后还需安装[基岩资源包](https://raw.githubusercontent.com/GeyserExtensionists/GeyserMoreRows/refs/heads/main/MorerowsPack.mcpack) 和 PacketEvents
 
 ## 更好的第三人称
 
@@ -136,3 +136,27 @@ discord 下载预构建
 discord 下载预构建
 
 该插件对于 IA,ORX 这些插件特别好使，让基岩版玩家不用再看口口了
+
+## Broadcaster Xbox Live 广播
+
+让服务器在 Xbox Live 上显示，朋友可以直接从好友列表加入服务器。
+
+[下载地址](https://github.com/MCXboxBroadcast/Broadcaster/releases)
+
+### 扩展版本安装
+
+1. 下载 `MCXboxBroadcastExtension.jar`
+2. 放入 Geyser `extensions` 文件夹
+3. 重启服务器，按照提示进行 Microsoft 账户认证
+
+### 认证步骤
+
+启动后会显示认证码，打开 `https://www.microsoft.com/link` 输入代码，登录 Microsoft 账户，在 Xbox 上关注该账户即可。
+
+## GeyserFloatingPoints 浮点精度修复
+
+修复基岩版在大距离处的浮点精度问题（距离效应）。
+
+[下载地址](https://github.com/Oryxel/GeyserFloatingPoints/releases)
+
+将 `.jar` 文件放入 Geyser `extensions` 文件夹，重启服务器即可自动生效。
