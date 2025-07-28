@@ -140,12 +140,19 @@ Matrix 是由国人 RE 编写的一款反作弊插件，当年诞生是用于取
 > 购买地址：https://www.spigotmc.org/resources/anticheataddition.33590/
 
 </TabItem>
+</Tabs>
+
+### 扩展工具
+
+这些插件自身不提供反作弊功能,但是可用于反作弊,推荐全部看一遍
+
+<Tabs>
 <TabItem value="aco" label="AntiCheatObfuscator">
 
 此插件会 "混淆 你的服务器上的反作弊，可以避免作弊者发现你的反作弊组合而针对性绕过
 
 > 下载地址：https://www.minebbs.com/resources/anticheatobfuscator-1-8-1-20.9251/
-> 
+>
 > Modrinth: https://modrinth.com/plugin/anticheatobfuscator
 
 </TabItem>
@@ -171,6 +178,51 @@ ISeeYou 是一个免费的录制插件，可以录制玩家的一举一动
 > 下载地址：https://github.com/MC-XiaoHei/ISeeYou/releases
 
 </TabItem>
+<TabItem value="coordinateoffset" label="CoordinateOffset">
+
+CoordinateOffset 是一个坐标混淆插件，可以防止玩家通过 F3 调试界面或客户端模组获取真实坐标。
+
+**支持版本：** 1.17.x - 1.21.7 (Spigot/Paper)
+
+> GitHub: https://github.com/joshuaprince/CoordinateOffset
+>
+> Modrinth: https://modrinth.com/plugin/coordinateoffset
+>
+> Spigot: https://www.spigotmc.org/resources/coordinateoffset.111292/
+
+需要安装前置 PacketEvent
+
+![](_images/img.png)
+
+</TabItem>
+<TabItem value="synsniff" label="syn-sniff">
+
+syn-sniff 是一个被动 TCP/IP 协议栈指纹识别插件，通过分析网络数据包来获取玩家连接的深层信息。
+
+**主要功能：**
+- 被动嗅探 TCP/IP SYN 数据包进行指纹识别
+- 检测玩家的操作系统类型
+
+**系统要求：**
+- pcap 原生库 (libpcap, WinPcap, Npcap)
+- 管理员权限或 Linux Capabilities
+
+**命令：**
+- `/fingerprint <player>` - 查看原始 TCP/IP 指纹信息
+- `/predictos <player>` - 显示预测的操作系统
+
+:::warning[注意]
+
+此插件需要管理员权限和特定的网络库支持，安装前请确保满足系统要求。
+
+:::
+
+![](_images/img_1.png)
+
+> GitHub: https://github.com/Duckulus/syn-sniff
+
+</TabItem>
+
 </Tabs>
 
 ---
