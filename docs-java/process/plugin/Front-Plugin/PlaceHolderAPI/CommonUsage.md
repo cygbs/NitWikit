@@ -72,7 +72,7 @@ Multiverse-Core v5 已经内置 papi 支持，不再需要额外下载扩展
 
 :::
 
-```
+```text
 %multiverse-core_alias% - v5 显示世界别名
 ```
 
