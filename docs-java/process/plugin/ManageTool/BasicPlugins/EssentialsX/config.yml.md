@@ -443,7 +443,7 @@ list:
 # 在使用昵称的玩家旁边显示 /list 中的真实 ID。
 real-names-on-list: false
 
-# 控制台输出更多东西。
+# 控制台输出调试信息。
 debug: false
 
 # 设置所有消息的语言文件。
@@ -453,7 +453,7 @@ debug: false
 # 查看更多信息，请访问 http://wiki.ess3.net/wiki/Locale
 #locale: en
 
-# 当开启上帝模式的人离开服务器时关闭那人的上帝模式。
+# 当开启上帝模式的人离开服务器时关闭其上帝模式。
 remove-god-on-disconnect: false
 
 # 自动AFK   驿站:使用命令/afk 暂时离开
@@ -503,7 +503,7 @@ sleep-ignores-vanished-player: true
 # 设置玩家 AFK 时的列表名称。默认情况下为 none，它指定 Essentials
 # 不应干扰 AFK 玩家的列表名称。none 我改成了 挂机中
 # 你可以使用颜色代码，使用 {USERNAME} 玩家的名称或 {PLAYER} 作为玩家的显示名称。
-afk-list-name: "挂机中"
+afk-list-name: "离开"
 
 # 当玩家进入或退出 AFK 模式时，是否聊天栏通知其他玩家
 # 发给整个服务器的人，还是只发给这个挂机的玩家？
@@ -614,7 +614,7 @@ login-attack-delay: 5
 # 设置最大飞行速度，速度从 0.1 到 1.0 之间
 max-fly-speed: 0.8
 
-# 设置每分钟可以发送的最大邮件数量。
+# 设置最大移动速度。
 max-walk-speed: 0.8
 
 #设置一分钟内可以发送的最大邮件量。
@@ -971,7 +971,7 @@ protect:
     fireball-itemdamage: false   # 阻止 火球项目伤害 ???
     witherskull-explosion: false   # 阻止 凋零攻击的爆炸
     witherskull-playerdamage: false   # 阻止 凋零攻击对玩家照成伤害
-    witherskull-itemdamage: false   #凋零骷髅头？物品伤害 ???
+    witherskull-itemdamage: false   # 阻止 凋零骷髅头对实体伤害 (注: 这个保护的更全面 配置文件名误导人)
     wither-spawnexplosion: false   #阻止 凋零出生时的爆炸
     wither-blockreplace: false   # 阻止 凋零破坏方块
     creeper-explosion: false   #阻止 爬行者的爆炸
@@ -989,7 +989,7 @@ protect:
     entitytarget: false
     # 阻止 僵尸破门
     zombie-door-break: false
-    # 防止掠夺者窃取方块
+    # 防止劫掠兽破坏方块
     ravager-thief: false
     # 防止羊吃掉草
     sheep-eat-grass: false
@@ -1005,7 +1005,7 @@ protect:
       witch: false
       # 防止猪被闪电击中时变成僵尸猪人。
       zombie-pigman: false
-      # 防止僵尸变成淹死成溺尸。
+      # 防止僵尸变成溺尸。
       drowned: false
       # 防止哞菇被闪电击中时变色。
       mooshroom: false
@@ -1018,7 +1018,7 @@ protect:
       zombie: false   #阻止 僵尸       的生成
       slime: false   #阻止 史莱姆     的生成
       ghast: false   #阻止 恶魂       的生成
-      pig_zombie: false   #阻止 僵尸猪人   的生成
+      pig_zombie: false   #阻止 僵尸猪人/灵   的生成  译者注: Essenials做了不同版本间实体类型的兼容层, 填zombified_piglin亦可。
       enderman: false   #阻止 末影人     的生成
       cave_spider: false   #阻止 洞穴蜘蛛   的生成
       silverfish: false   #阻止 蠹虫       的生成
@@ -1061,7 +1061,7 @@ protect:
     drown: false
     suffocate: false
 
-    # 取消岩浆伤害，但掉落岩浆中的物品将仍被烧成灰烬
+    # 取消岩浆伤害，但掉落岩浆中的物品将仍被烧毁
     lavadmg: false
 
     # 取消弓箭伤害
