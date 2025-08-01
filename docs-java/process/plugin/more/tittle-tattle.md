@@ -43,7 +43,7 @@ Paper 服务器有一个鲜为人知的功能，那就是 update 文件夹。以
 
 ## Spigot Library Booster
 
-Spigot在1.17之后新增了一个名为LibraryLoader的玩意，可以让插件在运行时下载所需依赖，无需将其包括在插件本体中，这显然是一个好消息，但是对于国内用户来说就显得不那么友好，spigot默认没有提供对下载源的自定义功能，导致只能从maven中心源缓慢地下载依赖文件甚至超时，本工具就是针对这种情况进行解决。
+Spigot 在 1.17 之后新增了一个名 为LibraryLoader 的玩意，可以让插件在运行时下载所需依赖，无需将其包括在插件本体中，这显然是一个好消息，但是对于国内用户来说就显得不那么友好，Spigot 默认没有提供对下载源的自定义功能，导致只能从 maven 中心源缓慢地下载依赖文件甚至超时，本工具就是针对这种情况进行解决。
 
 :::info
 
@@ -51,7 +51,7 @@ Spigot在1.17之后新增了一个名为LibraryLoader的玩意，可以让插件
 
 :::
 
-如果你使用 Leaf 核心，可以直接 [这样做](/docs-java/process/maintenance/optimize/jvm/common.md#下载源加速)，不需要使用此工具。
+如果你使用 Leaf 核心或 Paper 1.21.6(及其分支) 之后的版本，可以直接 [这样做](/docs-java/process/maintenance/optimize/jvm/common.md#下载源加速)，不需要使用此工具。
 
 ## 圈内破事
 
