@@ -122,7 +122,7 @@ Matrix 是由国人 RE 编写的一款反作弊插件，当年诞生是用于取
 
 ### 扩展反作弊插件
 
-一些扩展的反作弊插件，通常不提供直接的防作弊功能，而是扩展
+一些扩展的反作弊插件，提供一些一般反作弊不会反的部分
 
 <Tabs queryString="ext">
 <TabItem value="aca" label="AntiCheatAddition">
@@ -138,6 +138,62 @@ Matrix 是由国人 RE 编写的一款反作弊插件，当年诞生是用于取
 - (以及更多)
 
 > 购买地址：https://www.spigotmc.org/resources/anticheataddition.33590/
+
+</TabItem>
+<TabItem value="coordinateoffset" label="CoordinateOffset">
+
+CoordinateOffset 是一个坐标混淆插件，可以防止玩家通过 F3 调试界面或客户端模组获取真实坐标。
+
+**支持版本：** 1.17.x - 1.21.7 (Spigot/Paper)
+
+> GitHub: https://github.com/joshuaprince/CoordinateOffset
+>
+> Modrinth: https://modrinth.com/plugin/coordinateoffset
+>
+> Spigot: https://www.spigotmc.org/resources/coordinateoffset.111292/
+
+需要安装前置 PacketEvent
+
+![](_images/img.png)
+
+</TabItem>
+<TabItem value="antihealthindicator" label="AntiHealthIndicator">
+
+AntiHealthIndicator 是一个防止黑客和模组用户查看其他玩家血量的插件。通过直接修改数据包来实现，无法被绕过。
+
+**主要功能：**
+- 隐藏玩家血量
+- 隐藏玩家氧气值
+- 隐藏玩家吸收效果
+- 隐藏玩家饱食度
+- 隐藏玩家游戏模式
+- 隐藏玩家经验值
+- 隐藏物品耐久度
+- 隐藏物品附魔
+- 隐藏物品堆叠数量
+
+需要安装前置 PacketEvents
+
+> GitHub: https://github.com/Bram1903/AntiHealthIndicator
+>
+> Modrinth: https://modrinth.com/plugin/antihealthindicator
+>
+> SpigotMC: https://www.spigotmc.org/resources/antihealthindicator.114851/
+
+</TabItem>
+<TabItem value="totemguard" label="TotemGuard">
+
+TotemGuard 是一个专门检测 AutoTotem 作弊的轻量级反作弊插件
+
+具体如何检查请查看 [Wiki](https://github.com/Bram1903/TotemGuard/wiki/Checks)
+
+需要安装前置 PacketEvents
+
+> GitHub: https://github.com/Bram1903/TotemGuard
+>
+> Modrinth: https://modrinth.com/plugin/totemguard
+>
+> SpigotMC: https://www.spigotmc.org/resources/totemguard.119385/
 
 </TabItem>
 </Tabs>
@@ -176,23 +232,6 @@ ISeeYou 是一个免费的录制插件，可以录制玩家的一举一动
 :::
 
 > 下载地址：https://github.com/MC-XiaoHei/ISeeYou/releases
-
-</TabItem>
-<TabItem value="coordinateoffset" label="CoordinateOffset">
-
-CoordinateOffset 是一个坐标混淆插件，可以防止玩家通过 F3 调试界面或客户端模组获取真实坐标。
-
-**支持版本：** 1.17.x - 1.21.7 (Spigot/Paper)
-
-> GitHub: https://github.com/joshuaprince/CoordinateOffset
->
-> Modrinth: https://modrinth.com/plugin/coordinateoffset
->
-> Spigot: https://www.spigotmc.org/resources/coordinateoffset.111292/
-
-需要安装前置 PacketEvent
-
-![](_images/img.png)
 
 </TabItem>
 <TabItem value="synsniff" label="syn-sniff">
