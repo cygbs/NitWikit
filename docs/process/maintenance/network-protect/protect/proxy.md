@@ -117,6 +117,7 @@ Asia Network(亚洲网络):
 
 - 提供新加坡和东京网络
 - 价格:0.01 $/GB(与其他流量分开计费，没有免费流量)(约合人民币 7 分)
+- 需要 Pro 计划
 
 Geyser 支持需要 Premium 计划 (100 $/月，堪比抢钱)
 
@@ -138,7 +139,7 @@ Pro 计划 (25$ 每月)(约合人民币 178 元):
 - 支持任意 TCP，UDP 代理
 - 提供亚洲节点 (一般来说会被分配到日本节点)
 - 提供免费域名
-- 自带内网穿透
+- **自带内网穿透**
 - 提供防火墙
 
 缺点:
@@ -184,6 +185,21 @@ Cloudflare Spectrum 目前是没中国节点的
 ### 国内
 
 目前没有价格可以接受并且好用的四级代理,如果你非常有钱,可以考虑 EdgeOne 企业版(腾讯), ESA 企业版(阿里)
+
+### Geyser 兼容
+
+由于 [RakNet 放大攻击](https://geysermc.org/blog/raknet-amplification-attack#rate-limiting),Geyser 实施了速率限制,以防止协议的进一步潜在滥用
+
+所以你需要将前端代理 IP 加入白名单,像这样:
+
+```yaml
+bedrock:
+# ...
+  enable-proxy-protocol: true
+  proxy-protocol-whitelisted-ips: [ "https://cosmic.global/ips/", "https://tcpshield.com/v4/" ]
+```
+
+你可以在这些服务的官网上找到 IP 池
 
 
 ## 狂套 Frp
