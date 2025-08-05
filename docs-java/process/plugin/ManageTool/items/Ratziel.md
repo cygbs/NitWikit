@@ -8,8 +8,8 @@ sidebar_position: 5
 :::info
 
 `GitHub` https://github.com/TheFloodDragon/Ratziel-Beta
-`MineBBS` https://www.minebbs.com/resources/ratziel.12580/
-`Docs` https://theflooddragon.github.io/Ratziel-Docs/
+`MineBBS` https://www.minebbs.com/resources/ratziel.12580
+`Docs` https://theflooddragon.github.io/Ratziel-Docs
 
 :::
 
