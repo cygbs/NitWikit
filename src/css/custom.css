@@ -1042,4 +1042,4 @@ a.card::after:not(.header-github-link):not(.github-icon-button) {
   opacity: 0;
   transform: scaleX(0.6) translateY(3px);
   transition: all var(--transition-bezier);
-} 
+}
