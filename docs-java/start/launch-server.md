@@ -123,7 +123,12 @@ java -jar leaf-*.jar
 
 当服务器崩溃或关闭时，使用脚本实现自动重启：
 
-**Windows (.bat)**
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs queryString="system">
+<TabItem value="windows" label="Windows">
+
 ```batch
 @echo off
 :start
@@ -133,7 +138,9 @@ timeout /t 5
 goto start
 ```
 
-**Linux (.sh)**
+</TabItem>
+<TabItem value="linux" label="Linux">
+
 ```bash
 #!/bin/bash
 while true; do
@@ -142,6 +149,9 @@ while true; do
     sleep 5
 done
 ```
+
+</TabItem>
+</Tabs>
 
 ### 模块化内容
 
