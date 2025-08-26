@@ -7,7 +7,7 @@ sidebar_position: 4
 
 你已经做好了准备工作，开始启动你的服务器了
 
-:::tip 
+:::tip
 
 新版本的 Forge 和 Neoforge 使用安装器安装后会自动生成启动脚本。参阅 [新版 Forge 和 NeoForge 启动方法](#新版-forge-和-neoforge-启动)
 
@@ -157,8 +157,7 @@ done
 
 使用变量拆分脚本内容，不再堆在同一行，使得内容更清晰，也方便修改。
 
-示例脚本：
-```batch
+```batch title="示例脚本"
 @echo off
 set JAVA_OPTS=-Xmx4G -Xms1G -XX:+UseG1GC
 set SERVER_JAR=paper-*.jar
