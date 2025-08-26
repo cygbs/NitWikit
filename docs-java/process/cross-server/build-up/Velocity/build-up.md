@@ -90,11 +90,7 @@ Velocity 支持将玩家信息 (如 IP 地址、UUID 和皮肤) 转发到你的�
 你只能选择这些转发格式中的一种。目前不可能“混合匹配”转发模式或同时使用所有转发格式。一般来说，如果你只支持使用 Minecraft 1.13 及更新版本的客户端，请使用 Velocity Modern 转发；
 否则，你必须使用 BungeeCord 转发。
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-<Tabs>
-  <TabItem value="Modern" label="现代转发(Modern Forwarding)" default>
+## 现代转发(Modern Forwarding)
 
 **`modern` 转发** 是 Velocity 的原生格式，以高效的二进制格式转发所有玩家信息，并采用 MAC 代码增加安全性，使非法服务器难以绕过你的 Velocity 代理。但它**仅支持 Minecraft 1.13 或更高版本**。
 
@@ -107,7 +103,11 @@ import TabItem from '@theme/TabItem';
 1. 在 `velocity.toml` 文件中将 `player-info-forwarding` 设置为 `modern`。
 2. 确保你的服务器已正确配置以使用 Velocity 转发。
 
-### 为 Paper 配置现代转发
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+  <TabItem value="paper" label="Paper" default>
 
 - Paper **1.14 及以上版本** 以及 **1.13.1/1.13.2 版本 377 及以上版本** 原生支持 Velocity 现代转发。
 
@@ -120,22 +120,18 @@ import TabItem from '@theme/TabItem';
 4. 编辑完成后，重新启动服务器。
 
 **注意**：如果你使用的是 Paper **1.18.2 或更低版本**，请在 `paper.yml` 文件中查找相关设置。
-
-<details>
-  <summary>点击展开 - 为 Fabric/Forge 配置现代转发</summary>
-
-### 为 Fabric 配置现代转发
-
-- 使用名为 **FabricProxy-Lite** 的 mod，可以在 Fabric 上使用修改过的服务器与 Velocity 现代转发。
-
-### 为 Forge 配置现代转发
-
-- 使用名为 **ProxyCompatibleForge** 的 mod，可以在 Forge **1.16.5 或更高版本** 的修改过的服务器上使用 Velocity 现代转发。
-
-</details>
   </TabItem>
 
-  <TabItem value="legacy" label="传统 BungeeCord 兼容转发 (Legacy Forwarding)" default>
+  <TabItem value="fabric" label="Fabric" default>
+   - 使用名为 **FabricProxy-Lite** 的 mod，可以在 Fabric 上使用修改过的服务器与 Velocity 现代转发。
+  </TabItem>
+
+  <TabItem value="forge" label="Forge" default>
+  - 使用名为 **ProxyCompatibleForge** 的 mod，可以在 Forge **1.16.5 或更高版本** 的修改过的服务器上使用 Velocity 现代转发。
+  </TabItem>
+</Tabs>
+
+## 传统 BungeeCord 兼容转发 (Legacy Forwarding)
 
 :::warning
 
@@ -148,31 +144,29 @@ import TabItem from '@theme/TabItem';
 
 :::
 
-### 传统转发增加安全性
+传统转发增加安全性：
 
 - 对于托管在共享主机上的代理，Velocity 可选地支持 **BungeeGuard**。
   - 将 `velocity.toml` 中的 `player-info-forwarding` 设置为 `bungeeguard`。
   - 在 BungeeGuard 配置的令牌部分添加 `forwarding.secret` 文件中的值。
 
-### 为 Spigot / Paper 配置传统转发
+<Tabs>
+  <TabItem value="spigot/paper" label="Spigot/Paper" default>
 
 1. 在 `spigot.yml` 中将 `settings.bungeecord` 设置为 `true`。
 2. 重新启动服务器。
 
-<details>
-  <summary>点击展开 - 为 Sponge/Fabric 配置传送转发</summary>
-
-### 为 Sponge 配置传统转发
+  </TabItem>
+  <TabItem value="sponge" label="Sponge" default>
 
 1. 停止服务器。
 2. 在 `config/sponge/global.conf` 文件中将 `modules.bungeecord` 和 `bungeecord.ip-forwarding` 设置为 true。
 3. 重新启动 Sponge 服务器。
 
-### 为 Fabric 配置传统转发
+  </TabItem>
+  <TabItem value="fabric" label="Fabric" default>
 
 **警告**：不再有任何积极支持传统转发的 mod。**请改用 Velocity 现代转发**。
-
-</details>
 
   </TabItem>
 </Tabs>
