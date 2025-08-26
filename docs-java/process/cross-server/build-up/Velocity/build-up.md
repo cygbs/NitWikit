@@ -87,7 +87,8 @@ Velocity 支持将玩家信息 (如 IP 地址、UUID 和皮肤) 转发到你的�
 - **BungeeCord 转发**(也称为*传统转发*)，它有更好的兼容性但安全性较低。
 - **BungeeGuard**，与传统 BungeeCord 转发相同，但包含了一个密钥。它比单独的 BungeeCord 转发更好，但不如 Velocitymodern 转发理想。
 
-你只能选择这些转发格式中的一种。目前不可能“混合匹配”转发模式或同时使用所有转发格式。一般来说，如果你只支持使用 Minecraft 1.13 及更新版本的客户端，请使用 Velocity Modern 转发；
+你只能选择这些转发格式中的一种。目前不可能“混合匹配”转发模式或同时使用所有转发格式。~~除非你使用 [Velocity-CTD](../Velocity-CTD/velocity-ctd.md)~~
+一般来说，如果你只支持使用 Minecraft 1.13 及更新版本的客户端，请使用 Velocity Modern 转发；
 否则，你必须使用 BungeeCord 转发。
 
 ## 现代转发(Modern Forwarding)
