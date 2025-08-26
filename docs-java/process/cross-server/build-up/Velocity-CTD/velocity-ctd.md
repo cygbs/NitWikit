@@ -1,7 +1,7 @@
 ---
 title: Velocity-CTD
 slug: /velocity-ctd
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Velocity-CTD
