@@ -9,13 +9,20 @@ sidebar_position: 9
 
 `eCloud` https://api.extendedclip.com/expansions/string
 
-`变量列表` https://wiki.placeholderapi.com/users/placeholder-list/#changeoutput
+`变量列表` https://wiki.placeholderapi.com/users/placeholder-list/#string
 
 `GitHub` https://github.com/BlitzOffline/StringExpansion
 
 :::
 
 用于处理字符串的简单 PlaceholderAPI 扩展。
+
+## 安装此扩展
+
+```text
+/papi ecloud download String
+/papi reload
+```
 
 ```yaml title="plugins/PlaceHolderAPI/config.yml"
 "string":
