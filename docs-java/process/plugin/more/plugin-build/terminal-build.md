@@ -17,14 +17,14 @@ sidebar_position: 5
      2. 输入 `java -version`
      3. 如果看到类似下面的输出，说明安装成功：
         ```bash
-        java version "1.8.0_301"
+java version "1.8.0_301"
         Java(TM) SE Runtime Environment (build 1.8.0_301-b09)
         Java HotSpot(TM) 64-Bit Server VM (build 25.301-b09, mixed mode)
-        ```
+```
 
 2. **Linux**：
    ```bash
-   # Ubuntu/Debian系统
+# Ubuntu/Debian系统
    sudo apt update                    # 更新软件源
    sudo apt install openjdk-8-jdk     # 安装 JDK 8
    
@@ -33,7 +33,7 @@ sidebar_position: 5
    
    # 验证安装
    java -version
-   ```
+```
 
 ### 2. 安装构建工具
 
@@ -47,12 +47,12 @@ sidebar_position: 5
         - 在 `Path` 变量末尾添加 `;%MAVEN_HOME%\bin`
      5. 验证安装：
         ```bash
-        mvn -version
-        ```
+mvn -version
+```
    
    - **Linux**：
      ```bash
-     # Ubuntu/Debian系统
+# Ubuntu/Debian系统
      sudo apt install maven
      
      # CentOS 系统
@@ -60,7 +60,7 @@ sidebar_position: 5
      
      # 验证安装
      mvn -version
-     ```
+```
 
 2. **Gradle**（可选，如果项目使用 Gradle）：
    - **Windows**：
@@ -72,19 +72,19 @@ sidebar_position: 5
         - 在 `Path` 变量末尾添加 `;%GRADLE_HOME%\bin`
      5. 验证安装：
         ```bash
-        gradle -version
-        ```
+gradle -version
+```
    
    - **Linux**：
      ```bash
-     # 使用 SDKMAN 安装（推荐）
+# 使用 SDKMAN 安装（推荐）
      curl -s "https://get.sdkman.io" | bash     # 安装 SDKMAN
      source "$HOME/.sdkman/bin/sdkman-init.sh"  # 初始化 SDKMAN
      sdk install gradle                         # 安装 Gradle
      
      # 验证安装
      gradle -version
-     ```
+```
 
 ## Maven 构建步骤
 
@@ -141,16 +141,132 @@ jar 文件通常命名为：`项目名-版本号.jar`
 ## Gradle 构建步骤
 
 ### 1. 使用 Gradle Wrapper（推荐）
-Wrapper 是项目专用的 Gradle 启动器，不需要本地安装 Gradle。
 
+#### 什么是 Gradle Wrapper？
+Gradle Wrapper 是项目专用的 Gradle 启动器，它的优势包括：
+- **无需安装 Gradle**：自动下载指定版本的 Gradle
+- **版本统一**：确保所有开发者使用相同的 Gradle 版本
+- **自动更新**：可以轻松升级到新版本
+- **项目隔离**：不同项目可以使用不同版本的 Gradle
+
+#### 如何识别项目是否有 Wrapper？
+在项目根目录查看是否有以下文件：
+```text
+项目根目录/
+├── gradlew              # Unix/Linux/macOS 的启动脚本
+├── gradlew.bat          # Windows 的启动脚本
+├── gradle/              # Wrapper 配置目录
+│   └── wrapper/
+│       ├── gradle-wrapper.jar        # Wrapper 执行程序
+│       └── gradle-wrapper.properties # Wrapper 配置文件
+└── build.gradle         # 项目构建文件
+```
+
+#### 进入项目目录
 ```bash
-# Windows系统
-# 如果是第一次运行，可能需要下载Gradle
-gradlew.bat clean build
+# Windows示例（如果项目在D盘的minecraft文件夹）
+D:
+cd minecraft\plugins\MyGradlePlugin
 
-# Linux/macOS系统
-chmod +x ./gradlew              # 给予执行权限
-./gradlew clean build          # 清理并构建
+# Linux/macOS示例
+cd ~/minecraft/plugins/MyGradlePlugin
+
+# 验证是否在正确目录
+dir                      # Windows
+ls                       # Linux/macOS
+```
+确保你能看到 `gradlew`、`gradlew.bat` 和 `build.gradle` 文件。
+
+#### 构建步骤
+
+**Windows 系统：**
+```bash
+# 第一次运行可能需要等待下载 Gradle
+gradlew.bat clean        # 清理旧文件
+gradlew.bat build        # 构建项目
+
+# 或者一次性执行
+gradlew.bat clean build
+```
+
+**Linux/macOS 系统：**
+```bash
+# 首次使用需要给予执行权限
+chmod +x ./gradlew
+
+# 清理并构建
+./gradlew clean build
+
+# 或者分步执行
+./gradlew clean          # 清理旧文件
+./gradlew build          # 构建项目
+```
+
+#### 构建过程说明
+1. **首次运行**：
+   - 检查 `gradle-wrapper.properties` 中指定的 Gradle 版本
+   - 如果本地没有该版本，自动下载到 `~/.gradle/wrapper/dists/` 目录
+   - 下载完成后开始构建
+
+2. **后续运行**：
+   - 直接使用已下载的 Gradle 版本
+   - 构建速度更快
+
+#### 常用 Wrapper 命令
+```bash
+# Windows 示例（Linux/macOS 将 gradlew.bat 替换为 ./gradlew）
+
+# 查看项目信息
+gradlew.bat --version          # 查看 Gradle 版本
+gradlew.bat projects           # 查看项目结构
+gradlew.bat tasks             # 查看所有可用任务
+
+# 构建相关
+gradlew.bat clean             # 清理构建产物
+gradlew.bat build             # 完整构建（包括测试）
+gradlew.bat assemble          # 只构建，不运行测试
+gradlew.bat jar               # 只生成 jar 文件
+
+# 依赖管理
+gradlew.bat dependencies      # 查看项目依赖
+gradlew.bat --refresh-dependencies build  # 刷新依赖并构建
+
+# 调试模式
+gradlew.bat build --debug     # 输出详细日志
+gradlew.bat build --info      # 输出一般信息
+gradlew.bat build --quiet     # 只输出错误信息
+```
+
+#### Wrapper 配置文件说明
+`gradle/wrapper/gradle-wrapper.properties` 文件内容示例：
+```properties
+distributionBase=GRADLE_USER_HOME
+distributionPath=wrapper/dists
+distributionUrl=https\://services.gradle.org/distributions/gradle-7.4.2-bin.zip
+zipStoreBase=GRADLE_USER_HOME
+zipStorePath=wrapper/dists
+```
+
+- `distributionUrl`：指定使用的 Gradle 版本
+- 如需更换版本，修改此行即可
+
+#### Wrapper 优化配置
+1. **使用国内镜像**（可选）：
+   修改 `gradle-wrapper.properties`：
+   ```properties
+# 使用腾讯云镜像（更快）
+   distributionUrl=https\://mirrors.cloud.tencent.com/gradle/gradle-7.4.2-bin.zip
+```
+
+2. **并行构建**：
+   创建 `gradle.properties` 文件：
+   ```properties
+# 启用并行构建
+   org.gradle.parallel=true
+   # 启用构建缓存
+   org.gradle.caching=true
+   # 配置JVM参数
+   org.gradle.jvmargs=-Xmx2048m -XX:MaxMetaspaceSize=512m
 ```
 
 ### 2. 使用全局 Gradle
@@ -180,53 +296,62 @@ ls -l build/libs
 
 2. **手动下载依赖**：
    ```bash
-   # Maven 项目
+# Maven 项目
    mvn dependency:get -DgroupId=组 ID -DartifactId=项目 ID -Dversion=版本号
    # 示例：下载 Paper API
    mvn dependency:get -DgroupId=io.papermc.paper -DartifactId=paper-api -Dversion=1.19.4-R0.1-SNAPSHOT
 
    # Gradle 项目
    gradle --refresh-dependencies
-   ```
+   
+   # Gradle Wrapper 项目
+   # Windows
+   gradlew.bat --refresh-dependencies build
+   # Linux/macOS
+   ./gradlew --refresh-dependencies build
+```
 
 ### 2. 内存不足
 如果看到 `OutOfMemoryError` 错误：
 
 1. **Maven 项目**：
    ```bash
-   # Windows（在 cmd 中运行）
+# Windows（在 cmd 中运行）
    set MAVEN_OPTS=-Xmx512m
    # 如果 512m 不够，可以设置更大，如-Xmx1024m
 
    # Linux/macOS
    export MAVEN_OPTS="-Xmx512m"
-   ```
+```
 
 2. **Gradle 项目**：
    ```bash
-   # Windows
+# Windows
    set GRADLE_OPTS=-Xmx512m
 
    # Linux/macOS
    export GRADLE_OPTS="-Xmx512m"
-   ```
+   
+   # 或者在项目的 gradle.properties 中配置（推荐）
+   org.gradle.jvmargs=-Xmx1024m -XX:MaxMetaspaceSize=256m
+```
 
 ### 3. 编码问题
 如果看到 `编码GBK的不可映射字符` 等错误：
 
 1. **Maven 项目**：
    ```bash
-   # 在运行时指定编码
+# 在运行时指定编码
    mvn -Dfile.encoding=UTF-8 clean package
-   ```
+```
 
 2. **Gradle 项目**：
    在 `build.gradle` 中添加：
    ```groovy
-   tasks.withType(JavaCompile) {
+tasks.withType(JavaCompile) {
        options.encoding = 'UTF-8'
    }
-   ```
+```
 
 ### 4. 其他常见错误
 1. **找不到 JAVA_HOME**：
@@ -245,4 +370,10 @@ ls -l build/libs
    
    # Gradle 项目，使用 debug 模式构建
    gradle clean build --debug
+   
+   # Gradle Wrapper 项目
+   # Windows
+   gradlew.bat clean build --debug
+   # Linux/macOS
+   ./gradlew clean build --debug
    
