@@ -24,8 +24,6 @@ sidebar_position: 4
 
 `Modrinth` https://modrinth.com/plugin/simplescore
 
-`MineBBS` https://www.minebbs.com/resources/.8111
-
 `文档` https://github.com/r4g3baby/SimpleScore/wiki
 
 :::
